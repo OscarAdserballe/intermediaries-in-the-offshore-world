@@ -1,0 +1,26 @@
+
+digraph AgenticFlow {
+    rankdir=TB; // Arrange layout from Top to Bottom
+
+    // Define node styles
+    node [shape=box, style=rounded, fontname="Helvetica"];
+    START [label="Start", shape=Mdiamond, style=filled, fillcolor=lightblue];
+    END [label="End", shape=doubleoctagon, style=filled, fillcolor=lightcoral];
+
+    // Define nodes based on the Python functions/nodes
+    initial_search [label="Initial Search\n(Tavily Search with Intermediary Name)"];
+    analyze_and_decide [label="Analyze & Decide\n(LLM Classification & Need for More Info?)"];
+    additional_search [label="Additional Search\n(Tavily Search with Specific Queries)"];
+
+    // Define edges representing the flow
+    START -> initial_search;
+    initial_search -> analyze_and_decide [label="Results collected"];
+
+    // Conditional edges from analyze_and_decide
+    analyze_and_decide -> additional_search [label="Needs More Info\n(Search Iteration < 3)"];
+    analyze_and_decide -> END [label="Info Sufficient OR\nMax Iterations OR\nError"]; // Updated label slightly for clarity
+
+    // Loop back from additional_search
+    additional_search -> analyze_and_decide [label="Additional results collected"];
+}
+

@@ -1,0 +1,34 @@
+\chapter{Appendix}
+\label{chap:appendix}
+
+Replication code all provided here on GitHub. Tried to centralise it all into one Makefile, though it's far more intuitive to go through the jupyter notebooks instead.
+
+because it's through an agentic ai that the scrapign has been done, it's fo a non-deterministic nature. Where able I've put a seed to 42 and used gemini-2.0-flash-001, though this is not extendable to the use of Tavily. There, however, the dataset provided includes all the search links and content scraped, so one can apply the classifying model on it directly.
+
+Categories:
+
+Tax Expert: Focuses on tax planning, compliance, and advisory.
+Legal Expert: Focuses on legal structuring, compliance, incorporation, and representation.
+Administrator: Focuses on accounting, auditing, financial reporting, and company administration.
+Investment Advisor: Focuses on managing financial assets and investments.
+
+Instructions:
+
+Analyze Website Content: Thoroughly review the intermediary's website, paying close attention to sections like:
+
+"Services" / "What We Do" / "Expertise" / "Solutions"
+"About Us" / "Our Firm"
+Team descriptions / Professional profiles (if available)
+Case studies / Client examples
+
+Look for Keywords and Service Descriptions: Identify the primary services offered and look for keywords associated with each category:
+
+For Tax Expert: Search for terms like "tax advisory," "tax planning," "international tax," "tax compliance," "tax returns," "transfer pricing," "VAT," "tax structuring," "tax disputes," "tax minimization."
+For Legal Expert: Search for terms like "legal services," "corporate law," "commercial law," "entity formation," "incorporation," "company registration," "contracts," "litigation," "legal opinions," "regulatory compliance," "M\&A legal," "due diligence (legal)," "lawyer," "attorney," "solicitor," "notary." % Escaped '&'
+For Administrator: Search for terms like "accounting," "bookkeeping," "audit," "assurance," "financial statements," "reporting," "company secretarial," "payroll," "administration services," "domiciliation," "accountant," "auditor."
+For Investment Advisor: Search for terms like "investment management," "wealth management," "asset management," "portfolio management," "financial planning," "investment strategy," "securities," "funds," "derivatives," "financial advisor."
+
+Determine Primary Focus: Based on the emphasis in the service descriptions and overall website messaging, determine the single most dominant role the intermediary presents itself as fulfilling.
+
+Overlap Handling: Many firms offer multiple services (e.g., accounting firms often provide tax advice). Prioritize based on the firm's core identity or the most prominently featured service area. If a firm strongly presents itself as an "Accounting and Tax Firm," lean towards "Administrator" if accounting/audit seems central, or "Tax Expert" if tax advisory is the main thrust. If it's a "Law Firm" that also offers tax advice, classify as "Legal Expert." If it equally emphasizes multiple areas and a single primary focus isn't clear, note the ambiguity but still choose the best fit based on overall impression or self-description (e.g., "Wealth Manager" points to Investment Advisor).
+Output: Provide the single best-fit category classification: Tax Expert, Legal Expert, Administrator, or Investment Advisor.

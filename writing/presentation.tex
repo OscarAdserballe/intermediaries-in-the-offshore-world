@@ -1,0 +1,281 @@
+\documentclass{beamer}
+
+% --- Standard Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % For including images
+\usepackage{xcolor}   % For defining colors
+\usepackage{listings} % For code highlighting
+\usepackage{adjustbox} % For better image scaling control
+
+% --- Theme ---
+\usetheme{Warsaw} 
+% Note: Warsaw is a relatively clean theme often used for dark styles. 
+% For truly minimal black, consider \usetheme{default} \usecolortheme{beaver} 
+% or custom \setbeamercolor commands.
+
+% --- Placeholder Metadata (Often used by themes in footers/headers) ---
+% \title{Your Presentation Title}
+% \author{Your Name}
+% \institute{Your Institution}
+% \date{\today}
+
+% --- Code Highlighting Setup ---
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegrey}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegrey},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                   
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=Python % Specify Python language
+}
+\lstset{style=mystyle}
+% --- End of code highlighting setup ---
+
+% --- Start of Document ---
+\begin{document}
+
+% --- Title Frame Removed ---
+% The frame containing \maketitle has been deleted.
+
+% --- Research Question Frame ---
+\begin{frame}
+    \frametitle{Research Question}
+
+    \begin{block}{Central Question}
+        What is the role of intermediaries in facilitating the creation of offshore tax havens?
+    \end{block}
+
+    \begin{itemize}
+        \item Using network theory to study intermediaries in the offshore ecosystem.
+        \item Why intermediaries?
+        \begin{itemize}
+            \item Key enablers of tax haven use and key mechanism perpetuating wealth inequality.
+            \item Reliable targets for regulation to combat tax avoidance/evasion.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+% --- Abstract Frame ---
+% Added [allowframebreaks] to handle potentially long text
+\begin{frame}[allowframebreaks] 
+    \frametitle{Abstract}
+
+    {\tiny Intermediaries form the links enabling tax haven use, contributing to tax avoidance and inequality. This study examines these actors as potential regulatory targets. Extending the network analysis of Chang et al. (2023) and drawing on Harrington's (2016) micro-sociological evidence, I analyze International Consortium of Investigative Journalists (ICIJ) leak data. Although ICIJ data has limitations for estimating avoidance scale, it permits generalization about intermediary roles within these networks. A novel agentic method is employed to enrich ICIJ data samples using available information about their role online.}
+
+    {\tiny Four propositions emerge: 1) The overall network displays scale-free properties, implying vulnerability to the loss of central intermediaries. 2) Intermediaries exhibit cultural specificity, often catering to distinct client countries and clientele. 3) Intermediary types perform different network roles with varying systemic importance as measured by degree. 4) Network structures respond dynamically to regulation and financial innovation, indicating they are not immutable. This analysis provides insight into the structure and potential vulnerabilities of tax haven networks through the lens of intermediary action.}
+\end{frame}
+
+% --- Motivation Frame ---
+\begin{frame}
+    \frametitle{Motivation: Economics \& Public Finance}
+
+    \begin{itemize}
+        \item \textbf{Classic Models (Demand-Side):}
+            \begin{itemize}
+                \item Allingham-Sandmo (1972) model struggles with top-end evasion and difficult to study with classic udit studies (e.g., Kleven et al., 2011) have limitations .
+            \end{itemize}
+    \end{itemize}
+
+    \begin{itemize}
+        \item \textbf{Current Focus: Supply-Side} models are gaining traction.
+        \item \textbf{Alternative Methods for Top-End Evasion:}
+            \begin{itemize}
+                \item Macro statistics (Zucman 2013; Johannesen \& Zucman 2014; Alstadsæter et al. 2018).
+                \item Micro leak data (Alstadsæter et al. 2019; Londoño-Vélez \& Ávila-Mahecha 2021).
+                \item Tax Amnesties (Guyton et al. 2021; Londoño-Vélez \& Tortarolo 2022; Leenders et al. 2023).
+            \end{itemize}
+        \item \textbf{Alstadsæter et al. (2019) Model:}
+            \begin{itemize}
+                \item Shifts focus to supply-side and intermediaries.
+                \item Comparative statics on inequality, detection costs.
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+% --- Data Challenge & Prior Work Frame ---
+\begin{frame}
+    \frametitle{Challenge: Intermediary Data Scarcity}
+
+    \begin{itemize}
+        \item Getting detailed data on intermediaries is extremely difficult.
+        \item \textbf{Micro-Sociological Insights:} Brooke Harrington (2016) provides crucial qualitative understanding of intermediary roles.
+            \begin{center}
+                % Using adjustbox: scales down if needed, max 60% of text width, centered
+                \adjustimage{max height=0.15\textwidth, center}{images/harrington.jpeg} 
+                \scriptsize{Source: Harrington (2016)}
+            \end{center}
+        \item \textbf{Approach:} Network theory applied to unique ICIJ leak data (Pandora, Panama Papers, etc.).
+        \item \textbf{Building on Prior Network Research:} Limited accounts exist (e.g., Chang et al., 2023), often focused on specific areas like sanctions.
+            \begin{center}
+                 % Using adjustbox: scales down if needed, max 70% of text width, centered
+                \adjustimage{max width=0.7\textwidth, center}{images/chang.png} 
+                \scriptsize{Source: Chang et al. (2023) - Example Visualization}
+            \end{center}
+        \item \textbf{Goal:} Understand the actual structure of these networks beyond anecdotes.
+    \end{itemize}
+\end{frame}
+
+% --- Concrete Example Frame ---
+\begin{frame}
+    \frametitle{A Concrete Example: Intermediary Profile}
+
+    \begin{columns}[T] % Align tops
+        \begin{column}{0.5\textwidth}
+            \textbf{Network Link (ICIJ Data):}
+            \begin{center}
+                % Using adjustbox: scales down if needed, max 100% of column width, centered
+                \adjustimage{max width=\linewidth, center}{images/michael.png} 
+                \scriptsize{Michael Papageorge in leak data}
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \textbf{Public Profile (Web Data):}
+             \begin{center}
+                 % Using adjustbox: scales down if needed, max 100% of column width, centered
+                \adjustimage{max width=\linewidth, center}{images/michael_webpage.png}
+                \scriptsize{Micahel Papageorge online presence}
+            \end{center}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+% --- Propositions Frame ---
+\begin{frame}
+    \frametitle{Four Propositions About Intermediaries}
+
+    \begin{columns}[T]
+        \begin{column}{0.8\textwidth}
+            \begin{enumerate}
+                \item \textbf{Overall Vulnerability:} Network is scale-free (power-law distribution).
+                    \begin{itemize}
+                        \item Loss of central intermediaries significantly disrupts the network.
+                        \item Consistent with supply-side importance.
+                    \end{itemize}
+
+                \item \textbf{Cultural Specificity:} Intermediaries often cater to specific client countries/cultures.
+                    \begin{itemize}
+                        \item Network structures vary by client country.
+                        \item Differential vulnerability across countries.
+                    \end{itemize}
+
+                \item \textbf{Diverse Roles:} Different intermediary types play distinct network roles.
+                    \begin{itemize}
+                        \item Varying systemic importance (measured by degree, centrality etc.).
+                    \end{itemize}
+
+                \item \textbf{Dynamic Networks:} Structure evolves with regulation and financial innovation.
+                    \begin{itemize}
+                        \item Networks are not static or immutable.
+                    \end{itemize}
+            \end{enumerate}
+        \end{column}
+        \begin{column}{0.2\textwidth}
+            \begin{center}
+                 % Using adjustbox: scales down if needed, max 100% of column width, centered
+                \adjustimage{max width=\linewidth, center}{images/powerlaw.png} 
+                \scriptsize{Illustrative Power-Law Distribution}
+            \end{center}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+% --- Data & Methods Frame ---
+\begin{frame}
+    \frametitle{Data \& Methods}
+
+    \begin{alertblock}{Data Cleaning}
+        Significant effort required for data preparation and cleaning.
+    \end{alertblock}
+
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \textbf{Datasets:}
+            \begin{itemize}
+                \item \textbf{Primary:} ICIJ Offshore Leaks Database
+                \item Sebastien Lafitte (2024) - History of Tax Haven Legal Innovations
+                \item World Justice Project (WJP) - Rule of Law Index
+                \item V-Dem - Regime Types \& Democracy Data
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \textbf{Methods:}
+            \begin{itemize}
+                \item \textbf{Primary:} Network Analysis
+                \item Regression Analysis
+                \begin{itemize}
+                    \item Discontinuity Designs
+                    \item OLS
+                \end{itemize}
+                \item Time-Series Analysis
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% --- Enriching Intermediaries Frame ---
+\begin{frame}
+    \frametitle{Methodological Innovation: Enriching Intermediary Data}
+
+    \textbf{Challenge:} ICIJ data often lacks specific intermediary roles.
+    \textbf{Solution:} Agentic approach (LangGraph) to classify intermediaries based on available online information.
+
+    % Note: This frame originally only had one column defined, but used \begin{columns}. 
+    % If the image and text should be side-by-side, structure it like the other column frames.
+    % Assuming the image should be below the text for now.
+    
+    \textbf{Typology}
+    \begin{itemize}
+        \item \textbf{Tax Experts}
+        \item \textbf{Legal Experts}
+        \item \textbf{Administrators} (Company formation, secretarial)
+        \item \textbf{Investment Advisors}
+    \end{itemize}
+
+     \begin{center}
+        % Using adjustbox: scales down if needed, max 60% of text width, centered
+        % Adjust width percentage as needed. 0.8\linewidth might be too large if not in columns.
+        \adjustimage{max height=0.3\textwidth, center}{images/agent_graph.png} 
+        \scriptsize{Agent Workflow (LangGraph)}
+    \end{center}
+    
+    % Alternative layout using columns:
+    % \begin{columns}[T]
+    %     \begin{column}{0.5\textwidth} % Adjust width as needed
+    %         \textbf{Typology Developed:}
+    %         \begin{itemize}
+    %             \item \textbf{Tax Experts}
+    %             \item \textbf{Legal Experts}
+    %             \item \textbf{Administrators} (Company formation, secretarial)
+    %             \item \textbf{Investment Advisors}
+    %         \end{itemize}
+    %     \end{column}
+    %     \begin{column}{0.5\textwidth} % Adjust width as needed
+    %         \begin{center}
+    %            \adjustimage{max width=\linewidth, center}{images/agent_graph.png} 
+    %            \scriptsize{Conceptual Agent Workflow (LangGraph)}
+    %        \end{center>
+    %     \end{column}
+    % \end{columns}
+
+\end{frame}
+
+% --- End of Document ---
+\end{document}

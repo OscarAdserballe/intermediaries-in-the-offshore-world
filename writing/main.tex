@@ -1,0 +1,128 @@
+\documentclass[12pt, a4paper]{report}
+
+% --- Basic Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in} % 1-inch margins
+\usepackage{amsmath, amssymb} % Math symbols
+\usepackage{graphicx} % For figures Tell LaTeX where to look for images:
+\graphicspath{{./images/}} % Add this line to specify the images folder
+\usepackage{enumitem} % For list formatting
+\usepackage{hyperref} % For potential URLs (clickable)
+\usepackage{setspace} % For line spacing
+\onehalfspacing % 1.5 line spacing
+
+
+% --- Section Title Formatting ---
+\usepackage{titlesec} % Added package to control section spacing
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}[<right-sep>]
+\titlespacing*{\chapter}{0pt}{20pt}{40pt} % Adjust 20pt (before) and 40pt (after) as needed
+
+% \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}[<after-code>]
+% Remove the "Chapter X" label completely
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries} % Format of the title (Huge, Bold)
+  {}                         % Label (empty to remove "Chapter X")
+  {0pt}                      % Separation between label and title (0pt as label is empty)
+  {}                         % Code before the title body
+
+% --- Bibliography Package ---
+\usepackage[backend=biber, style=apa, sorting=nyt]{biblatex} % Modern bibliography management (use APA style)
+% Update the path to your bibliography file:
+\addbibresource{bib/references.bib} % Define your bibliography file
+
+% --- Optional: Nicer Headers/Footers ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+
+% --- Selective Compilation (Optional but useful) ---
+% Uncomment the line below and list chapter filenames (without .tex) to compile only those chapters.
+% \includeonly{chapters/introduction,chapters/theory}
+
+
+\title{Network Topologies of Offshore Intermediaries}
+\author{Oscar Julius Adserballe} % Replace with your name
+\date{May 2025} % Or specify a date: \date{Month Year}
+
+% --- Document Start ---
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{1cm} 
+
+    {\Huge\bfseries Network Topologies of Offshore Intermediaries and their Role in High-End, Individual Tax Avoidance\par}
+
+    \vspace{1.5cm}
+
+    {\Large\bfseries Oscar Julius Adserballe\par} % Replace with your name
+    {\large Student ID: S160855\par} % Replace with your ID
+
+    \vspace{1cm}
+
+    {\large Copenhagen Business School} \\ % Replace university
+
+    \vspace{2cm}
+
+    {\large Supervisor: Rasmus Corlin Christensen\par} 
+
+    \vspace{1.5cm}
+
+    {\large \today\par} 
+
+    \vfill 
+\end{titlepage}
+
+% --- Front Matter (ToC, Lists) ---
+\pagenumbering{roman} % Use Roman numerals for front matter
+\pagestyle{plain} % Use plain style for ToC pages
+
+\newpage
+\tableofcontents % Generate Table of Contents
+
+\newpage
+\listoffigures % Generate List of Figures (if any)
+
+\newpage
+\listoftables  % Generate List of Tables (if any)
+
+\newpage
+
+% Keep the Abstract in the main file as it's part of the front matter
+\chapter*{Abstract}
+\label{sec:abstract}
+\addcontentsline{toc}{chapter}{Abstract} % Manually add to ToC if needed
+
+   Intermediaries form the crucial links enabling tax haven use, contributing significantly to global tax avoidance and inequality. While analyses often focus on demand-side factors, this thesis challenges such perspectives by asserting the critical importance of the supply-side network structure and intermediary agency for understanding and regulating offshore finance. Extending the network analysis of Chang et al. (2023) and drawing on Harrington's (2016) micro-sociological evidence, I analyze International Consortium of Investigative Journalists (ICIJ) leak data. Although ICIJ data has limitations for estimating the overall scale of avoidance, it permits robust generalization about intermediary roles within these complex networks. A novel agentic method is employed, enriching ICIJ data by incorporating publicly available online information about intermediaries' professional roles and affiliations. 
+
+   This thesis presents four key propositions: 1) The overall network exhibits structural vulnerabilities concentrated around central intermediaries. 2) Intermediaries often display cultural or national specificity, catering to distinct clienteles. 3) Different intermediary types occupy distinct network positions and vary in systemic importance, measurable via network centrality. 4) Network structures are dynamic, adapting in response to regulation and financial innovation. This analysis provides critical insights into the architecture and potential regulatory chokepoints within tax haven networks, viewed through the lens of intermediary action. 
+
+% --- Include Chapters ---
+\pagenumbering{arabic} % Switch to Arabic numerals for main content
+\pagestyle{fancy} % Switch back to fancy style for main content
+
+% Use \include for main chapters. LaTeX will automatically start a new page for each.
+\include{chapters/introduction}
+\include{chapters/theory}
+\include{chapters/data_methodology}
+\include{chapters/empirical_analysis}
+\include{chapters/discussion}
+\include{chapters/conclusion}
+
+% --- Appendix ---
+\appendix
+\include{chapters/appendix}
+
+
+% --- Bibliography ---
+% This command should be in your main file where you want the bibliography to appear.
+\printbibliography
+
+\end{document}
+% --- Document End ---
