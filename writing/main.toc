@@ -1,31 +1,31 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Abstract}{1}{chapter*.4}%
-\contentsline {chapter}{\numberline {1}Introduction - why should we care about network topologies of offshore intermediaries?}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Introduction \& Motivation}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Why Tax Evasion among High-income earners: The Scale and Impact of Individual High-End Tax Evasion (Alstadsæter et al. 2019, Zucman).}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Demand-side limited to understand this phenomenon - game of cat and mouse: Limitations of Traditional Demand-Side Models and Enforcement (Allingham-Sandmo critique, Audit limitations - Alstadsæter et al. 2019).}{4}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Supply-side far more relevant to look at: Intermediaries as Gatekeepers (Alstadsæter et al. 2019 model, Harrington 2016).}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.2}Tax Avoidance at the Top of the Income Distribution}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Limitations of Traditional Demand-Side Models}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}The Supply-side: Intermediaries as Gatekeepers}{4}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Research Gap: Understanding the \textit {Network Structure} to Inform Intermediary Regulation}{6}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Core Research Question(s): What role do offshore intermediaries play in networks of high-end tax avoidance?}{7}{section.1.6}%
+\contentsline {section}{\numberline {1.6}RQ: What role do offshore intermediaries play in networks of high-end tax avoidance?}{7}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Roadmap of the Thesis.}{7}{section.1.7}%
 \contentsline {chapter}{\numberline {2}Theory}{8}{chapter.2}%
 \contentsline {section}{\numberline {2.1}A Note on Philosophy of Science and Methodological Approach}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Conceptual foundations}{10}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Role of Intermediaries as Professionals (Seabrooke, Wigan, Christensen, Tsingou, Harrington) - the whole CBS cartel}{10}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Weaponised Interdependence for importance of the supply-side as chokepoints (Farrell \& Newman, 2019, Christensen 2024, Zucman 2019) and Network Vulnerability through Intermediaries (Harrington 2016, Alstadsæter et al. 2019, Chang et al. 2023)}{10}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Network Theory as a Lens for Understanding Illicit networks (Chang et. al 2023, Newman textbook, Newman 2003 overview paper, Barabási, A.-L., \& Albert, R. (1999))}{10}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}The specific roles of "intermediaries" and a Typology of Intermediaries (EU 2017 paper, Harrington 2016)}{10}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Different financial instruments and legal innovations - secrecy strategies (Chang et al. 2023, Lafitte, 2024)}{12}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}Propositions}{12}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Data and Methodology}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}The ICIJ Offshore Leaks Database as "proxy" (EU, 2017 paper): Structure, Content, Strengths, Limitations (Nodes, Relationships, Leaks included, \texttt {sourceID}, \texttt {valid\_until}, incompleteness).}{17}{section.3.1}%
-\contentsline {section}{\numberline {3.2}External Data Sources: Country-Level Indicators (WJP RoL, TI CPI, Regime Type, GDP, etc.), Jurisdiction-Level Data (FSI, Regulatory status).}{17}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Using Agentic AI to Scrape data on intermediaries.}{18}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Empirical Analysis}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Proposition I}{20}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Proposition II}{20}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Proposition III}{20}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Proposition IV}{20}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Discussion}{21}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{22}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Appendix}{23}{appendix.A}%
+\contentsline {section}{\numberline {2.2}Conceptual foundations}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Global Wealth Chains and the Role of Intermediaries}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Weaponised Interdependence}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Network Theory as a Lens for Understanding Illicit networks}{11}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}A Typology of Intermediaries and Their Role}{12}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Secrecy Strategies: Financial Instruments and Legal Innovations}{13}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Propositions}{13}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Data and Methodology}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The ICIJ Offshore Leaks Database}{18}{section.3.1}%
+\contentsline {section}{\numberline {3.2}External Data Sources}{18}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Using Agentic AI to Scrape Data on Intermediaries.}{19}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Empirical Analysis}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Proposition I}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Proposition II}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Proposition III}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Proposition IV}{22}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Discussion}{23}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{24}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Appendix}{25}{appendix.A}%

@@ -1,57 +1,57 @@
 \chapter{Data and Methodology}
 \label{chap:data_methodology}
 
-\section{The ICIJ Offshore Leaks Database as "proxy" (EU, 2017 paper): Structure, Content, Strengths, Limitations (Nodes, Relationships, Leaks included, \texttt{sourceID}, \texttt{valid\_until}, incompleteness).} % Used \texttt for code-like terms
+This section details the data sources and methodological approaches employed in this thesis. It begins by describing the primary data source, the ICIJ Offshore Leaks Database, outlining its structure, content, strengths, and limitations. Subsequently, it discusses the external datasets used to provide contextual information. Finally, it introduces a novel methodology utilizing agentic AI to enrich the classification of intermediaries within the icij dataset.
+
+\section{The ICIJ Offshore Leaks Database}
 \label{sec:3_1}
-\begin{itemize}[leftmargin=*]
-    \item Numerical estimates will surely be biased, but the qualitiative nature of intereactions less so
-\end{itemize}
 
-\section{External Data Sources: Country-Level Indicators (WJP RoL, TI CPI, Regime Type, GDP, etc.), Jurisdiction-Level Data (FSI, Regulatory status).}
+The empirical core of this thesis rests upon the International Consortium of Investigative Journalists (ICIJ) Offshore Leaks Database. This resource serves as the primary data source, acting as a valuable, albeit imperfect, "proxy" for the opaque universe of offshore finance (cf. EU, 2017). The general idea underpinning its use here is that while any direct numerical estimates derived solely from the leaks (e.g., total wealth hidden) will surely be biased due to the data's inherent incompleteness, the qualitative nature of the interactions captured within the data – the patterns of relationships between clients, intermediaries, and jurisdictions – appears more reliable for understanding the structure and dynamics of the offshore system.
+
+The use of the ICIJ Offshore Leaks Database for this type of research is increasingly established. For example, Alstadsæter et al. (2019), Londoño-Vélez \& Ávila-Mahecha (2021), and Chang et al. (2023a; 2023b). 
+
+\section{External Data Sources}
+
 \label{sec:3_2}
-Lafitte 2024: Legal innovatoins
 
-Laffitte, S. (2024). The Historical Tax Havens Database (HTHD).
+To contextualize the patterns observed within the ICIJ data, several external data sources are employed.
 
-World Justice Project (WJP) Rule of Law Index.
+A key resource is the Historical Tax Havens Database (HTHD) developed by Laffitte (2024). This dataset documents the historical evolution of "offshore legal architecture," tracking the adoption of specific legal technologies (e.g., banking secrecy, IBCs) across tax havens over time. This dataset will be utilized to explore whether specific patterns observed in the ICIJ data – such as the prevalence of certain offshore instruments or shifts in intermediary activity – align temporally with the historical innovations documented in the HTHD.
 
-VDEM Regime Type Data.
-Coppedge, Michael, John Gerring, Carl Henrik Knutsen, Staffan I. Lindberg, Jan Teorell, David Altman, Fabio Angiolillo, Michael Bernhard, Agnes Cornell, M. Steven Fish, Linnea Fox, Lisa Gastaldi, Haakon Gjerløw, Adam Glynn, Ana Good God, Sandra Grahn, Allen Hicken, Katrin Kinzelbach, Joshua Krusell, Kyle L. Marquardt, Kelly McMann, Valeriya Mechkova, Juraj Medzihorsky, Natalia Natsika, Anja Neundorf, Pamela Paxton, Daniel Pemstein, Johannes von Römer, Brigitte Seim, Rachel Sigman, Svend-Erik Skaaning, Jeffrey Staton, Aksel Sundström, Marcus Tannenberg, Eitan Tzelgov, Yi-ting Wang, Felix Wiebrecht, Tore Wig, Steven Wilson and Daniel Ziblatt. 2025. "V-Dem [Country-Year/Country-Date] Dataset v15" Varieties of Democracy (V-Dem) Project. \url{https://doi.org/10.23696/vdemds25} % Added \url
+The World Justice Project (WJP) Rule of Law Index provides comprehensive country-level metrics on governance. Its specific use is to investigate potential correlations between the home country's rule of law environment and the patterns of specialization or network positioning observed among the intermediaries serving clients from that country.
 
-\begin{itemize}[leftmargin=*]
-    \item World Inequality Database with data on wealth inequality.
-\end{itemize}
+VDEM (Varieties of Democracy) Regime Type Data will be used exactly analogously.
 
-\section{Using Agentic AI to Scrape data on intermediaries.}
+Data from the World Inequality Database (WID), specifically metrics on wealth inequality at the country level, will also be incorporated.  This serves primarily to see if we can confirm some of the comparative statics Alstadsæter and Zucman derive, trying to verify whether there's anything to their supply-side model.
+
+\section{Using Agentic AI to Scrape Data on Intermediaries.}
 \label{sec:3_3}
-Using an AI-loop to classify the type of intermediary.
-ICIJ data just classifies them generically. For our purposes, it is useful to get more information on them, and put them into the typology from the EU (2017) paper.
 
-% Placeholder for figure: Make sure you have 'agent_loop_diagram.png' in your 'images' folder
+A significant challenge in utilizing the ICIJ data for the purposes of this thesis is that intermediaries are often classified generically within the database. To analyze the specific roles and potential influence of different types of intermediaries, as outlined in the typology adapted from the EU (2017) paper (see Section 2.1.4), a more granular classification is required. To achieve this classification at scale, an approach employing agentic AI is utilized.
+
+The core idea is to use an AI agent loop to automate the process of gathering information about and classifying the intermediaries listed in the ICIJ data. The basic workflow is illustrated in Figure \ref{fig:agent_loop_placeholder}.
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{agent_graph.png}
-    \caption{Basic Agent Loop for Intermediary Classification}
+    \includegraphics[width=0.8\textwidth]{agent_graph.png} 
+    \caption{Agent Setup for Intermediary Classification}
     \label{fig:agent_loop_placeholder}
 \end{figure}
 
-In brief, an AI-agent orchestrates searches for these people, online first gneerically reading the results, then coming up with more specific ones based on the information it discovers or lacks, searching up to 3 queries, and scouring 15 most relevant results based on query-result embedding similiarity (Tavily). Effectively, replaces the need for individually searching for each person
+In brief, the process involves an AI agent orchestrating online searches for each intermediary identified in the ICIJ data. It begins with generic searches, reads and interprets the initial results, and then formulates more specific search queries based on the information discovered or identified as lacking. This iterative process involves up to three search queries per intermediary, scouring the top 15 most relevant web results identified through query-result embedding similarity using the Tavily Search API (though the tool is relatively generic and it specifically is not very important). This effectively replaces the time-consuming need for manual searching of the intermediaries.
 
-For each, it then classifies it accordingly with a few additional fields as well as listing the confidecne of its judgement.
+Based on the information gathered, the AI agent then classifies the intermediary according to the EU (2017) typology (Tax Expert, Legal Expert, Administrator, Investment Advisor), adding a few additional relevant fields (e.g., specific job title). Crucially, the agent also provides a confidence score for its classification judgment, allowing for filtering or weighting in subsequent analyses.
 
-There are a few obvious issues with such a proposal, that I wish to assuage
+There are a few obvious limitations associated with this approach that warrant discussion:
 
-\textbf{Temporally misaligned}
-All of the seraches necessarily today, and on the information found htere.
-\begin{enumerate}[label=\arabic*.]
-    \item This immediately biases it otwrads those intermeidaries that are more current, and
-    \item retrospectively assumes that the role they played then is equivalent to what one gets when one scours them today.
-\end{enumerate}
-This issues aren't too big however. To the first point, there isn't an obvious reason why this should be a problem beyond limiting power. If we can only identify 50\% of them, so be it. This only becomes problematic if there should be a systematic bias in the way it's used. E.g. it's easier to identify tax experts compared to legal experts, one may ofr exampel have a reason to stay more covert. This is when it becomes a very real threat to any potnetial infernece.
+Temporal Misalignment: A primary concern is that all online searches are conducted based on information available today, whereas the ICIJ data pertains to activities that may have occurred years or even decades prior. This introduces two potential issues:
+    1.  The process might be biased towards identifying intermediaries who are still active or have a significant online presence currently.
+    2.  It implicitly assumes that the role an intermediary plays today (as reflected online) is equivalent to the role they played at the time relevant to the ICIJ data.
 
-To the second, this shuoldn't be too bad a problem either. Most firms/individuals woudl likely not switch between these roles, considering the highly specialised nature of each of the functios and the considerable barriers to entry to each.
+Addressing the Limitations: While these issues are real, they are not prohibitive for their use in this thesis.
+1. Regarding the first point (bias towards current intermediaries), this primarily impacts the coverage or statistical power of the classification – we may only be able to confidently classify a subset (e.g., 50\%) of all intermediaries. This is acceptable, provided the unclassifiable intermediaries are not systematically different in ways that correlate with the research questions. The issue becomes problematic only if there is a systematic bias in identifiability across types (e.g., if it is inherently much harder to find information online about legal experts compared to tax experts due to differing needs for discretion or public visibility).
+2. Regarding the second point (role stability), the assumption that roles remain consistent is arguably less problematic. Given the highly specialized nature of functions like tax advisory, legal structuring, administration, and investment management within the offshore context, and the considerable barriers to entry (qualifications, reputation, networks) for each, frequent switching between these core roles by individuals or firms seems relatively unlikely.
 
-\textbf{General trouble with using LLMs}
-Certainly there is also issue with using large-language models as a substitute for human annotation and research. This is experimental, but similar processes have been used to great effect in e.g. (INSERT SOME CITATION HERE).
+In my view, it is the only pragmatically feasible method to do this given the constraints of this thesis.
 
-If there is a systematic direction of bias, I cannot think of it.
+(Note: LLMs have also been used to polish the text of this thesis.)

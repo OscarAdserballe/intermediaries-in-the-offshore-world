@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.26)  2 MAY 2025 11:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.26)  2 MAY 2025 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -673,7 +673,10 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 54
 (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./main.aux
-(./chapters/introduction.aux) (./chapters/theory.aux))
+(./chapters/introduction.aux) (./chapters/theory.aux)
+(./chapters/data_methodology.aux) (./chapters/empirical_analysis.aux)
+(./chapters/discussion.aux) (./chapters/conclusion.aux)
+(./chapters/appendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
@@ -798,24 +801,64 @@ Package biblatex Info: Reference segment=0 on input line 54.
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (./main.toc)
+al/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (./main.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+4.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+4.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-
-[1
-
-] (./main.lof)
+ [2]
+(./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [2
+ [3
 
 ] (./main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [3
+ [4
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -830,72 +873,62 @@ l.111 \include{chapters/introduction}
 
  (./chapters/introduction.tex
 Chapter 1.
-
-Overfull \hbox (29.7579pt too wide) in paragraph at lines 1--1
-|\T1/lmr/bx/n/24.88 Introduction - why should we care about
- []
-
-[2
-
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.11652pt}.
-
-[3]
-Overfull \hbox (34.35794pt too wide) in paragraph at lines 23--23
-|[]\T1/lmr/bx/n/17.28 Demand-side lim-ited to un-der-stand this phe-nomenon
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-5.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+1.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+) [2
+
+
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (13.1823pt too wide) in paragraph at lines 44--44
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4]
+Overfull \hbox (13.1823pt too wide) in paragraph at lines 47--47
 |[]\T1/lmr/bx/n/17.28 Research Gap: Un-der-stand-ing the \T1/lmr/bx/it/17.28 Ne
 t-work Struc-
  []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.11652pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.11652pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-15.11652pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
 \openout2 = `chapters/theory.aux'.
@@ -917,23 +950,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9]
-Overfull \hbox (4.74435pt too wide) in paragraph at lines 27--27
-|[]\T1/lmr/bx/n/14.4 Role of In-ter-me-di-aries as Pro-fes-sion-als (Seabrooke,
- Wigan,
- []
-
-
-Overfull \hbox (6.90617pt too wide) in paragraph at lines 33--33
-|[]\T1/lmr/bx/n/14.4 Weaponised In-ter-de-pen-dence for im-por-tance of the sup
-ply-
- []
-
-
-Overfull \hbox (4.3958pt too wide) in paragraph at lines 37--37
-\T1/lmr/bx/n/14.4 2003 overview pa-per, Barabási, A.-L., & Al-bert, R. (1999))|
- 
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -961,11 +977,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
-Overfull \hbox (39.04282pt too wide) in paragraph at lines 109--110
-[]\T1/lmr/bx/n/12 2a. Governance-Dependent In-ter-me-di-ary Net-work Topolo-gie
-s: \T1/lmr/m/n/12 Key intermediary-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -975,6 +986,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
+Overfull \hbox (39.04282pt too wide) in paragraph at lines 102--103
+[]\T1/lmr/bx/n/12 2a. Governance-Dependent In-ter-me-di-ary Net-work Topolo-gie
+s: \T1/lmr/m/n/12 Key intermediary-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -992,7 +1008,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15])
+[15]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1001,78 +1017,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16]
+[16])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
 \openout2 = `chapters/data_methodology.aux'.
 
  (./chapters/data_methodology.tex
 Chapter 3.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 4.
-
-Overfull \hbox (5.01578pt too wide) in paragraph at lines 4--4
-\T1/lmr/bx/n/17.28 (EU, 2017 pa-per): Struc-ture, Con-tent, Strengths,
- []
-
-
-Overfull \hbox (16.32693pt too wide) in paragraph at lines 4--4
-\T1/lmr/bx/n/17.28 Lim-i-ta-tions (Nodes, Re-la-tion-ships, Leaks in-cluded,
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-9.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-9.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-19.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-19.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 19.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 19.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 19.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
-
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
-
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [17
+[18
 
 
 
 
 ]
-<./images/agent_graph.png, id=156, 591.20876pt x 453.695pt>
+<./images/agent_graph.png, id=264, 591.20876pt x 453.695pt>
 File: ./images/agent_graph.png Graphic file (type png)
 <use ./images/agent_graph.png>
-Package pdftex.def Info: ./images/agent_graph.png  used on input line 33.
+Package pdftex.def Info: ./images/agent_graph.png  used on input line 36.
 (pdftex.def)             Requested size: 362.37569pt x 278.09657pt.
 
 
@@ -1083,7 +1051,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18 <./images/agent_graph.png>])
+[19]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1092,12 +1060,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19]
+[20 <./images/agent_graph.png>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
 \openout2 = `chapters/empirical_analysis.aux'.
 
  (./chapters/empirical_analysis.tex
 Chapter 4.
-) [20
+) [22
 
 
 
@@ -1107,7 +1084,7 @@ Chapter 4.
 
  (./chapters/discussion.tex
 Chapter 5.
-) [21
+) [23
 
 
 
@@ -1117,7 +1094,7 @@ Chapter 5.
 
  (./chapters/conclusion.tex
 Chapter 6.
-) [22
+) [24
 
 
 
@@ -1127,21 +1104,12 @@ Chapter 6.
 
  (./chapters/appendix.tex
 Appendix A.
-[23
+) [25
 
 
 
 
-])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24]
+]
 
 LaTeX Warning: Empty bibliography on input line 125.
 
@@ -1153,39 +1121,28 @@ LaTeX Warning: Empty bibliography on input line 125.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: B0395796440DCAD8F7EA7DDEAC3EC731;5153
-(rerunfilecheck)             After:  D935A08BE16896A26E7529FEA4DA3426;13012.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 845A7A612F9594EE1E38FD8A770BABB6;6600.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20384 strings out of 474116
- 355378 string characters out of 5743682
- 1937187 words of memory out of 5000000
- 42388 multiletter control sequences out of 15000+600000
- 604637 words of font info for 66 fonts, out of 8000000 for 9000
+ 20370 strings out of 474116
+ 355193 string characters out of 5743682
+ 1938187 words of memory out of 5000000
+ 42368 multiletter control sequences out of 15000+600000
+ 604319 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,81p,1308b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,81p,1271b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texli
 ve/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/tex
-mf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fo
-nts/type1/public/lm/lmtk10.pfb>
-Output written on main.pdf (28 pages, 215912 bytes).
+mf-dist/fonts/type1/public/lm/lmri12.pfb>
+Output written on main.pdf (30 pages, 194306 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 334 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
  64 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
