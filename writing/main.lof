@@ -2,8 +2,22 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Agent Setup for Intermediary Classification}}{20}{figure.3.1}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Agent Setup for Intermediary Classification}}{18}{figure.3.1}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Entity Incorporations Over Time by Source Investigation.}}{24}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Illustration of the Power Law Distribution of Intermediary Connections (Degree).}}{25}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Coverage of Intermediary Connections Explained by the Enriched Top Intermediaries.}}{25}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Geographic Distribution of Intermediaries (Top Locations).}}{26}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Coverage of Intermediaries by Top Geographic Locations.}}{26}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Geographic Distribution of Entities (Top Jurisdictions/Locations).}}{27}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Coverage of Entities by Top Geographic Locations.}}{27}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Geographic Distribution of Officers (Top Locations).}}{28}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Coverage of Officers by Top Geographic Locations.}}{28}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Comparison of Intermediary Classification Distributions (Random Sample vs. Top 5\%).}}{29}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Cumulative Distribution Function (CDF) of Intermediary Degree by Classification.}}{29}{figure.4.11}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Boxplot of Intermediary Degree by Classification.}}{30}{figure.4.12}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Distribution of Intermediary Classifications across Top Countries.}}{30}{figure.4.13}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Temporal Evolution of the Intermediary-Entity Network (Cyprus Case Study). Shows connections between intermediary types (based in Cyprus) and the locations of entities they manage at different time points.}}{33}{figure.4.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

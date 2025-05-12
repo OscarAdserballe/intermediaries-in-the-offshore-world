@@ -55,6 +55,8 @@ The general principles and analytical techniques drawn upon in such studies are 
 
 To proceed with an analysis centered on the supply-side, it is essential to clarify conceptually what exactly is meant by an "intermediary" within the context of offshore finance. These actors play diverse roles in facilitating the creation, maintenance, and utilization of offshore structures. While specific studies, such as Harrington (2016), provide deep insights into the practices of particular intermediary types like wealth managers, a broader classification is useful for systematic analysis.
 
+These are all what Hoang (2022) would call the "small spiders", the "High net worth indivduals" rather than the "Ultra-High net worth individiduals" sitting at the top of the food chain. Anything uncovered, in this respect is extremely limited, because they are able to further obfuscate their position.
+
 For this purpose, this thesis builds upon the typology developed in a 2017 EU report examining the role of advisors and intermediaries as revealed in the Panama Papers. This framework, grounded in empirical observation of a major leak, categorizes intermediaries based on their primary area of expertise and function within the offshore ecosystem. Adopting this typology serves a dual purpose: it provides conceptual clarity for the subsequent discussion and offers a practical schema for efforts to classify the varied intermediary actors identified within the ICIJ dataset, thereby enriching the data for structural analysis.
 
 Based on the EU (2017) framework, we can distinguish the following core types of intermediaries:
@@ -74,57 +76,19 @@ This typology provides a decent conceptual grounding for analyzing the distinct 
 
 Goal: Understanding the different financial instruments they use and how they can be innovated on, and used for different purposes. (Mainly Lafitte, 2024; Chang et al. 2023)
 
-(TBD)
+
+Most important type, Bearer instruments:
+
+Harrington (2016) writes of Bearer instruments as follows:
+*In addition, a few offshore jurisdictions allow the use of “bearer shares,” which are a way of issuing corporate stock without specifying a particular owner. Rather, the owner of a bearer share is literally whoever happens to be holding the stock certificate at any moment in time. This provides strong privacy protections, because as long as one does not have the shares in hand, one can say truthfully under oath, “I do not own that firm.” And if any officers of the firm are ever questioned about its ownership, they can also truthfully say, “I don’t know who owns the company, because bearer shares were issued.” In other words, bearer shares make it impossible to know who owns a company, and that makes it impossible to assign legal responsibility for any taxes, fines, or debts the company incurs.*
 
 
 \section{Propositions}
 \label{sec:2_2}
 
-\textbf{Proposition 1: Offshore Intermediary Networks Exhibit Scale-Free Centrality and Targeted Vulnerability.}
+PLACEHOLDER
 
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Core Idea:} The network connecting clients to the intermediaries who facilitate offshore structures is characterized by a high degree of centrality, where a few "hub" intermediaries serve a disproportionate number of clients, making the overall network susceptible to targeted disruption aimed at these key players.
-    \item \textbf{Contribution:} While Chang et al. (2023) identified scale-free properties in specific contexts (e.g., sanctioned oligarchs), this proposition aims to \textit{systematically quantify} these structural properties across the broader Offshore Leaks Database, explicitly link intermediary centrality to network vulnerability, and test if specific intermediary \textit{types} dominate these central positions.
-    \item \textbf{Sub-propositions:}
-    \begin{itemize}[leftmargin=\parindent]
-        \item \textbf{1a. Power-Law Distribution of Intermediary Connectivity:} The distribution of the number of clients served per intermediary will follow a power law, indicating the presence of highly connected "hub" intermediaries. \textit{Contribution:} Confirms and quantifies the scale-free nature specifically for the \textit{intermediary} nodes across the comprehensive ICIJ dataset.
-        \item \textbf{1b. Hub Intermediary Dominance and Network Fragility:} The overall connectivity and integrity of the client-intermediary network are disproportionately dependent on a small number of high-degree intermediary hubs. Simulated or observed removal of these top intermediaries (ranked by centrality metrics) will lead to significantly greater network fragmentation compared to random node removal. 
-        \item \textbf{1c. Functional Specialization of Hub Intermediaries:} Certain \textit{types} of intermediaries (as defined in 2.1.2 - e.g., Legal Experts, Administrators) will be significantly over-represented among the high-centrality network hubs, suggesting that specific functions are critical bottlenecks in the offshore facilitation process. 
-    \end{itemize}
-\end{itemize}
 
-\textbf{Proposition 2: Intermediary Network Structures and Vulnerabilities Vary Systematically with Client Home Country Governance.}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Core Idea:} The way clients connect to intermediaries, the resulting network structure, and the vulnerability of key intermediaries are not uniform globally but are shaped by the political and institutional environment (rule of law, regime type, corruption) of the clients' home countries.
-    \item \textbf{Contribution:} Extends Chang et al.'s work on secrecy \textit{strategies} by systematically examining how client home country governance shapes the \textit{measurable network structure} centered on intermediaries (e.g., intermediary centrality distributions, clustering, specialization) and the \textit{differential vulnerability} of these intermediary networks, using comprehensive governance indicators (WJP, VDEM) across the full dataset.
-    \item \textbf{Sub-propositions:}
-    \begin{itemize}[leftmargin=\parindent]
-        \item \textbf{2a. Governance-Dependent Intermediary Network Topologies:} Key intermediary-centric network metrics (e.g., parameters of the intermediary degree distribution, average intermediary clustering coefficient, network density around intermediaries) will differ significantly and predictably based on the governance indicators (WJP Rule of Law, V-Dem Regime Type, TI CPI) of the client cohorts' home countries. \textit{Contribution:} Quantifies the link between macro-level governance and the micro-level structure of intermediary networks.
-        \item \textbf{2b. Contextual Variation in Intermediary Hub Fragility:} The "super-fragility" observed by Chang et al. (2023) will manifest as heightened network fragmentation upon removal of top \textit{intermediary hubs} specifically for client cohorts from countries with weaker rule of law or more autocratic regimes, potentially reflecting concentrated trust patterns or higher reliance on specific "gatekeepers" in such contexts. \textit{Contribution:} Tests the fragility hypothesis specifically on intermediary hubs and links it systematically to governance indicators.
-        \item \textbf{2c. Intermediary Specialization Based on Client Governance Profile:} Intermediaries will exhibit measurable specialization, tending to serve clusters of clients predominantly from countries with similar governance profiles (e.g., intermediaries specializing in clients from high-corruption countries vs. those specializing in clients from strong rule-of-law countries). \textit{Contribution:} Moves beyond geographic specialization to test for intermediary specialization based on the \textit{political-institutional} context of their clientele.
-    \end{itemize}
-\end{itemize}
 
-\textbf{Proposition 3: The Functional Roles and Network Positions of Intermediary Types Vary with Client Governance Context.}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Core Idea:} The \textit{types} of intermediaries (Legal, Tax, Admin, Investment) that are most prominent, central, or interconnected within the network depend on the governance context of their clients, reflecting varying demands for specific forms of expertise (e.g., legal protection vs. sophisticated tax planning vs. basic administration).
-    \textbf{Contribution:} This proposition quantitatively tests the relationship between client governance context and the \textit{functional composition} of the intermediary network. It moves beyond simply identifying types to analyze their \textit{relative prominence, centrality, and interplay} within the network structure as shaped by client origin.
-    \item \textbf{Sub-propositions:}
-    \begin{itemize}[leftmargin=\parindent]
-        \item \textbf{3a. Governance-Driven Prominence of Intermediary Functions:} The relative share of network activity (e.g., number of connections, aggregate centrality) accounted for by different intermediary \textit{types} (Legal, Tax, Admin, Investment) will vary significantly and predictably based on the governance indicators of the client cohorts' home countries. \textit{Contribution:} Quantifies how client context shapes the demand for specific intermediary functions within the network.
-        \item \textbf{3b. Contextual Determination of Critical Intermediary Hub Types:} The \textit{type} of intermediary most likely to occupy a high-centrality hub position (as identified in Prop 1c) will differ based on client home country governance. For instance, Legal Experts may be more central hubs for clients from weak rule-of-law states, while Tax Experts may be hubs for clients from high-tax/strong-enforcement states. \textit{Contribution:} Integrates network structure (hub status) with intermediary function (type) and client context (governance).
-        \item \textbf{3c. Varying Intermediary Ecosystems by Client Context:} The patterns of co-occurrence or collaboration \textit{between different types} of intermediaries serving the same client will vary based on the client's home country governance. For example, clients from complex regulatory environments might exhibit denser connections involving multiple specialist intermediary types. \textit{Contribution:} Explores how governance shapes the functional ecosystem and potential division of labor among different intermediary types.
-    \end{itemize}
-\end{itemize}
 
-\textbf{Proposition 4: Intermediary Network Dynamics are Driven by Supply-Side Factors and Regulatory Shocks.}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Core Idea:} Changes in the offshore landscape, such as the introduction of new legal vehicles by tax havens or major international regulatory initiatives (like CRS), significantly impact the structure and activity within the intermediary network, influencing which intermediaries are active, their centrality, and how they connect to clients.
-    \textbf{Contribution:} While prior work studied the \textit{impact} of these factors, this proposition specifically analyzes their effect on the \textit{intermediary network structure}. It aims to quantify how supply-side changes reshape intermediary activity, centrality, specialization, and overall network topology, potentially using event-study or difference-in-differences approaches applied to network metrics over time.
-    \item \textbf{Sub-propositions:}
-    \begin{itemize}[leftmargin=\parindent]
-        \item \textbf{4a. Intermediary Response to Legal Innovation:} Following Laffitte (2024), the introduction of significant new legal vehicles in offshore jurisdictions will be associated with measurable changes in the activity levels, client base composition, or network centrality of \textit{intermediaries} specializing in or operating from those jurisdictions. \textit{Contribution:} Links macro-level legal changes (Laffitte) to observable shifts in micro-level intermediary network roles.
-        \item \textbf{4b. Regulatory Shocks Reshape Intermediary Network Topology:} Major regulatory shocks, particularly the phased implementation of the Common Reporting Standard (CRS), will lead to detectable shifts in the intermediary network structure, such as changes in overall network density, shifts in the centrality ranking of intermediaries, potential exit of certain intermediary types, or altered geographic patterns of intermediary-client links. \textit{Contribution:} Applies event analysis logic (O'Donovan et al.) to track the evolution of the \textit{intermediary network itself} in response to major regulatory interventions (Christensen, Alstadsæter).
-        \item \textbf{4c. Heterogeneous Intermediary Reactions to Supply Shocks:} The impact of legal innovations (4a) and regulatory shocks (4b) on intermediaries and their network position will vary significantly depending on the \textit{type} of intermediary (e.g., Tax Experts vs. Administrators might react differently to CRS) and the \textit{governance context} of the clients they primarily serve (linking back to Prop 2 \& 3). \textit{Contribution:} Examines differential effects, recognizing that intermediaries are not a monolithic group and serve diverse clienteles facing different pressures.
-    \end{itemize}
-\end{itemize}
+
