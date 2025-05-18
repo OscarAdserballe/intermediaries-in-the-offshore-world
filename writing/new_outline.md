@@ -78,7 +78,11 @@ Other Data Sources
 
 ##### Degree distribution of intermediaries
 * Show power-alw distribution fits well
-* Test significance against other distributions? Random Graph?
+* Use MLE to fit power law
+* Goodness-of-fit using Kolmogorov-Smirnov statistics. ISSUE: assumes we know parameter a priori - not fitting it a posterriori like here with MLE. Recall Lillefors correction in the context of wehn we test against normal distributions. If this is what we want, this is the seminal paper:
+* Clauset, A., Shalizi, C. R., & Newman, M. E. J. (2009). Power-law distributions in empirical data. SIAM Review, 51(4), 661-703. This paper provides a rigorous statistical framework for identifying and validating power-law distributions.
+* An alternative to this is just comparing the fit of the power-law distribution to the fit of a log-normal distribution. 
+* Note, we already have Kejriwal \& Dang (2020) showing this, so we can just use their results if need be
 
 
 ## Geogprahical Specialisation
@@ -87,7 +91,6 @@ Other Data Sources
 * Just a basic bar plot of 15 biggest + pie chart showing how much that covers
 
 ##### How many countries do intermediaries incorporate entities in?
-* Power-law distribution of how many they incorporate
 * Distribution of the number of countries they incorporate in
 
 Transition: Doesn't account for the fact that some just incorporate more!
@@ -136,8 +139,8 @@ HOW TO TEST SIGNIFICANCE HERE?
 Idea: Though wit hthat many countries and jurisdictions we'd end up with a super sparse matrix, we can do some feature selection exactly by virtue of the fact that countries and officers are so tightly located. We have this long dataframe in this case, with dictionary objects flattened out as columns, which we then proceed to try to cluster then doing some pca/t-sne/mds to visualise in 2-dimensions
 
 
-##### Case Studies of One of Each Type in The Appendix
-Having the case study of each of those revealed into the appendix
+##### case studies of one of each type in the appendix
+having the case study of each of those revealed into the appendix
 
 
 
