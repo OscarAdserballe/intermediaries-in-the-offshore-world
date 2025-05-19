@@ -21,9 +21,9 @@
 \contentsline {section}{\numberline {3.1}The ICIJ Offshore Leaks Database}{15}{section.3.1}%
 \contentsline {section}{\numberline {3.2}External Data Sources}{16}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Using Agentic AI to Scrape Data on Intermediaries.}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Use of LLMs}{23}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Use of LLMs in the Broader Paper}{23}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Empirical Analysis}{24}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion}{34}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{35}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Appendix}{36}{appendix.A}%
+\contentsline {section}{\numberline {3.4}Use of LLMs}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Use of LLMs in the Broader Paper}{24}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Empirical Analysis}{25}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion}{40}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{41}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Appendix}{42}{appendix.A}%

@@ -101,6 +101,15 @@ States only a necessary condition; not sufficinet.
 
 Results: Really in the major financial centres of the world. New York, San Francisco, London, Hong Kong, Singapore, Zurich, Amsterdam, Luxembourg.
 
+"The tax practitioners we are interested in are solely those who are responsible
+for managing and advising on corporate taxation for larger firms. Since this is not
+an established function with set titles and accreditations, titles, and backgrounds
+can vary between firms and countries. We therefore read job ads and LinkedIn
+profiles containing the different types of titles to ensure that we understood the
+practitioners behind the titles. Illustrative examples include an ‘International Tax
+Manager’ at a large shipping firm, a ‘Tax Manager’ at a large Big Four consulting
+firm, and a ‘Head of Corporate Tax’ at a large international bank"
+
 
 # Future Classification
 
@@ -114,6 +123,9 @@ Are they located offshore or onshore? (cf. Stausholm)
 What the hell about regulation? Why can we not just legally punish attempts at tax avoidance, if the intent was so lie for example Zucman mentions in his book are laws in place in the US that would allow for this?
 
 Is it sufficiently theoretical?
+
+
+Target intermediaries from one's own country. At least a huge short-term shock, go medieval on their ass. In fact, not even weaponising interdependence, rather just... penalising one's own countrymen for engagin in illegal activity. A way out from the difficult cooperative games that are played at the international level.
 
 
 
