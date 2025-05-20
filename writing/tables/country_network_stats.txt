@@ -1,0 +1,103 @@
+Full country network: 121 nodes, 2716 edges
+Network density: 0.3741
+Average degree: 44.89
+Average clustering coefficient: 0.7728
+Number of connected components: 2
+Number of singletons: 0
+Percentage of singletons: 0.00%
+
+Country node appearances:
+{'ZAF': 70, 'LIE': 129, 'MCO': 184, 'LBN': 55, 'CHE': 1545, 'MYS': 299, 'ESP': 239, 'GBR': 1258, 'JEY': 390, 'FRA': 133, 'LUX': 409, 'TWN': 107, 'EST': 15, 'MEX': 36, 'ARG': 98, 'GGY': 277, 'USA': 1042, 'VEN': 192, 'HKG': 2865, 'PAN': 1203, 'SAU': 48, 'DEU': 81, 'KWT': 19, 'POL': 14, 'BRA': 397, 'TUR': 30, 'EGY': 26, 'CAN': 195, 'PRT': 37, 'RUS': 152, 'IMN': 264, 'MLT': 57, 'HUN': 12, 'ISR': 154, 'GRC': 76, 'ROU': 7, 'PHL': 22, 'ITA': 54, 'CHN': 320, 'GIB': 85, 'BHS': 489, 'HND': 11, 'AUS': 69, 'AUT': 21, 'SWE': 32, 'SVN': 3, 'URY': 318, 'VGB': 6285, 'BLZ': 24, 'THA': 168, 'ECU': 359, 'COK': 224, 'COL': 270, 'ARE': 176, 'WSM': 818, 'PER': 27, 'CZE': 17, 'KOR': 11, 'CRI': 133, 'AND': 23, 'CYP': 190, 'CYM': 363, 'LVA': 20, 'GTM': 441, 'AZE': 6, 'UKR': 31, 'NZL': 40, 'CHL': 70, 'SLV': 37, 'SYC': 241, 'UGA': 1, 'ISL': 9, 'BOL': 18, 'BEL': 41, 'NIU': 53, 'MNE': 2, 'NOR': 16, 'MAC': 7, 'KEN': 15, 'SYR': 5, 'VNM': 9, 'NLD': 64, 'TCA': 17, 'BMU': 103, 'BRB': 1137, 'DNK': 13, 'MUS': 139, 'MOZ': 3, 'JPN': 20, 'FIN': 13, 'IRN': 1, 'SGP': 578, 'BHR': 12, 'KNA': 41, 'DOM': 60, 'NGA': 15, 'TUN': 4, 'BLR': 4, 'IND': 13, 'DMA': 13, 'IDN': 40, 'ATG': 10, 'IRL': 79, 'JOR': 18, 'VUT': 6, 'PRY': 10, 'NIC': 10, 'ABW': 6, 'MLI': 1, 'LKA': 3, 'QAT': 10, 'LSO': 1, 'CUB': 8, 'CIV': 7, 'TZA': 3, 'AIA': 19, 'MKD': 2, 'ZWE': 5, 'BGR': 7, 'DJI': 1, 'MDA': 1, 'GHA': 2, 'SEN': 1, 'PRI': 3, 'CUW': 5, 'NRU': 1, 'LTU': 4, 'BWA': 4, 'HRV': 4, 'TTO': 5, 'LBY': 2, 'BGD': 2, 'AGO': 4, 'VCT': 7, 'JAM': 8, 'SDN': 1, 'VIR': 7, 'CMR': 1, 'HTI': 4, 'OMN': 3, 'MAR': 1, 'KAZ': 5, 'ALB': 1, 'SVK': 1, 'LCA': 10, 'TCD': 4, 'BRN': 3, 'MWI': 1, 'GEO': 2, 'NAM': 1, 'CAF': 1, 'LBR': 4, 'GUM': 1, 'PAK': 4, 'ZMB': 2, 'YEM': 1, 'ASM': 1, 'SXM': 1, 'UZB': 1, 'XXX': 8141, 'MHL': 5, 'FJI': 2, 'GRD': 2, 'SRB': 1, 'GUF': 3, 'MNG': 1}
+
+Top 10 countries by betweenness centrality (excluding XXX):
+  node  betweenness  eigenvector  appearances               regime
+0  VGB     0.184274     0.135730         6285          Micro-state
+1  USA     0.053129     0.134776         1042    Liberal Democracy
+2  CHE     0.038620     0.131234         1545    Liberal Democracy
+3  GBR     0.028499     0.133304         1258    Liberal Democracy
+4  MUS     0.023743     0.129268          139    Liberal Democracy
+5  BHS     0.020768     0.131846          489          Micro-state
+6  BMU     0.020273     0.128895          103          Micro-state
+7  PAN     0.019726     0.096285         1203  Electoral Democracy
+8  SGP     0.019164     0.131722          578  Electoral Autocracy
+9  URY     0.016748     0.030603          318    Liberal Democracy
+
+Top 10 countries by eigenvector centrality (excluding XXX):
+  node  eigenvector  betweenness  appearances               regime
+0  VGB     0.135730     0.184274         6285          Micro-state
+1  USA     0.134776     0.053129         1042    Liberal Democracy
+2  GBR     0.133304     0.028499         1258    Liberal Democracy
+3  HKG     0.133292     0.016464         2865     Closed Autocracy
+4  JEY     0.132590     0.013250          390          Micro-state
+5  CHN     0.132406     0.008508          320     Closed Autocracy
+6  CAN     0.132285     0.008778          195    Liberal Democracy
+7  BHS     0.131846     0.020768          489          Micro-state
+8  SGP     0.131722     0.019164          578  Electoral Autocracy
+9  CYM     0.131492     0.012494          363          Micro-state
+
+Number of nodes: 121, hypothesis tests (pairs): 7260
+Bonferroni p-value threshold (@α=0.05): 6.89e-06
+Number of significant associations after Bonferroni correction: 58
+
+Significant country associations after Bonferroni correction (excluding XXX):
+        u    v             u_regime             v_regime  weight   support         lift    odds_ratio       p_value
+76    VGB  WSM          Micro-state          Micro-state     401  0.016719     1.870714  2.824422e+00  7.241295e-46
+498   WSM  CYM          Micro-state          Micro-state      84  0.003502     6.784861  9.387888e+00  1.344387e-45
+105   VGB  CYM          Micro-state          Micro-state     182  0.007588     1.913291  2.886250e+00  9.578337e-23
+775   CHN  BMU     Closed Autocracy          Micro-state      21  0.000876    15.281068  2.019830e+01  3.355431e-19
+2405  CYM  BMU          Micro-state          Micro-state      21  0.000876    13.470914  1.762655e+01  4.457315e-18
+2032  SGP  MYS  Electoral Autocracy  Electoral Autocracy      38  0.001584     5.273588  6.240315e+00  5.660027e-17
+102   VGB  SGP          Micro-state  Electoral Autocracy     242  0.010090     1.597732  2.069418e+00  9.745711e-17
+351   PAN  SYC  Electoral Democracy  Electoral Autocracy      47  0.001960     3.888094  4.733658e+00  8.084591e-16
+501   WSM  COK          Micro-state          Micro-state      37  0.001543     4.843084  5.821571e+00  1.570407e-15
+496   WSM  SGP          Micro-state  Electoral Autocracy      60  0.002502     3.043629  3.460845e+00  1.888695e-14
+2044  SGP  BMU  Electoral Autocracy          Micro-state      20  0.000834     8.057245  1.007168e+01  5.067952e-13
+488   WSM  SYC          Micro-state  Electoral Autocracy      34  0.001418     4.136473  4.810004e+00  2.362311e-12
+2033  SGP  CYM  Electoral Autocracy          Micro-state      34  0.001418     3.886566  4.383929e+00  1.754494e-11
+2035  SGP  COK  Electoral Autocracy          Micro-state      25  0.001042     4.631117  5.272066e+00  2.229895e-10
+366   PAN  AIA  Electoral Democracy          Micro-state      11  0.000459    11.542372  2.626919e+01  2.519874e-10
+1190  USA  BMU    Liberal Democracy          Micro-state      22  0.000917     4.916311  6.087412e+00  4.617713e-10
+497   WSM  TWN          Micro-state    Liberal Democracy      20  0.000834     5.480429  6.648518e+00  5.267739e-10
+768   CHN  CYM     Closed Autocracy          Micro-state      23  0.000959     4.748898  5.312458e+00  8.314918e-10
+2377  EGY  GUF  Electoral Autocracy          Micro-state       3  0.000125   922.461538           inf  1.130874e-09
+2465  BLZ  TCA          Micro-state          Micro-state       4  0.000167   235.137255  3.684154e+02  1.818912e-09
+2079  TWN  CYM    Liberal Democracy          Micro-state      13  0.000542     8.027394  9.296383e+00  8.881366e-09
+1820  NLD  GUF    Liberal Democracy          Micro-state       3  0.000125   374.750000           inf  1.812181e-08
+2317  AUS  GUF    Liberal Democracy          Micro-state       3  0.000125   347.594203           inf  2.278884e-08
+2170  MUS  CYM    Liberal Democracy          Micro-state      14  0.000584     6.654696  7.540264e+00  2.738194e-08
+2617  IRL  GUF    Liberal Democracy          Micro-state       3  0.000125   303.594937           inf  3.439552e-08
+2423  CYM  JAM          Micro-state  Electoral Democracy       5  0.000208    41.294766  1.099534e+02  4.168447e-08
+2034  SGP  MUS  Electoral Autocracy    Liberal Democracy      17  0.000709     5.074905  5.783408e+00  4.457072e-08
+2673  AGO  GUF     Closed Autocracy          Micro-state       2  0.000083  3997.333333  2.397900e+04  6.258255e-08
+2579  BMU  GUF          Micro-state          Micro-state       3  0.000125   232.854369           inf  7.692159e-08
+419   JEY  BMU          Micro-state          Micro-state      12  0.000500     7.164750  8.199198e+00  1.167070e-07
+2188  MUS  GUF    Liberal Democracy          Micro-state       3  0.000125   172.546763           inf  1.905039e-07
+2222  RUS  GUF  Electoral Autocracy          Micro-state       3  0.000125   157.789474           inf  2.495751e-07
+2700  GUF  JAM          Micro-state  Electoral Democracy       2  0.000083  1998.666667  7.991667e+03  2.920194e-07
+1695  ARE  GUF     Closed Autocracy          Micro-state       3  0.000125   136.272727           inf  3.884986e-07
+1547  CYP  GUF    Liberal Democracy          Micro-state       3  0.000125   126.231579           inf  4.893986e-07
+584   CAN  GUF    Liberal Democracy          Micro-state       3  0.000125   122.994872           inf  5.292771e-07
+2494  KOR  GUF    Liberal Democracy          Micro-state       2  0.000083  1453.575758  5.327111e+03  5.735617e-07
+642   HKG  CYM     Closed Autocracy          Micro-state      76  0.003169     1.752685  1.977945e+00  6.607307e-07
+650   HKG  BMU     Closed Autocracy          Micro-state      31  0.001293     2.519541  3.197566e+00  6.830260e-07
+300   ESP  GUF    Liberal Democracy          Micro-state       3  0.000125   100.351464           inf  9.772658e-07
+1492  SYC  AIA  Electoral Autocracy          Micro-state       5  0.000208    26.189124  3.590950e+01  1.018646e-06
+2571  BMU  IRL          Micro-state    Liberal Democracy       6  0.000250    17.685142  2.017342e+01  1.167818e-06
+1066  IMN  GUF          Micro-state          Micro-state       3  0.000125    90.848485           inf  1.318713e-06
+502   WSM  MYS          Micro-state  Electoral Autocracy      28  0.001167     2.745713  2.994348e+00  1.539090e-06
+2662  KWT  GUF     Closed Autocracy          Micro-state       2  0.000083   841.543860  2.819294e+03  1.782859e-06
+2039  SGP  TWN  Electoral Autocracy    Liberal Democracy      13  0.000542     5.041425  5.706195e+00  1.848149e-06
+2622  IRL  JAM    Liberal Democracy  Electoral Democracy       3  0.000125   113.848101  1.886842e+02  1.903372e-06
+2515  JPN  GUF    Liberal Democracy          Micro-state       2  0.000083   799.466667  2.662556e+03  1.980899e-06
+796   CHN  GUF     Closed Autocracy          Micro-state       3  0.000125    74.950000           inf  2.353191e-06
+2307  AUS  IRL    Liberal Democracy    Liberal Democracy       5  0.000208    21.999633  2.516997e+01  3.250014e-06
+2416  CYM  GUF          Micro-state          Micro-state       3  0.000125    66.071625           inf  3.438839e-06
+2303  AUS  KOR    Liberal Democracy    Liberal Democracy       3  0.000125    94.798419  1.358352e+02  3.698537e-06
+1389  DMA  DOM          Micro-state  Electoral Democracy       3  0.000125    92.246154  1.258632e+02  4.181584e-06
+440   JEY  GUF          Micro-state          Micro-state       3  0.000125    61.497436           inf  4.267125e-06
+2126  UKR  GUF  Electoral Autocracy          Micro-state       2  0.000083   515.784946  1.651862e+03  4.846507e-06
+2306  AUS  IND    Liberal Democracy  Electoral Democracy       3  0.000125    80.214047  1.086591e+02  6.384382e-06
+2004  MEX  GUF  Electoral Democracy          Micro-state       2  0.000083   444.148148  1.408647e+03  6.565322e-06
+2369  EGY  AGO  Electoral Autocracy     Closed Autocracy       2  0.000083   461.230769  9.981667e+02  6.771109e-06
+
+Filtered graph: 15 nodes, 23 edges

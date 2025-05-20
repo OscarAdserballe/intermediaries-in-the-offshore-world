@@ -1,4 +1,322 @@
 \chapter{Appendix}
 \label{chap:appendix}
 
+\section{Country Network Centrality and Associations}
+\label{sec:appendix_country_network}
+
+Table \ref{tab:appendix_country_betweenness_app} lists the top 10 countries by betweenness centrality and Table \ref{tab:appendix_country_eigenvector_app} by eigenvector centrality in the full co-service network. Table \ref{tab:appendix_significant_country_associations_app} details significant country associations.
+
+\begin{table}[htbp]
+\centering
+\caption{Top 10 Countries by Betweenness Centrality in the Full Co-Service Network (excluding XXX)}
+\label{tab:appendix_country_betweenness_app}
+\begin{tabular}{lrrrr}
+\toprule
+Node & Betweenness & Eigenvalue & Appearances & Regime              \\
+\midrule
+VGB  & 0.18    & 0.14    & 6285        & Micro-state         \\
+USA  & 0.053    & 0.13    & 1042        & Liberal Democracy   \\
+CHE  & 0.039    & 0.13    & 1545        & Liberal Democracy   \\
+GBR  & 0.028    & 0.13    & 1258        & Liberal Democracy   \\
+MUS  & 0.024    & 0.13    & 139         & Liberal Democracy   \\
+BHS  & 0.021    & 0.13    & 489         & Micro-state         \\
+BMU  & 0.020    & 0.13    & 103         & Micro-state         \\
+PAN  & 0.020    & 0.096    & 1203        & Electoral Democracy \\
+SGP  & 0.019    & 0.13    & 578         & Electoral Autocracy \\
+URY  & 0.017    & 0.031    & 318         & Liberal Democracy   \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Top 10 Countries by Eigenvector Centrality in the Full Co-Service Network (excluding XXX)}
+\label{tab:appendix_country_eigenvector_app}
+\begin{tabular}{lrrrr}
+\toprule
+Node & Eigenvalue & Betweenness & Appearances & Regime              \\
+\midrule
+VGB  & 0.14    & 0.18    & 6285        & Micro-state         \\
+USA  & 0.13    & 0.053    & 1042        & Liberal Democracy   \\
+GBR  & 0.13    & 0.028    & 1258        & Liberal Democracy   \\
+HKG  & 0.13    & 0.016    & 2865        & Closed Autocracy    \\
+JEY  & 0.13    & 0.013    & 390         & Micro-state         \\
+CHN  & 0.13    & 0.0085    & 320         & Closed Autocracy    \\
+CAN  & 0.13    & 0.0088    & 195         & Liberal Democracy   \\
+BHS  & 0.13    & 0.021    & 489         & Micro-state         \\
+SGP  & 0.13    & 0.019    & 578         & Electoral Autocracy \\
+CYM  & 0.13    & 0.012    & 363         & Micro-state         \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+{\scriptsize % Smaller font for the large table
+\begin{longtable}{@{}lllp{2.2cm}p{2.2cm}rrr@{}}
+\caption{Significant Country Associations in Co-Service Network (Bonferroni Corrected $p < 6.89 \times 10^{-6}$)} \\
+\label{tab:appendix_significant_country_associations_app} \\
+\toprule
+    & u   & v   & u\_regime            & v\_regime            & support  & lift      & p\_value      \\
+\midrule
+\endfirsthead
+\multicolumn{8}{c}%
+{{\tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+    & u   & v   & u\_regime            & v\_regime            & support  & lift      & p\_value      \\
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{{Continued on next page}} \\
+\midrule
+\endfoot
+\bottomrule
+\endlastfoot
+76  & VGB & WSM & Micro-state         & Micro-state         & 0.017    & 1.87      & 7.24e-46  \\
+498 & WSM & CYM & Micro-state         & Micro-state         & 0.0035   & 6.78      & 1.34e-45  \\
+105 & VGB & CYM & Micro-state         & Micro-state         & 0.0076   & 1.91      & 9.58e-23  \\
+775 & CHN & BMU & Closed Autocracy    & Micro-state         & 0.00088  & 15.3      & 3.36e-19  \\
+2405& CYM & BMU & Micro-state         & Micro-state         & 0.00088  & 13.5      & 4.46e-18  \\
+2032& SGP & MYS & Electoral Autocracy & Electoral Autocracy & 0.0016   & 5.27      & 5.66e-17  \\
+102 & VGB & SGP & Micro-state         & Electoral Autocracy & 0.010    & 1.60      & 9.75e-17  \\
+351 & PAN & SYC & Electoral Democracy & Electoral Autocracy & 0.0020   & 3.89      & 8.08e-16  \\
+501 & WSM & COK & Micro-state         & Micro-state         & 0.0015   & 4.84      & 1.57e-15  \\
+496 & WSM & SGP & Micro-state         & Electoral Autocracy & 0.0025   & 3.04      & 1.89e-14  \\
+2044& SGP & BMU & Electoral Autocracy & Micro-state         & 0.00083  & 8.06      & 5.07e-13  \\
+488 & WSM & SYC & Micro-state         & Electoral Autocracy & 0.0014   & 4.14      & 2.36e-12  \\
+2033& SGP & CYM & Electoral Autocracy & Micro-state         & 0.0014   & 3.89      & 1.75e-11  \\
+2035& SGP & COK & Electoral Autocracy & Micro-state         & 0.0010   & 4.63      & 2.23e-10  \\
+1190& USA & BMU & Liberal Democracy   & Micro-state         & 0.00092  & 4.92      & 4.62e-10  \\
+497 & WSM & TWN & Micro-state         & Liberal Democracy   & 0.00083  & 5.48      & 5.27e-10  \\
+768 & CHN & CYM & Closed Autocracy    & Micro-state         & 0.00096  & 4.75      & 8.31e-10  \\
+2034& SGP & MUS & Electoral Autocracy & Liberal Democracy   & 0.00071  & 5.07      & 4.46e-08  \\
+419 & JEY & BMU & Micro-state         & Micro-state         & 0.00050  & 7.16      & 1.17e-07  \\
+642 & HKG & CYM & Closed Autocracy    & Micro-state         & 0.0032   & 1.75      & 6.61e-07  \\
+650 & HKG & BMU & Closed Autocracy    & Micro-state         & 0.0013   & 2.52      & 6.83e-07  \\
+502 & WSM & MYS & Micro-state         & Electoral Autocracy & 0.0012   & 2.75      & 1.54e-06  \\
+2039& SGP & TWN & Electoral Autocracy & Liberal Democracy   & 0.00054  & 5.04      & 1.85e-06  \\
+2307& AUS & IRL & Liberal Democracy   & Liberal Democracy   & 0.00021  & 22.0      & 3.25e-06  \\
+\end{longtable}
+} 
+\clearpage
+\newpage
+
+
+\section{Jurisdiction Network Centrality and Associations}
+\label{sec:appendix_jurisdiction_network}
+
+Table \ref{tab:appendix_jurisdiction_betweenness_app} shows the top 10 jurisdictions by betweenness centrality and Table \ref{tab:appendix_jurisdiction_eigenvector_app} by eigenvector centrality in the full co-usage network. Significant jurisdiction associations are detailed in Table \ref{tab:appendix_significant_jurisdiction_associations_app}.
+
+\begin{table}[htbp]
+\centering
+\caption{Top 10 Jurisdictions by Betweenness Centrality in the Full Co-Usage Network (excluding XXX)}
+\label{tab:appendix_jurisdiction_betweenness_app}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+Node & Betweenness & Eigenvalue & Appearances & Jurisdiction Legal Technology                               \\
+\midrule
+VGB  & 0.20    & 0.26    & 13533       & Dual-Purpose/Personal                                       \\
+BHS  & 0.084    & 0.26    & 2099        & Banking/Corporate/Dual-Purpose/Other Technologies/Personal  \\
+PAN  & 0.060    & 0.25    & 6533        & Banking/Corporate/Dual-Purpose                              \\
+HKG  & 0.058    & 0.24    & 625         & Banking/Corporate/Other Technologies                        \\
+CYM  & 0.048    & 0.21    & 290         & Banking/Corporate/Dual-Purpose                              \\
+WSM  & 0.027    & 0.20    & 1352        & Dual-Purpose/Personal                                       \\
+USA  & 0.019    & 0.23    & 387         & None                                                        \\
+COK  & 0.018    & 0.12    & 954         & Banking/Corporate/Dual-Purpose/Personal                     \\
+CYP  & 0.017    & 0.22    & 45          & Banking/Corporate/Dual-Purpose                              \\
+SGP  & 0.013    & 0.19    & 355         & Banking/Other Technologies                                  \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Top 10 Jurisdictions by Eigenvector Centrality in the Full Co-Usage Network (excluding XXX)}
+\label{tab:appendix_jurisdiction_eigenvector_app}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+Node & Eigenvalue & Betweenness & Appearances & Jurisdiction Legal Technology                               \\
+\midrule
+VGB  & 0.26    & 0.20    & 13533       & Dual-Purpose/Personal                                       \\
+BHS  & 0.26    & 0.084    & 2099        & Banking/Corporate/Dual-Purpose/Other Technologies/Personal  \\
+PAN  & 0.25    & 0.060    & 6533        & Banking/Corporate/Dual-Purpose                              \\
+HKG  & 0.24    & 0.058    & 625         & Banking/Corporate/Other Technologies                        \\
+USA  & 0.23    & 0.019    & 387         & None                                                        \\
+CYP  & 0.22    & 0.017    & 45          & Banking/Corporate/Dual-Purpose                              \\
+CYM  & 0.21    & 0.048    & 290         & Banking/Corporate/Dual-Purpose                              \\
+WSM  & 0.20    & 0.027    & 1352        & Dual-Purpose/Personal                                       \\
+JEY  & 0.20    & 0.011    & 28          & Dual-Purpose/Other Technologies                             \\
+SGP  & 0.19    & 0.013    & 355         & Banking/Other Technologies                                  \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\clearpage
+{\tiny % Even smaller font for this very wide table
+\begin{longtable}{@{}lllp{3cm}p{3cm}rrr@{}} % Adjusted column spec and count
+\caption{Significant Jurisdiction Associations in Co-Usage Network (Bonferroni Corrected $p < 6.10 \times 10^{-5}$)} \\
+\label{tab:appendix_significant_jurisdiction_associations_app} \\
+\toprule
+    & u   & v   & u\_legal\_technology                             & v\_legal\_technology                             & support  & lift      & p\_value      \\ % Removed weight and odds_ratio
+\midrule
+\endfirsthead
+\multicolumn{8}{c}% % Adjusted column span
+{{\tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+    & u   & v   & u\_jurisdiction\_legal\_technology                             & v\_jurisdiction\_legal\_technology                             & support  & lift      & p\_value      \\ % Removed weight and odds_ratio
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{{Continued on next page}} \\ % Adjusted column span
+\midrule
+\endfoot
+\midrule
+\bottomrule
+\endlastfoot
+72  & BHS & NIU & Bnk/Corp/Dual/Oth Tech/Pers & Dual-Purpose                & 0.016    & 4.6       & 1.80e-165 \\
+108 & NIU & WSM & Dual-Purpose                & Dual-Purpose/Personal       & 0.012    & 5.3       & 9.68e-134 \\
+106 & NIU & SYC & Dual-Purpose                & Dual-Purpose/Personal       & 0.010    & 4.1       & 1.89e-85  \\
+122 & SYC & WSM & Dual-Purpose/Personal       & Dual-Purpose/Personal       & 0.011    & 3.3       & 4.50e-73  \\
+3   & PAN & SYC & Bnk/Corp/Dual-Purpose       & Dual-Purpose/Personal       & 0.027    & 1.6       & 2.50e-49  \\
+73  & BHS & SYC & Bnk/Corp/Dual/Oth Tech/Pers & Dual-Purpose/Personal       & 0.013    & 2.3       & 2.62e-48  \\
+123 & SYC & AGO & Dual-Purpose/Personal       & None                        & 0.0043   & 4.6       & 2.20e-40  \\
+4   & PAN & USA & Bnk/Corp/Dual-Purpose       & None                        & 0.0095   & 2.2       & 1.33e-39  \\
+121 & SYC & USA & Dual-Purpose/Personal       & None                        & 0.0041   & 4.2       & 9.61e-36  \\
+143 & USA & AGO & None                        & None                        & 0.0021   & 8.6       & 1.49e-32  \\
+2   & PAN & NIU & Bnk/Corp/Dual-Purpose       & Dual-Purpose                & 0.018    & 1.6       & 1.88e-32  \\
+174 & WSM & CYM & Dual-Purpose/Personal       & Bnk/Corp/Dual-Purpose       & 0.0031   & 4.6       & 1.31e-29  \\
+1   & PAN & BHS & Bnk/Corp/Dual-Purpose       & Bnk/Corp/Dual/Oth Tech/Pers & 0.033    & 1.4       & 3.87e-29  \\
+74  & BHS & USA & Bnk/Corp/Dual/Oth Tech/Pers & None                        & 0.0042   & 3.0       & 1.33e-23  \\
+162 & WSM & HKG & Dual-Purpose/Personal       & Bnk/Corp/Oth Tech           & 0.0043   & 2.9       & 4.59e-23  \\
+204 & HKG & CYM & Bnk/Corp/Oth Tech           & Bnk/Corp/Dual-Purpose       & 0.0018   & 5.8       & 3.16e-21  \\
+107 & NIU & USA & Dual-Purpose                & None                        & 0.0025   & 3.9       & 1.05e-19  \\
+6   & PAN & AGO & Bnk/Corp/Dual-Purpose       & None                        & 0.0074   & 1.8       & 3.80e-18  \\
+163 & WSM & AGO & Dual-Purpose/Personal       & None                        & 0.0027   & 3.2       & 1.30e-16  \\
+140 & USA & WSM & None                        & Dual-Purpose/Personal       & 0.0026   & 2.8       & 8.95e-14  \\
+7   & PAN & GBR & Bnk/Corp/Dual-Purpose       & None                        & 0.0023   & 2.4       & 1.50e-13  \\
+76  & BHS & AGO & Bnk/Corp/Dual/Oth Tech/Pers & None                        & 0.0032   & 2.4       & 3.06e-13  \\
+128 & SYC & BLZ & Dual-Purpose/Personal       & Bnk/Corp/Dual-Purpose/Pers  & 0.00092  & 6.0       & 3.06e-12  \\
+75  & BHS & WSM & Bnk/Corp/Dual/Oth Tech/Pers & Dual-Purpose/Personal       & 0.0080   & 1.6       & 3.94e-12  \\
+10  & PAN & CRI & Bnk/Corp/Dual-Purpose       & None                        & 0.0011   & 3.1       & 7.44e-11  \\
+109 & NIU & AGO & Dual-Purpose                & None                        & 0.0017   & 2.8       & 2.41e-09  \\
+81  & BHS & BLZ & Bnk/Corp/Dual/Oth Tech/Pers & Bnk/Corp/Dual-Purpose/Pers  & 0.00083  & 3.7       & 1.18e-07  \\
+34  & VGB & NIU & Dual-Purpose/Personal       & Dual-Purpose                & 0.025    & 1.1       & 4.69e-07  \\
+9   & PAN & CYP & Bnk/Corp/Dual-Purpose       & Bnk/Corp/Dual-Purpose       & 0.0012   & 2.3       & 9.42e-07  \\
+207 & HKG & SGP & Bnk/Corp/Oth Tech           & Bnk/Oth Tech                & 0.0011   & 2.8       & 2.53e-06  \\
+125 & SYC & HKG & Dual-Purpose/Personal       & Bnk/Corp/Oth Tech           & 0.0028   & 1.8       & 3.98e-06  \\
+\end{longtable}
+} % End tiny
+\clearpage
+
+\section{Classification of Intermediaries}
+\label{sec:appendix_intermediary_classification}
+
+To instruct the AI agent on how to perform the classification and the specific structure of the information to return, the following prompt template is utilized. This prompt defines the categories, provides keywords for guidance, and specifies the desired output fields. The agent's output for each intermediary is a structured data record, typically resembling a JSON object or a Python dictionary, which includes the fields detailed in the prompt.
+
+\subsection*{Classification Prompt}
+The core prompt provided to the AI agent for classification is as follows (where \texttt{\{intermediary\_name\}} and \texttt{\{log\_summary\_for\_classification\}} are dynamically inserted):
+\begin{verbatim}
+Classify the intermediary: {intermediary_name}
+
+Based *only* on the information gathered in the following search log.
+{log_summary_for_classification}
+
+Classify this intermediary into ONE of these categories based on their
+likely primary role in offshore activities:
+- Tax Expert: Focuses on tax planning, compliance, advisory. Keywords:
+  tax advisory, international tax, tax compliance, tax returns,
+  transfer pricing, VAT, tax structuring.
+- Legal Expert: Focuses on legal structuring, compliance, incorporation,
+  representation. Keywords: legal services, corporate law, entity formation,
+  incorporation, contracts, litigation, legal opinions, regulatory
+  compliance, M&A legal, lawyer, attorney, solicitor.
+- Administrator: Focuses on accounting, auditing, financial reporting,
+  company administration. Keywords: accounting, bookkeeping, audit,
+  financial statements, reporting, company secretarial, payroll,
+  administration services, domiciliation, accountant, auditor.
+- Investment Advisor: Focuses on managing financial assets and investments.
+  Keywords: investment management, wealth management, asset management,
+  portfolio management, financial planning, investment strategy,
+  securities, funds, financial advisor.
+
+Provide a structured classification including:
+- classification (Enum: Tax Expert, Legal Expert, Administrator, Investment Advisor)
+- role_muddled (bool: true if the role seems mixed or unclear)
+- role_muddled_reasoning (str: explanation if role_muddled is true)
+- is_individual (bool: based on the name and findings, is this likely a person?)
+- job_title (str: inferred job title if possible, e.g., "Lawyer", "Accountant",
+  "Director", or "Unknown")
+- confidence (Enum: Low, High - Use Low if evidence is sparse, contradictory,
+  or confidence in the source/relevance is low)
+- justification (str: detailed reasoning for the classification, referencing the
+  search log)
+- key_evidence (list[str]: specific snippets or findings from the search
+  results supporting the classification)
+
+Analyze the content of the search results carefully. Prioritize information
+directly describing the intermediary's services or professional role.
+\end{verbatim}
+
+\subsection*{Examples of Dynamic Search and Structured Output}
+
+The agent's search process is dynamic. It begins with a general query (the intermediary's name) and, based on the retrieved information's relevance and completeness, may formulate up to two additional, more specific queries. For instance, if initial results for a company are vague, subsequent queries might include terms like "services offered" or "business activity." The classification is then made based on the entirety of the gathered search logs.
+
+Sometimes it's just not possible to find anything useful, hence the confidence section. Any cases where `confidence` is low, they are excluded from the analysis sections.
+
+The output for each intermediary is a structured record. While the `key\_evidence` field in the prompt requests specific snippets, for comprehensiveness in these examples, it contains the full, somewhat verbose, search log detailing each iteration of the dynamic search process.
+
+The following examples illustrate this process and the resulting structured output, taken directly from the enrichment process. The first provides an example of where it's impossible to find clear information linked to the interemediary resulting in low confidence, while the second is a clear case of a legal expert.
+
+\subsubsection*{Example 1: OPULENT OPAL HOLDINGS LIMITED}
+\textbf{Dynamic Search Summary:}
+\begin{itemize}
+    \item \textbf{Iteration 0 Query:} `OPULENT OPAL HOLDINGS LIMITED`
+    \item \textbf{Findings:} Results were ambiguous, pointing to "OPULENT OPAL CONSTRUCTION LIMITED," a subsidiary link to "Opal Holdings Pte Ltd" (itself a subsidiary of CapitaLand, suggesting a holding structure), and unrelated products (paint, home decor).
+    \item \textbf{Iteration 1 Query:} `OPULENT OPAL HOLDINGS LIMITED primary business activities`
+    \item \textbf{Findings:} Retrieved general information on Bank Secrecy Act compliance for businesses, potentially triggered by "holdings," and another mention of the CapitaLand subsidiary link.
+    \item \textbf{Iteration 2 Query:} `OPULENT OPAL HOLDINGS LIMITED services offered`
+    \item \textbf{Findings:} Largely irrelevant results (gemstones, furniture), again highlighting the difficulty in pinpointing specific services for this entity.
+\end{itemize}
+
+\textbf{Structured Output (Simplified Representation):}
+\begin{itemize}
+    \item \textbf{intermediary\_name:} OPULENT OPAL HOLDINGS LIMITED
+    \item \textbf{classification:} Administrator
+    \item \textbf{confidence:} Low
+    \item \textbf{role\_muddled:} True
+    \item \textbf{role\_muddled\_reasoning:} "The role is muddled as the search results are ambiguous and could indicate construction, holding company activities, or other possibilities. There is no clear indication of their primary business activities."
+    \item \textbf{is\_individual:} False
+    \item \textbf{job\_title:} Unknown
+    \item \textbf{justification:} "The search results provide limited information about OPULENT OPAL HOLDINGS LIMITED. One result mentions 'OPULENT OPAL CONSTRUCTION LIMITED' which suggests involvement in construction, potentially as a specialty trade contractor. Another result indicates that 'Opal Holdings Pte Ltd' is a subsidiary of CapitaLand, implying a holding company structure. The lack of direct evidence about their services or role leads to a low confidence classification as an administrator, potentially involved in company administration or holding activities."
+    \item \textbf{key\_evidence (Full Search Log):} (Content of the JSON-like string representing the three search iterations and their results, as provided in the original example, would be detailed here. For brevity, it is summarized above and omitted in this representation.)
+\end{itemize}
+
+\subsubsection*{Example 2: Cheo Yeoh \& Associates}
+\textbf{Dynamic Search Summary:}
+\begin{itemize}
+    \item \textbf{Iteration 0 Query:} `Cheo Yeoh \& Associates`
+    \item \textbf{Findings:} Immediately yielded relevant results identifying the entity as "CHEO YEOH \& ASSOCIATES LLC," a Singapore-based company providing legal services, with details on its registration and directors.
+    \item \textbf{Iteration 1 Query:} `Cheo Yeoh \& Associates services`
+    \item \textbf{Findings:} Reinforced the legal nature, with results like "Cheo Yeoh \& Associates provides legal services" and official listings specifying "LEGAL ACTIVITIES."
+    \item \textbf{Iteration 2 Query:} `Cheo Yeoh \& Associates client testimonials` (or similar refinement if needed)
+    \item \textbf{Findings:} Could uncover legal case mentions, lawyer profiles, or further business directory listings, solidifying its role. (The provided log indicates successful identification primarily from the first two iterations).
+\end{itemize}
+
+\textbf{Structured Output (Simplified Representation):}
+\begin{itemize}
+    \item \textbf{intermediary\_name:} Cheo Yeoh \& Associates
+    \item \textbf{classification:} Legal Expert
+    \item \textbf{confidence:} High
+    \item \textbf{role\_muddled:} False
+    \item \textbf{role\_muddled\_reasoning:} (Empty or N/A)
+    \item \textbf{is\_individual:} False
+    \item \textbf{job\_title:} Lawyer (Implicitly, as a law firm)
+    \item \textbf{justification:} "Cheo Yeoh \& Associates LLC provides legal services in Singapore. The company's principal activity is LEGAL ACTIVITIES (EXCLUDING ONLINE MARKETPLACES). Johnny Cheo is a Director at the firm. The firm has been operating for 23 years. The search results consistently point to legal services."
+    \item \textbf{key\_evidence (Full Search Log):} (Content of the JSON-like string representing the search iterations and their results, as provided in the original example, would be detailed here. For brevity, it is summarized above and omitted in this representation.)
+\end{itemize}
+
+
 

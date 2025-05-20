@@ -1,0 +1,124 @@
+Full jurisdiction network: 41 nodes, 347 edges
+Network density: 0.4232
+Average degree: 16.93
+Average clustering coefficient: 0.8155
+Number of connected components: 1
+Number of singletons: 0
+Percentage of singletons: 0.00%
+
+Jurisdiction node appearances:
+{'VGB': 13533, 'PAN': 6533, 'BHS': 2099, 'NIU': 951, 'SYC': 1451, 'USA': 387, 'WSM': 1352, 'AGO': 366, 'GBR': 81, 'HKG': 625, 'CYP': 45, 'CRI': 31, 'URY': 30, 'MLT': 19, 'BLZ': 61, 'IMN': 36, 'JEY': 28, 'ARE': 4, 'NZL': 20, 'SGP': 355, 'XXX': 8399, 'MYS': 261, 'COK': 954, 'CYM': 290, 'MUS': 63, 'LBR': 3, 'THA': 2, 'MHL': 6, 'NLD': 3, 'VUT': 3, 'LCA': 4, 'BMU': 76, 'BRN': 1, 'IRL': 1, 'GGY': 13, 'AIA': 1, 'GIB': 1, 'GRD': 2, 'VCT': 1, 'ATG': 2, 'KNA': 19, 'ABW': 1, 'TCA': 1, 'BRB': 1122}
+
+Top 10 jurisdictions by betweenness centrality (excluding XXX):
+  node  betweenness  eigenvector  appearances                               jurisdiction_legal_technology
+0  VGB     0.196834     0.264054        13533                                       Dual-Purpose/Personal
+1  BHS     0.083543     0.258307         2099  Banking/Corporate/Dual-Purpose/Other Technologies/Personal
+2  PAN     0.060274     0.245954         6533                              Banking/Corporate/Dual-Purpose
+3  HKG     0.058012     0.243551          625                        Banking/Corporate/Other Technologies
+4  CYM     0.047955     0.212878          290                              Banking/Corporate/Dual-Purpose
+5  WSM     0.027236     0.198658         1352                                       Dual-Purpose/Personal
+6  USA     0.019130     0.225509          387                                                        None
+7  COK     0.017698     0.122779          954                     Banking/Corporate/Dual-Purpose/Personal
+8  CYP     0.016764     0.219042           45                              Banking/Corporate/Dual-Purpose
+9  SGP     0.012969     0.194213          355                                  Banking/Other Technologies
+
+Top 10 jurisdictions by eigenvector centrality (excluding XXX):
+  node  eigenvector  betweenness  appearances                               jurisdiction_legal_technology
+0  VGB     0.264054     0.196834        13533                                       Dual-Purpose/Personal
+1  BHS     0.258307     0.083543         2099  Banking/Corporate/Dual-Purpose/Other Technologies/Personal
+2  PAN     0.245954     0.060274         6533                              Banking/Corporate/Dual-Purpose
+3  HKG     0.243551     0.058012          625                        Banking/Corporate/Other Technologies
+4  USA     0.225509     0.019130          387                                                        None
+5  CYP     0.219042     0.016764           45                              Banking/Corporate/Dual-Purpose
+6  CYM     0.212878     0.047955          290                              Banking/Corporate/Dual-Purpose
+7  WSM     0.198658     0.027236         1352                                       Dual-Purpose/Personal
+8  JEY     0.198627     0.011335           28                             Dual-Purpose/Other Technologies
+9  SGP     0.194213     0.012969          355                                  Banking/Other Technologies
+
+Number of nodes: 41, hypothesis tests (pairs): 820
+Bonferroni p-value threshold (@α=0.05): 6.10e-05
+Number of significant associations after Bonferroni correction: 81
+
+Significant jurisdiction associations after Bonferroni correction (excluding XXX):
+       u    v                             u_jurisdiction_legal_technology                             v_jurisdiction_legal_technology  weight   support          lift  odds_ratio        p_value
+72   BHS  NIU  Banking/Corporate/Dual-Purpose/Other Technologies/Personal                                                Dual-Purpose     386  0.016094      4.637842    8.502932  1.804861e-165
+108  NIU  WSM                                                Dual-Purpose                                       Dual-Purpose/Personal     286  0.011925      5.334951    8.862534  9.678686e-134
+106  NIU  SYC                                                Dual-Purpose                                       Dual-Purpose/Personal     239  0.009965      4.154049    6.043520   1.893220e-85
+122  SYC  WSM                                       Dual-Purpose/Personal                                       Dual-Purpose/Personal     270  0.011258      3.300968    4.532462   4.504114e-73
+3    PAN  SYC                              Banking/Corporate/Dual-Purpose                                       Dual-Purpose/Personal     649  0.027060      1.642049    2.289738   2.503294e-49
+73   BHS  SYC  Banking/Corporate/Dual-Purpose/Other Technologies/Personal                                       Dual-Purpose/Personal     301  0.012550      2.370327    3.018443   2.617132e-48
+123  SYC  AGO                                       Dual-Purpose/Personal                                                        None     102  0.004253      4.606523    6.378007   2.195871e-40
+4    PAN  USA                              Banking/Corporate/Dual-Purpose                                                        None     228  0.009506      2.162882    3.932764   1.333474e-39
+121  SYC  USA                                       Dual-Purpose/Personal                                                        None      99  0.004128      4.228423    5.655857   9.606116e-36
+143  USA  AGO                                                        None                                                        None      51  0.002126      8.635744   11.218651   1.494814e-32
+2    PAN  NIU                              Banking/Corporate/Dual-Purpose                                                Dual-Purpose     426  0.017762      1.644516    2.248934   1.876348e-32
+174  WSM  CYM                                       Dual-Purpose/Personal                              Banking/Corporate/Dual-Purpose      75  0.003127      4.587839    6.123636   1.311024e-29
+1    PAN  BHS                              Banking/Corporate/Dual-Purpose  Banking/Corporate/Dual-Purpose/Other Technologies/Personal     796  0.033189      1.392226    1.719501   3.870631e-29
+74   BHS  USA  Banking/Corporate/Dual-Purpose/Other Technologies/Personal                                                        None     100  0.004169      2.952556    3.764600   1.330213e-23
+162  WSM  HKG                                       Dual-Purpose/Personal                        Banking/Corporate/Other Technologies     103  0.004295      2.923493    3.492955   4.587816e-23
+204  HKG  CYM                        Banking/Corporate/Other Technologies                              Banking/Corporate/Dual-Purpose      44  0.001835      5.822323    7.115374   3.155765e-21
+182  AGO  BLZ                                                        None                     Banking/Corporate/Dual-Purpose/Personal      19  0.000792     20.411001   30.735831   3.194295e-20
+107  NIU  USA                                                Dual-Purpose                                                        None      60  0.002502      3.910042    4.675913   1.051439e-19
+6    PAN  AGO                              Banking/Corporate/Dual-Purpose                                                        None     177  0.007380      1.775420    2.543424   3.800276e-18
+163  WSM  AGO                                       Dual-Purpose/Personal                                                        None      65  0.002710      3.150483    3.746938   1.300518e-16
+184  AGO  GBR                                                        None                                                        None      18  0.000751     14.562234   19.339080   2.529135e-16
+183  AGO  CYP                                                        None                              Banking/Corporate/Dual-Purpose      14  0.000584     20.387128   30.261913   3.153513e-15
+187  AGO  CRI                                                        None                                                        None      12  0.000500     25.366473   42.103479   1.449247e-14
+140  USA  WSM                                                        None                                       Dual-Purpose/Personal      62  0.002585      2.842010    3.298829   8.949097e-14
+7    PAN  GBR                              Banking/Corporate/Dual-Purpose                                                        None      54  0.002252      2.447472    5.378608   1.497930e-13
+76   BHS  AGO  Banking/Corporate/Dual-Purpose/Other Technologies/Personal                                                        None      77  0.003210      2.403913    2.845673   3.059375e-13
+145  USA  URY                                                        None                                                        None      11  0.000459     22.723859   36.304311   6.956245e-13
+128  SYC  BLZ                                       Dual-Purpose/Personal                     Banking/Corporate/Dual-Purpose/Personal      22  0.000917      5.961383    8.879582   3.055167e-12
+75   BHS  WSM  Banking/Corporate/Dual-Purpose/Other Technologies/Personal                                       Dual-Purpose/Personal     193  0.008047      1.631135    1.810783   3.938791e-12
+147  USA  CYP                                                        None                              Banking/Corporate/Dual-Purpose      12  0.000500     16.526443   22.849939   4.681206e-12
+221  CYP  URY                              Banking/Corporate/Dual-Purpose                                                        None       6  0.000250    106.595556  153.301282   1.770305e-11
+141  USA  GBR                                                        None                                                        None      14  0.000584     10.711583   13.181545   4.394753e-11
+10   PAN  CRI                              Banking/Corporate/Dual-Purpose                                                        None      26  0.001084      3.079077   13.941786   7.443534e-11
+296  CYM  BMU                              Banking/Corporate/Dual-Purpose          Corporate/Dual-Purpose/Other Technologies/Personal      12  0.000500     13.058439   15.937500   1.212081e-10
+281  SGP  MUS                                  Banking/Other Technologies                     Banking/Dual-Purpose/Other Technologies      12  0.000500     12.868679   16.174241   1.245482e-10
+223  CYP  MLT                              Banking/Corporate/Dual-Purpose  Banking/Corporate/Dual-Purpose/Other Technologies/Personal       5  0.000208    140.257310  213.616071   2.107595e-10
+291  CYM  MUS                              Banking/Corporate/Dual-Purpose                     Banking/Dual-Purpose/Other Technologies      11  0.000459     14.440285   17.925420   2.356751e-10
+247  IMN  JEY                                      Corporate/Dual-Purpose                             Dual-Purpose/Other Technologies       5  0.000208    118.968254  167.776999   5.467439e-10
+190  GBR  CRI                                                        None                                                        None       6  0.000250     57.309438   76.409600   8.457568e-10
+197  GBR  BLZ                                                        None                     Banking/Corporate/Dual-Purpose/Personal       7  0.000292     33.978547   41.777528   1.448573e-09
+109  NIU  AGO                                                Dual-Purpose                                                        None      41  0.001709      2.825165    3.148024   2.413046e-09
+80   BHS  URY  Banking/Corporate/Dual-Purpose/Other Technologies/Personal                                                        None      15  0.000625      5.713197   10.494242   5.617780e-09
+245  IMN  CYM                                      Corporate/Dual-Purpose                              Banking/Corporate/Dual-Purpose       8  0.000334     18.378544   23.977710   9.359620e-09
+186  AGO  URY                                                        None                                                        None       8  0.000334     17.474681   23.967496   1.189653e-08
+133  SYC  MLT                                       Dual-Purpose/Personal  Banking/Corporate/Dual-Purpose/Other Technologies/Personal      10  0.000417      8.699626   17.367569   3.557272e-08
+13   PAN  BLZ                              Banking/Corporate/Dual-Purpose                     Banking/Corporate/Dual-Purpose/Personal      37  0.001543      2.226798    4.135872   4.546178e-08
+200  HKG  BLZ                        Banking/Corporate/Other Technologies                     Banking/Corporate/Dual-Purpose/Personal      12  0.000500      7.549062    9.312515   4.793669e-08
+205  HKG  MUS                        Banking/Corporate/Other Technologies                     Banking/Dual-Purpose/Other Technologies      12  0.000500      7.309410    8.946550   7.002179e-08
+127  SYC  URY                                       Dual-Purpose/Personal                                                        None      12  0.000500      6.611716   10.430855   7.160769e-08
+274  MYS  SGP                     Banking/Dual-Purpose/Other Technologies                                  Banking/Other Technologies      18  0.000751      4.659349    5.140345   7.866706e-08
+81   BHS  BLZ  Banking/Corporate/Dual-Purpose/Other Technologies/Personal                     Banking/Corporate/Dual-Purpose/Personal      20  0.000834      3.746359    5.125353   1.178230e-07
+117  NIU  URY                                                Dual-Purpose                                                        None      10  0.000417      8.406590   12.227949   1.336022e-07
+185  AGO  NZL                                                        None                                                        None       6  0.000250     19.659016   28.100000   3.921873e-07
+259  JEY  GGY                             Dual-Purpose/Other Technologies                              Banking/Corporate/Dual-Purpose       3  0.000125    197.670330  287.352000   4.043468e-07
+273  MYS  MUS                     Banking/Dual-Purpose/Other Technologies                     Banking/Dual-Purpose/Other Technologies       8  0.000334     11.668917   13.607186   4.080018e-07
+34   VGB  NIU                                       Dual-Purpose/Personal                                                Dual-Purpose     610  0.025434      1.136781    1.399469   4.685939e-07
+144  USA  CRI                                                        None                                                        None       7  0.000292     13.994165   18.093311   5.079957e-07
+341  ATG  KNA                               Banking/Dual-Purpose/Personal                               Banking/Dual-Purpose/Personal       2  0.000083   1262.315789         inf   5.945672e-07
+83   BHS  CYP  Banking/Corporate/Dual-Purpose/Other Technologies/Personal                              Banking/Corporate/Dual-Purpose      16  0.000667      4.062718    5.788998   6.184441e-07
+246  IMN  GGY                                      Corporate/Dual-Purpose                              Banking/Corporate/Dual-Purpose       3  0.000125    153.743590  217.618182   8.790654e-07
+9    PAN  CYP                              Banking/Corporate/Dual-Purpose                              Banking/Corporate/Dual-Purpose      28  0.001167      2.284307    4.414270   9.418028e-07
+165  WSM  BLZ                                       Dual-Purpose/Personal                     Banking/Corporate/Dual-Purpose/Personal      15  0.000625      4.362208    5.508601   1.033238e-06
+124  SYC  GBR                                       Dual-Purpose/Personal                                                        None      18  0.000751      3.673176    4.480112   1.258699e-06
+17   PAN  NZL                              Banking/Corporate/Dual-Purpose                                                        None      16  0.000667      2.936966   10.708608   1.349279e-06
+130  SYC  CYP                                       Dual-Purpose/Personal                              Banking/Corporate/Dual-Purpose      13  0.000542      4.775128    6.356767   1.626109e-06
+260  JEY  BMU                             Dual-Purpose/Other Technologies          Corporate/Dual-Purpose/Other Technologies/Personal       4  0.000167     45.082707   55.287037   1.798988e-06
+207  HKG  SGP                        Banking/Corporate/Other Technologies                                  Banking/Other Technologies      26  0.001084      2.810519    3.038397   2.532998e-06
+125  SYC  HKG                                       Dual-Purpose/Personal                        Banking/Corporate/Other Technologies      67  0.002794      1.771940    1.906485   3.978648e-06
+12   PAN  MLT                              Banking/Corporate/Dual-Purpose  Banking/Corporate/Dual-Purpose/Other Technologies/Personal      15  0.000625      2.898322   10.037780   3.991385e-06
+146  USA  BLZ                                                        None                     Banking/Corporate/Dual-Purpose/Personal       8  0.000334      8.127759    9.376811   5.967660e-06
+308  MUS  THA                     Banking/Dual-Purpose/Other Technologies                                                        None       2  0.000083    380.698413         inf   6.790584e-06
+237  CRI  URY                                                        None                                                        None       3  0.000125     77.367742   94.944444   7.752236e-06
+148  USA  NZL                                                        None                                                        None       5  0.000208     15.493540   20.577661   1.353510e-05
+297  CYM  GGY                              Banking/Corporate/Dual-Purpose                              Banking/Corporate/Dual-Purpose       4  0.000167     25.447215   36.806527   1.373667e-05
+258  JEY  CYM                             Dual-Purpose/Other Technologies                              Banking/Corporate/Dual-Purpose       5  0.000208     14.768473   18.055683   1.953562e-05
+112  NIU  BLZ                                                Dual-Purpose                     Banking/Corporate/Dual-Purpose/Personal      11  0.000459      4.547827    5.379000   2.442846e-05
+11   PAN  URY                              Banking/Corporate/Dual-Purpose                                                        None      19  0.000792      2.325098    4.624445   3.787814e-05
+309  MUS  LCA                     Banking/Dual-Purpose/Other Technologies                     Banking/Corporate/Dual-Purpose/Personal       2  0.000083    190.349206  392.114754   4.060545e-05
+346  ABW  TCA                                          Other Technologies                     Banking/Corporate/Dual-Purpose/Personal       1  0.000042  23984.000000         inf   4.169446e-05
+339  GIB  VCT                                        Banking/Dual-Purpose                                       Dual-Purpose/Personal       1  0.000042  23984.000000         inf   4.169446e-05
+111  NIU  CYP                                                Dual-Purpose                              Banking/Corporate/Dual-Purpose       9  0.000375      5.043954    6.103238   5.710970e-05

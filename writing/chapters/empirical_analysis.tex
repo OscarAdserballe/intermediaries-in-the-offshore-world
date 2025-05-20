@@ -1,168 +1,245 @@
 \chapter{Empirical Analysis}
 \label{chap:empirical_analysis}
 
-Generally, in the sources that have been leaked, a gradually increasing number of incorporations. Entity creation across different data leaks. Figure \ref{fig:incorporations_time} illustrates the number of entity incorporations over time, segmented by the source investigation (e.g., Panama Papers, Pandora Papers).
+\subsection{Overview of the Dataset}
+The dataset reveals a highly concentrated landscape of offshore activities. This concentration is particularly stark when examining the jurisdictions of incorporation, where a mere 15 countries account for approximately 98\% of all incorporated entities.
 
+\subsubsection{Concentration of Relevant Elements}
+Figure \ref{fig:preliminary_geography_overview} provides a visual overview of this geographical concentration.
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{incorporationsovertime.png}
-    \caption{Entity Incorporations Over Time by Source Investigation.}
-    \label{fig:incorporations_time}
+    \includegraphics[width=0.8\textwidth]{Preliminary_Geography_Overview.png}
+    \caption{Geographical Concentration of Entities and Intermediaries}
+    \label{fig:preliminary_geography_overview}
 \end{figure}
 
-Because of the power-law distribution intermediaries follow in terms of their connections (see Figure \ref{fig:powerlaw_dist}), we can explain a significant portion of the network activity by enriching the top fraction of intermediaries. Specifically, enriching the top approximately 750 intermediaries (ranked by the number of entities they are connected to) provides substantial coverage of ~60\% entities, as shown in Figure \ref{fig:enrichment_coverage_pie}.
+\subsubsection{Degree Distribution of Intermediaries}
+A recurring theme within this analysis is the prevalence of power-law-like distributions. This is evident in the degree distribution of intermediaries (Figure \ref{fig:preliminary_powerlaw_fit}), which indicates that a small number of intermediaries are connected to a large number of entities, while most intermediaries have few connections. A formal comparison between a power-law and a log-normal distribution for the intermediary degree data yields a log-likelihood ratio $R = 57.0287$ with a $p$-value $< 0.0001$, suggesting a better fit for the power-law model or at least a heavy-tailed distribution. This characteristic underpins much of the thesis.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{powerlaw.png}
-    \caption{Illustration of the Power Law Distribution of Intermediary Connections (Degree).}
-    \label{fig:powerlaw_dist}
+    \includegraphics[width=0.8\textwidth]{Preliminary_Powerlaw_Fit.png}
+    \caption{Degree Distribution of Intermediaries and Power-Law Fit}
+    \label{fig:preliminary_powerlaw_fit}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{piechartenrichment.png}
-    \caption{Coverage of Intermediary Connections Explained by the Enriched Top Intermediaries.}
-    \label{fig:enrichment_coverage_pie}
-\end{figure}
+\subsection{Geographical Specialisation}
+This section delves into the geographical patterns of intermediaries, examining their client locations and the jurisdictions they utilize for incorporation.
 
-The geographic distribution and coverage of different node types (intermediaries, entities, officers) provide further context. Figures \ref{fig:int_locations} and \ref{fig:int_coverage} show the primary locations of intermediaries and the coverage achieved by focusing on the top locations. Similarly, Figures \ref{fig:ent_locations} and \ref{fig:ent_coverage} depict the distribution and coverage for entities, while Figures \ref{fig:off_locations} and \ref{fig:off_coverage} do the same for officers.
+\subsubsection{Intermediary Specialisation at the Country Level}
+When intermediaries are aggregated at the country level, distinct patterns emerge, as illustrated in Figures \ref{fig:geography_country_heatmaps_top5} through \ref{fig:geography_country_heatmaps_top11_15}. Intermediaries demonstrate a strong proclivity for serving clients from their own country. However, their choice of incorporation jurisdictions is more diverse. The entropy of jurisdictions used for incorporation by a country's intermediaries is significantly higher than the entropy of the countries where their clients' entities have their main activity (Figure \ref{fig:geography_country_level_entropy_distribution}). This suggests that while client bases are often geographically focused, the selection of incorporation jurisdictions is more globally dispersed, albeit concentrated within a relatively small number of preferred offshore jurisdictions.
 
-The common thread across all of them, is that all are incredibly concentrated in a limited number of countries.
+A two-sample Kolmogorov-Smirnov test formally confirms that the distributions of client country entropy and incorporation jurisdiction entropy are significantly different.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{intermediarieslocationsdesc.png}
-    \caption{Geographic Distribution of Intermediaries (Top Locations).}
-    \label{fig:int_locations}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{intermediariescoverage.png}
-    \caption{Coverage of Intermediaries by Top Geographic Locations.}
-    \label{fig:int_coverage}
+    \includegraphics[width=0.8\textwidth]{Geography_Country_Heatmaps_Top5.png}
+    \label{fig:geography_country_heatmaps_top5}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{entitieslocations.png}
-    \caption{Geographic Distribution of Entities (Top Jurisdictions/Locations).}
-    \label{fig:ent_locations}
+    \includegraphics[width=0.8\textwidth]{Geography_Country_Heatmaps_Top6_10.png}
+    \label{fig:geography_country_heatmaps_top6_10}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{entitiescoverage.png}
-    \caption{Coverage of Entities by Top Geographic Locations.}
-    \label{fig:ent_coverage}
+    \includegraphics[width=0.8\textwidth]{Geography_Country_Heatmaps_Top11_15.png}
+    \label{fig:geography_country_heatmaps_top11_15}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{officerslocation.png}
-    \caption{Geographic Distribution of Officers (Top Locations).}
-    \label{fig:off_locations}
+    \includegraphics[width=0.8\textwidth]{Geography_Country_Level_Entropy_Distribution.png}
+    \caption{Distribution of Entropy for Client Countries vs. Incorporation Jurisdictions at the Country Level of Intermediaries}
+    \label{fig:geography_country_level_entropy_distribution}
+\end{figure}
+
+An illustrative example is Cyprus (Figure \ref{fig:geography_country_heatmaps_cyprus}), which is well-documented for its strong links to Russia. While Russia is generally underrepresented in the broader dataset, entities incorporated by Cypriot intermediaries show a significant Russian presence, with 12\% of such entities linked to Russia. This highlights a high lift for the Cyprus-Russia connection. Such specific high-lift pairs could be targets for further investigation, though that falls outside the scope of this thesis.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Geography_Country_Heatmaps_Cyprus.png}
+    \caption{Client and Incorporation Jurisdiction Heatmap for Cyprus-based Intermediaries}
+    \label{fig:geography_country_heatmaps_cyprus}
+\end{figure}
+
+\subsubsection{Network of Countries Served by Intermediaries}
+While intermediaries at the country level show specialisation, particularly in their client bases, this section examines the specific clusters of countries served by individual intermediaries. At the intermediary level, clientele also tends to be highly concentrated in one or two countries, as shown in Figure \ref{fig:geography_distribution_countries_by_intermediary}. Interestingly, even as intermediaries grow larger (i.e., serve more clients), there is a very low correlation between the number of clients served and the number of distinct countries their clients originate from.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Geography_Distribution_of_Countries_by_Intermediary.png}
+    \caption{Distribution of the Number of Countries Served per Intermediary}
+    \label{fig:geography_distribution_countries_by_intermediary}
+\end{figure}
+
+To explore these relationships further, a network of countries was constructed. In this network, two countries (nodes) are connected if an intermediary serves clients (entities) in both. The resulting full country network consists of 121 nodes and 2716 edges. Key summary statistics for this network are presented in Table \ref{tab:country_network_summary}.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary Statistics for the Full Country Co-Service Network}
+\label{tab:country_network_summary}
+
+\begin{tabular}{lc}
+\toprule
+Metric                        & Value    \\
+\midrule
+Number of Nodes               & 121      \\
+Number of Edges               & 2716     \\
+Network Density               & 0.3741   \\
+Average Degree                & 44.89    \\
+Average Clustering Coefficient & 0.7728   \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Visualising such dense graphs is challenging. Therefore, to identify the most important connections, the network was filtered using association analysis, as shown in Figure \ref{fig:geography_cross_country_network}. Edges are displayed only if they meet a support threshold (representing at least 0.008 of all intermediaries' country-pair connections) and a lift score of 1.5 or higher. This ensures that the visualized connections are not only frequent but also represent associations stronger than expected by chance. The resulting filtered network, or "backbone," thus highlights the most robust and significant co-service relationships. (The filtered graph presented features 14 clearly identifiable nodes: USA, BMU, CHN, HKG, CYM, VGB, SGP, TWN, MYS, COK, IDN, PAN, SYC, BHS, with WSM likely being the 15th implicitly).
+
+The nodes in the network visualization are coloured in two ways: first, by communities identified using the Louvain method; and second, by regime type (VDem data). This was to explore whether regime type influences intermediary operations, though it appears less significant than other factors.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Geography_Cross_Country_Network.png}
+    \caption{Filtered Network of Co-Served Countries, Coloured by Louvain Community and Regime Type. Edges shown have support $\ge 0.008$ and lift $\ge 1.5$.}
+    \label{fig:geography_cross_country_network}
+\end{figure}
+
+\paragraph{Interpretation of the Filtered Country Network Structure}
+The filtered network (Figure \ref{fig:geography_cross_country_network}) reveals a sparse yet highly structured set of relationships. A central core of interconnected nodes is evident, particularly involving VGB (British Virgin Islands), CYM (Cayman Islands), SGP (Singapore), and their links to HKG (Hong Kong) and BMU (Bermuda).
+
+When coloured by regime type, no clear large-scale clustering emerges. The central cluster itself includes Micro-states (VGB, CYM, BMU), Closed Autocracies (HKG), and Electoral Autocracies (SGP). Liberal Democracies like USA and TWN (Taiwan) are present but connect to nodes of different regime types. This visual evidence supports the notion that regime type is not a primary driver of these strong co-service relationships.
+
+The Louvain community detection method reveals data-driven groupings:
+\begin{itemize}
+    \item \textbf{Community 0 (Dark Blue):} The largest, featuring VGB, SGP, CYM, TWN, MYS, IDN, COK (and likely WSM). This highlights strong ties between several offshore financial centers, key Asian economies, and Taiwan.
+    \item \textbf{Community 1 (Brown):} Comprises USA, BMU, CHN, HKG, linking major economies with Bermuda.
+    \item \textbf{Community 2 (Light Blue):} A smaller community of PAN, SYC, BHS.
+\end{itemize}
+Most nodes in this backbone are connected within 2-3 steps.
+
+\paragraph{Centrality in the Country Network}
+Centrality metrics for the full 121-node network (see Appendix Tables \ref{tab:appendix_country_betweenness} and \ref{tab:appendix_country_eigenvector}) identify key players.
+\textbf{VGB (British Virgin Islands)} is dominant with the highest betweenness and eigenvector centrality. The \textbf{USA} ranks second in both, linked to BMU in the filtered graph's Community 1. \textbf{HKG \& CHN} also feature prominently in Community 1. Numerous \textbf{Micro-states} (BMU, BHS, CYM) show high centrality. \textbf{SGP (Singapore)} is another key, highly central node. High centrality in the full network generally translates to a significant structural role in this filtered backbone.
+
+\paragraph{Significant Country Associations}
+Lift scores from association analysis (Appendix Table \ref{tab:appendix_significant_country_associations}) reveal strong pairings (visualized in Figure \ref{fig:geography_cross_country_network} for lift $\ge 1.5$).
+Key findings include:
+\begin{itemize}
+    \item Strong \textbf{Micro-state synergies} (e.g., VGB-CYM lift 1.91; CYM-BMU lift 13.47).
+    \item A critical \textbf{USA-BMU-China/HKG nexus} (Comm 1): CHN-BMU (lift 15.28) and USA-BMU (lift 4.92) suggest Bermuda as a major intermediary hub for these powers.
+    \item Robust \textbf{Asian connections} (e.g., SGP-MYS lift 5.27) and Singapore's links to Micro-states.
+    \item A distinct \textbf{PAN-SYC-BHS nexus} (Comm 2).
+    \item Crucially, high lift values are common \textbf{across different regime types}, reinforcing that factors beyond regime similarity (e.g., specialized services, legal systems) drive these strong ties.
+\end{itemize}
+
+\subsubsection{Network of Jurisdictions Used by Intermediaries}
+Shifting focus to incorporation locations, this section analyzes the network of jurisdictions intermediaries use. The full jurisdiction network has 41 nodes and 347 edges (Summary statistics in Table \ref{tab:jurisdiction_network_summary}). Figure \ref{fig:geography_distribution_jurisdictions_by_intermediary} shows the distribution of jurisdictions used per intermediary.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary Statistics for the Full Jurisdiction Co-Usage Network}
+\label{tab:jurisdiction_network_summary}
+\begin{tabular}{lc}
+\toprule
+Metric                        & Value    \\
+\midrule
+Number of Nodes               & 41       \\
+Number of Edges               & 347      \\
+Network Density               & 0.4232   \\
+Average Degree                & 16.93    \\
+Average Clustering Coefficient & 0.8155   \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Geography_Distribution_of_Jurisdictions_by_Intermediary.png}
+    \caption{Distribution of the Number of Jurisdictions Used per Intermediary}
+    \label{fig:geography_distribution_jurisdictions_by_intermediary}
+\end{figure}
+
+Figure \ref{fig:geography_cross_jurisdiction_network} presents a filtered "backbone" of co-usage patterns. Nodes are coloured by legal technology (Laffitte dataset) and Louvain communities. (The image shows 16 identifiable nodes: CRI, SGP, CYP, GBR, BLZ, AGO, HKG, CYM, COK, MYS, BHS, SYC, PAN, NIU, WSM, USA).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Geography_Cross_Jurisdiction_Network.png}
+    \caption{Filtered Network of Co-Used Jurisdictions, Coloured by Legal Technology and Louvain Community}
+    \label{fig:geography_cross_jurisdiction_network}
+\end{figure}
+
+\paragraph{Interpretation of the Filtered Jurisdiction Network Structure}
+The filtered jurisdiction network shows a central, densely connected core (BHS, SYC, AGO, WSM, NIU, PAN, USA, HKG).
+Coloured by legal technology, the central cluster is dominated by jurisdictions offering \textbf{"Dual-Purpose"} legal technologies. This strongly supports the observation that central jurisdictions in this network tend to offer flexible, dual-purpose structures.
+
+Louvain community detection identifies:
+\begin{itemize}
+    \item \textbf{Community 1 (Brown):} Largest and most central (USA, PAN, NIU, BHS, SYC, AGO, WSM), largely "Dual-Purpose" jurisdictions.
+    \item \textbf{Community 0 (Dark Blue):} HKG, CYM, COK, combining "Banking/Corporate/Dual-Purpose" with "Dual-Purpose/Personal".
+    \item \textbf{Community 2 (Light Blue):} More peripheral (SGP, CRI, CYP, GBR, BLZ, MYS).
+\end{itemize}
+
+\paragraph{Centrality in the Jurisdiction Network}
+Centrality metrics for the full 41-jurisdiction network (Appendix Tables \ref{tab:appendix_jurisdiction_betweenness} and \ref{tab:appendix_jurisdiction_eigenvector}) are revealing.
+\textbf{VGB (British Virgin Islands)} ranks \#1 in both betweenness and eigenvector centrality but is strikingly absent from the filtered graph. This implies its connections, while numerous, might not individually meet the high support/lift thresholds for this specific backbone view, or the visualization was capped.
+\textbf{BHS (Bahamas)} and \textbf{PAN (Panama)} are 2nd and 3rd in centrality and visibly central in the filtered graph. \textbf{HKG} and \textbf{CYM} are also highly central and core to Comm 0. Most other top-ranked jurisdictions align with the backbone, with VGB being the main exception.
+
+\paragraph{Significant Jurisdiction Associations}
+Association analysis (Appendix Table \ref{tab:appendix_significant_jurisdiction_associations}) highlights strong co-usage:
+\begin{itemize}
+    \item The dominant \textbf{Community 1 ("Dual-Purpose" hubs)} shows very high mutual lift (e.g., BHS-NIU lift 4.64; NIU-WSM lift 5.33), with NIU as a critical connector.
+    \item \textbf{Community 0 (financial centers)}: HKG-CYM (lift 5.82).
+    \item Exceptional \textbf{cross-community lift}: AGO-BLZ (lift 20.41), suggesting specific niche relationships.
+    \item High-lift associations often pair jurisdictions with \textbf{similar legal technology profiles}, but also occur between those with different profiles (e.g., WSM-CYM), indicating synergies drive co-usage.
+    \item Peripheral jurisdictions (Comm 2) can have \textbf{extremely high lift values} in specific pairings (e.g., GBR-CRI lift 57.3; JEY-GGY lift 197!), pointing to highly specialized niches.
+\end{itemize}
+
+\subsection{Functional Specialisation of Intermediaries}
+This section shifts from geography to the functional roles of intermediaries, exploring if a typology (e.g., EU, 2017; personalised advice vs. aid in incorporation) emerges. This analysis uses a classified random sample, as top-degree intermediaries aren't representative of the whole population (Figure \ref{fig:specialisation_classification_distribution}). The filtering of this sample is detailed in the Appendix (Figure \ref{fig:appendix_filtering_enrichment}).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Specialisation_Classification_Distribution_Comparison.png}
+    \caption{Distribution of Intermediary Classifications}
+    \label{fig:specialisation_classification_distribution}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{officerscoverage.png}
-    \caption{Coverage of Officers by Top Geographic Locations.}
-    \label{fig:off_coverage}
+    \includegraphics[width=0.8\textwidth]{Appendix_Filtering_of_Enrichment.png}
+    \caption{Filtering Process of the Enriched Random Sample for Functional Classification}
+    \label{fig:appendix_filtering_enrichment}
 \end{figure}
 
-The enrichment process involved classifying intermediaries based on their likely role (e.g., Administrator, Legal Expert). Figure \ref{fig:classification_samples} compares the distribution of these classifications within the random sample versus the sample of top 5\% intermediaries.
+\subsubsection{Different Levels of Connectivity: Personalised Advice vs. Aid in Incorporation}
+A key differentiator is the number of entities incorporated. Administrators and legal experts appear more in top-degree intermediaries than tax experts/investment advisors. Figure \ref{fig:specialisation_cdf_degrees} shows the CDF of degrees by classification.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{classificationsamples.png}
-    \caption{Comparison of Intermediary Classification Distributions (Random Sample vs. Top 5\%).}
-    \label{fig:classification_samples}
+    \includegraphics[width=0.8\textwidth]{Specialisation_CDF_of_Degrees_by_Classification_Random_Sample.png}
+    \caption{CDF of Degrees by Intermediary Classification (Random Sample)}
+    \label{fig:specialisation_cdf_degrees}
 \end{figure}
 
-We observe distinct degree distributions based on these classifications. Figure \ref{fig:cdf_classifications} shows the Cumulative Distribution Function (CDF) of intermediary degrees for each classification, while Figure \ref{fig:boxplot_classifications} presents this comparison using boxplots.
+Two-sample KS-tests (Bonferroni corrected for 6 pairs) found significant differences in degree distributions for 4 pairs. 'Tax Experts' and 'Investment Advisors' were not significantly different, nor were 'Legal Experts' and 'Administrators'. However, cross-group comparisons (e.g., 'Tax Experts' vs. 'Legal Experts') were all significant. This makes sense as the non-significant pairs are functionally more similar.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{CDFclassifications.png}
-    \caption{Cumulative Distribution Function (CDF) of Intermediary Degree by Classification.}
-    \label{fig:cdf_classifications}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{boxplotclassification.png}
-    \caption{Boxplot of Intermediary Degree by Classification.}
-    \label{fig:boxplot_classifications}
-\end{figure}
-
-These classification patterns also vary geographically, as illustrated in Figure \ref{fig:countries_classifications}, which likely shows the prevalence of different intermediary types across key countries.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{countriesclassification.png}
-    \caption{Distribution of Intermediary Classifications across Top Countries.}
-    \label{fig:countries_classifications}
-\end{figure}
-
-Also, differing degree distributions, tested signifiance for.
-
-Using a Negative Binomial GLM; cannot use Poisson because of overdispersion. 
-
-Basic setup:
-
-\textbf{Random Component:} The response $Y_i$ (degree of intermediary $i$) follows a Negative Binomial distribution, $Y_i \sim \text{NB}(\mu_i, \theta)$, accommodating count data with overdispersion where $\text{Var}(Y_i) = \mu_i + \mu_i^2 / \theta$.
-
-\textbf{Link Function:} The expected value $\mu_i = E[Y_i]$ is related to the linear predictor $\eta_i = \mathbf{x}_i^T \boldsymbol{\beta}$ via the \textbf{natural logarithm} link function:
-\[
-    \ln(\mu_i) = \eta_i \quad \implies \quad \mu_i = \exp(\mathbf{x}_i^T \boldsymbol{\beta})
-\]
-where $\mathbf{x}_i$ includes dummy variables for the intermediary classification (with 'Administrator' likely as the baseline) and $\boldsymbol{\beta}$ are the coefficients to be estimated.
-
-Since there is no closed-form solution for the parameters $\boldsymbol{\beta}$ and the dispersion parameter $\theta$, we numerically optimise the log-likelihood function:
-\[
-    \ell(\boldsymbol{\beta}, \theta) = \sum_{i=1}^n \ln \left[ P(Y_i=y_i | \mu_i = \exp(\mathbf{x}_i^T \boldsymbol{\beta}), \theta) \right]
-\]
-
-Results:
-\begin{verbatim}
-GLM Results (Negative Binomial):
-                 Generalized Linear Model Regression Results                  
-Dep. Variable:                 degree   No. Observations:                  790
-Model:                            GLM   Df Residuals:                      786
-Model Family:        NegativeBinomial   Df Model:                            3
-Link Function:                    Log   Scale:                          1.0000
-Method:                          IRLS   Log-Likelihood:                -3216.9
-Date:                Mon, 12 May 2025   Deviance:                       2927.8
-Time:                        13:00:11   Pearson chi2:                 3.51e+04
-No. Iterations:                    12   Pseudo R-squ. (CS):             0.5825
-Covariance Type:            nonrobust                                         
-                                              coef    std err          z      P>|z|      [0.025      0.975]
------------------------------------------------------------------------------------------------------------
-Intercept                                   3.4632      0.053     65.419      0.000       3.359       3.567
-C(classification)[T.Investment Advisor]     1.3162      0.115     11.457      0.000       1.091       1.541
-C(classification)[T.Legal Expert]          -1.5206      0.081    -18.734      0.000      -1.680      -1.362
-C(classification)[T.Tax Expert]            -0.2034      0.219     -0.929      0.353      -0.633       0.226
-\end{verbatim}
-
-The GLM results indicate significant differences in degree based on classification. Compared to the baseline (likely 'Administrator'), 'Investment Advisor' intermediaries have significantly higher degrees, while 'Legal Expert' intermediaries have significantly lower degrees. The 'Tax Expert' classification does not show a statistically significant difference from the baseline in this model. These findings are further corroborated by an Ordinary Least Squares (OLS) regression using the logarithm of the degree ($\log(\text{degree})$) as the target variable (results not shown here but confirm the direction and significance of the effects).
-
-
-While static comparisons are (moderately) informative, the temporal progress of the network structure offers more dynamic insights. Figure \ref{fig:cyprus_temporal} presents a case study focused on Cyprus, illustrating how the connections between different types of intermediaries and the locations (jurisdictions/countries) of the entities they service evolve over time.
-
-Starting with all intermediaries from Cyprus, and then grouping entities together based on where they are 1) based in terms of business activity (`countries` field provided by ICIJ) and the jurisdiction whose rules they follow (`jurisdiction` field provided by ICIJ)
-
-Two things to note:
+\subsubsection{Different Activities: Instruments and Service Offerings}
+Intermediary activities are compared using five metrics:
 \begin{enumerate}
-    \item Corroborates the well-documented picture of a gradually deepening network tied to Russia, as more and more entities connected to it, and 
-    \item Primary intermediaries that are first needed are Administrators, and then more peripheral intermediary roles become involved (e.g., Legal Experts, Tax Experts). Too sparse to conclude it from this case study alone, but consistent with the idea that the network starts with a core of essential roles and then expands to include more specialized functions as the network grows.
+    \item Entropy of incorporation jurisdictions.
+    \item Entropy of client countries.
+    \item Entropy of regimes of countries they incorporate in.
+    \item Entropy of legal technologies in jurisdictions they incorporate in.
+    \item Use of bearer instruments (binary).
 \end{enumerate}
+Figure \ref{fig:specialisation_average_entropy_bearer} shows average values by classification.
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{CyprusCaseStudy.png} 
-    \caption{Temporal Evolution of the Intermediary-Entity Network (Cyprus Case Study). Shows connections between intermediary types (based in Cyprus) and the locations of entities they manage at different time points.}
-    \label{fig:cyprus_temporal}
+    \includegraphics[width=0.8\textwidth]{Specialisation_Average_Entropy_and_Bearer_Usage_by_Classification.png}
+    \caption{Average Entropy Measures and Bearer Instrument Usage by Intermediary Classification}
+    \label{fig:specialisation_average_entropy_bearer}
 \end{figure}
-
 
