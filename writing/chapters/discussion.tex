@@ -1,36 +1,78 @@
 \chapter{Discussion}
 \label{chap:discussion}
 
-Results from country network
+\section{Three Propositions}
 
-Micro-states as Critical Hubs, Not Just Peripheries: The analysis (both centrality and the filtered graph) consistently shows that Micro-states (VGB, BMU, CYM, etc.) are not just passive recipients but act as essential, highly-connected nodes in the global intermediary network. VGB's top centrality and BMU's role in linking USA and China are striking.
+Three core propositions developed
 
-Regime Type is Secondary for Strongest Links: The initial hypothesis that intermediaries specialize along regime lines is not supported by this "backbone" network. The Louvain communities are heterogeneous in regime type, and many of the highest-lift associations bridge countries with different political systems. This suggests that "relational capital" and specialization are built around other commonalities (e.g., financial niches, legal frameworks, tax environments).
+Not in themselves particularly novel - none of them come as a particular surprise - but viewed through a set of new empirical data.
+\subsection{Proposition 1: Specialisation of Intermediaries}
 
-Discovery of Specific, Powerful Triads/Clusters:
-The USA-BMU-CHN/HKG (Comm 1) cluster is a major finding, indicating that Bermuda is a key jurisdiction for intermediaries navigating between these global economic giants. The very high lift values (especially CHN-BMU) point to highly specialized, non-random behaviors.
-The VGB/CYM/WSM-SGP (part of Comm 0) cluster shows a strong Asia-Offshore link.
+Functional Specialisation: Even though there's bound to be measurement error with the approach taken here, yet still significance for at least two distinct sets of roles. Taking outset from the typology of De Groen (2017). 
 
-Effectiveness of Network Filtering: The chosen support and lift thresholds effectively cut through the noise of a dense full network to reveal a meaningful "backbone" of the most significant co-service relationships, allowing for clearer interpretation of underlying structures and key players.
+First set of roles:
+\begin{itemize}
+  \item Administrators
+  \item Legal Experts
+\end{itemize}
 
-Data-Driven Communities Reveal Operational Logic: The Louvain communities provide a more insightful grouping than regime types, suggesting that intermediaries organize their operations around distinct, albeit internally diverse, networks of countries. These communities likely represent different types of financial service ecosystems or historical/economic pathways.
+Second set:
+\begin{itemize}
+  \item Tax Experts
+  \item Investment Advisors
+\end{itemize}
+
+\begin{itemize}
+\item Both the significance of the degree distribution only between those two sets,
+\item likewise entropy measures and bearer instrument share clearly visually distinct and significant across those two groups, but not very much within
+\end{itemize}
+
+Correlate with operational scale (degree of connectivity) and the diversity of their service portfolios (jurisdictional and legal-tech entropy). Personalised wealth management versus the mass provision of legal services.
+
+Geographical Specialisation: Distinct development of preferential client corridors linking specific client origination countries to favored offshore jurisdictions, sometimes driven by historical ties, linguistic affinity, or specialized demand. As we'll see in proposition 3, still universal hubs that connect all these corridors.
+
+\begin{itemize}
+\item Country heatmaps,
+\item Distribution of degree and country connections
+\end{itemize}
+
+\subsection{Proposition 2: Duality of Intermediary Focus - Local Anchors, Global Reach}
+
+        Intermediaries often exhibit a primary client concentration within their own operational countries, likely leveraging local networks and trust (Granovetter, 1973; Stausholm, 2024; Harrington, 2016; Hoang, 2022). However, their core value proposition and a key driver of their specialization lies in their capacity to connect these local clients to a diversified global offshore architecture.
+\begin{itemize}
+\item Heatmaps showing intermediaries in HKG, GBR, USA etc., serving a notable portion of clients from their home country.
+\item Lower client country entropy compared to jurisdiction entropy, suggesting more concentration in client origin.
+\end{itemize}
+
+\subsection{Proposition 3: Structural Centrality of Microstates in Intermediation Network}
+A core set of Offshore Financial Centers (OFCs), that in heavy part are those infamous microstates. Highly central in it.
+
+        Interesting to note, that this may also be due to their offering of versatile ``legal technologies'' like ``Dual-Purpose'' vehicles as for example is proposed in Laffitte (2024). Empirical confirmation that they form the structural backbone of the global offshore network, and are countries that intermediaries from all countries whose residents they do business and jurisdiction they incorporate. Critical hubs and bridges in chains of intermediation, facilitating complex offshore strategies regardless of client or intermediary home country.
+\begin{itemize}
+\item High centrality (betweenness, eigenvector) of jurisdictions like VGB, BHS, PAN, CYM, HKG in your co-service and co-usage networks.
+\item Dominance of ``Dual-Purpose'' legal technologies in the central core of the jurisdiction co-usage network.
+\item High lift values between key OFCs in association analysis.
+\end{itemize}
+
+\section{Implications for Regulation}
+
+The potential to escape the multi-level games; most intermediaries serving officers in their own countries. Reclaiming lost tax revenue, can be done by targeting local citizens (though still the problem of changing citizenship).
+
+Functional specialisation very much seeming to correlate with the degree: Layered due diligence or liability regimes could be interesting.
+
+Affirming the centrality of microstates in the offshore network, and the potential for targeted regulation. Switzerland and Luxembourg as less active tax havens as case study.
+
+And not least, affirming the importance of intermediaries.
+
+\section{Limitations}
+
+Where to begin. PLACEHOLDER
+
+\section{Future Research}
+
+\begin{itemize}
+\item A lot within the current dataset that could be done - like extending a lot of the analyses. More importantly, the whole temporal dimension is currently left out; are the patterns persistent? As seen, network here has entities over a very large time frame, countless of them that are not active anymore.
+\end{itemize}
 
 
 
-Synthesis from Jurisdiction Network
-
-Emergence of a "Dual-Purpose" Core: A significant cluster of jurisdictions, primarily within Louvain Community 1 (BHS, NIU, WSM, SYC, PAN, USA), is heavily utilized in tandem by intermediaries. Many of these are characterized by offering flexible "Dual-Purpose" legal technologies. NIU, in particular, shows up as a key connector with extremely high-lift associations.
-
-VGB's Puzzling Absence from the Visual Backbone: The most central and frequently used jurisdiction overall (VGB) is not present in this filtered graph. This is a major finding, suggesting that its centrality stems from a vast number of connections that, individually, might not all meet the stringent lift/support criteria of this "backbone" view, or that the strongest co-incorporation patterns favor other hubs. This implies that sheer volume of use (VGB) and strongest paired usage (e.g., BHS-NIU) can highlight different aspects of the network.
-
-Highly Specific and Powerful Pairings: The analysis reveals extremely high lift scores for certain jurisdiction pairs (e.g., AGO-BLZ, GBR-CRI, JEY-GGY), indicating very strong, non-random preferences by intermediaries. These point to specialized niches where using specific combinations of jurisdictions is a common strategy.
-
-Distinct Communities of Practice: The Louvain communities effectively partition the network into groups of jurisdictions that are frequently used together by the same intermediaries, more so than grouping by legal technology alone.
-
-Comm 1 (Brown) is the "Dual-Purpose" engine room.
-
-Comm 0 (Dark Blue) clusters key financial centers like HKG and CYM with COK.
-
-Comm 2 (Light Blue) groups other important jurisdictions that have strong, specific links even if they appear less central in this particular visual.
-
-Legal Technologies as a Feature, Not a Definitive Grouping Principle: While jurisdictions in the core often offer "Dual-Purpose" technologies, the Louvain communities show that operational groupings are more nuanced. Intermediaries combine jurisdictions based on a range of factors beyond just the primary legal technology type, likely including specific use-cases, costs, reputation, and existing intermediary expertise spanning those locations.

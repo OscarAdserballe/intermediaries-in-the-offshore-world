@@ -18,39 +18,48 @@
 \contentsline {subsection}{\numberline {2.2.5}Secrecy Strategies: Financial Instruments and Legal Innovations}{13}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}Propositions}{14}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Data and Methodology}{15}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Data and Methodology}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}The ICIJ Offshore Leaks Database}{16}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Data Structure and Content}{17}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Temporal Overview of Incorporations}{18}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}External Data Sources}{19}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Background of Other Data Sources}{19}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}Using Agentic AI to Scrape Data on Intermediaries}{19}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Analytical Methodologies}{22}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Network Analysis Concepts}{22}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Unsupervised Learning and Association Analysis}{22}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Testing Significance of Results}{23}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Multiple Hypothesis Testing}{23}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Use of LLMs in the Broader Paper}{23}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Empirical Analysis}{25}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Overview of the Dataset}{25}{subsection.5.0.1}%
-\contentsline {subsubsection}{Concentration of Relevant Elements}{25}{subsection.5.0.1}%
-\contentsline {subsubsection}{Degree Distribution of Intermediaries}{25}{figure.caption.7}%
-\contentsline {subsection}{\numberline {5.0.2}Geographical Specialisation}{26}{subsection.5.0.2}%
-\contentsline {subsubsection}{Intermediary Specialisation at the Country Level}{26}{subsection.5.0.2}%
-\contentsline {subsubsection}{Network of Countries Served by Intermediaries}{28}{figure.caption.13}%
-\contentsline {paragraph}{Interpretation of the Filtered Country Network Structure}{29}{figure.caption.16}%
-\contentsline {paragraph}{Centrality in the Country Network}{30}{figure.caption.16}%
-\contentsline {paragraph}{Significant Country Associations}{31}{figure.caption.16}%
-\contentsline {subsubsection}{Network of Jurisdictions Used by Intermediaries}{31}{figure.caption.16}%
-\contentsline {paragraph}{Interpretation of the Filtered Jurisdiction Network Structure}{31}{figure.caption.19}%
-\contentsline {paragraph}{Centrality in the Jurisdiction Network}{33}{figure.caption.19}%
-\contentsline {paragraph}{Significant Jurisdiction Associations}{33}{figure.caption.19}%
-\contentsline {subsection}{\numberline {5.0.3}Functional Specialisation of Intermediaries}{34}{subsection.5.0.3}%
-\contentsline {subsubsection}{Different Levels of Connectivity: Personalised Advice vs. Aid in Incorporation}{34}{figure.caption.21}%
-\contentsline {subsubsection}{Different Activities: Instruments and Service Offerings}{35}{figure.caption.22}%
-\contentsline {chapter}{\numberline {6}Discussion}{37}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion}{39}{chapter.7}%
-\contentsline {chapter}{\numberline {A}Appendix}{40}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Country Network Centrality and Associations}{40}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Jurisdiction Network Centrality and Associations}{42}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Classification of Intermediaries}{44}{section.A.3}%
+\contentsline {section}{\numberline {3.1}The ICIJ Offshore Leaks Database}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The Challenges of Obtaining and Interpreting Offshore Data}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Overview of the ICIJ Offshore Leaks Database}{16}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Entities}{18}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Intermediaries and Feature Engineering}{19}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Other Data Sources}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Other Data Sources}{20}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Agentic AI for Intermediary Classification}{22}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Analytical and Statistical Techniques Applied}{23}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Concepts from Network Analysis}{23}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Entropy}{25}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Association Analysis}{25}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Multiple Hypothesis Testing}{26}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Testing Significance of Results}{26}{subsection.3.5.5}%
+\contentsline {section}{\numberline {3.6}Use of LLMs in the Broader Paper}{27}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Empirical Analysis}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Overview of the Dataset}{28}{section.4.1}%
+\contentsline {subsubsection}{Concentration of Entities, Intermediaries, and Officers}{28}{section.4.1}%
+\contentsline {subsubsection}{Degree Distribution of Intermediaries}{30}{figure.caption.7}%
+\contentsline {section}{\numberline {4.2}Geographical Specialisation}{30}{section.4.2}%
+\contentsline {subsubsection}{Intermediary Specialisation at the Country Level}{30}{section.4.2}%
+\contentsline {subsubsection}{Network of Countries Served by Intermediaries}{32}{figure.caption.13}%
+\contentsline {paragraph}{Interpretation of the Filtered Country Network Structure}{35}{figure.caption.16}%
+\contentsline {paragraph}{Centrality in the Country Network}{36}{figure.caption.16}%
+\contentsline {paragraph}{Significant Country Associations}{37}{figure.caption.16}%
+\contentsline {subsubsection}{Network of Jurisdictions Used by Intermediaries}{37}{figure.caption.16}%
+\contentsline {paragraph}{Interpretation of the Filtered Jurisdiction Network Structure}{38}{figure.caption.19}%
+\contentsline {paragraph}{Centrality in the Jurisdiction Network}{39}{figure.caption.19}%
+\contentsline {paragraph}{Significant Jurisdiction Associations}{40}{figure.caption.19}%
+\contentsline {section}{\numberline {4.3}Functional Specialisation of Intermediaries}{40}{section.4.3}%
+\contentsline {subsubsection}{Different Levels of Connectivity: Personalised Advice vs. Aid in Incorporation}{41}{figure.caption.20}%
+\contentsline {subsubsection}{Different Activities: Instruments and Service Offerings}{43}{figure.caption.22}%
+\contentsline {chapter}{\numberline {5}Discussion}{46}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Three Propositions}{46}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Proposition 1: Specialisation of Intermediaries}{46}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Proposition 2: Duality of Intermediary Focus - Local Anchors, Global Reach}{47}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Proposition 3: Structural Centrality of Microstates in Intermediation Network}{47}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Implications for Regulation}{48}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Limitations}{48}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Future Research}{48}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusion}{49}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Appendix}{50}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Country Network Centrality and Associations}{50}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Jurisdiction Network Centrality and Associations}{52}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Classification of Intermediaries}{54}{section.A.3}%

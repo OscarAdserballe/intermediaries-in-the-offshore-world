@@ -6,16 +6,24 @@ This section details the data sources and methodological approaches employed in 
 \section{The ICIJ Offshore Leaks Database}
 \label{sec:3_1}
 
-\subsection{The Difficulty in }
+The primary empirical basis for this thesis is the International Consortium of Investigative Journalists (ICIJ) Offshore Leaks Database. However, before detailing its structure, the inherent complexities and limitations associated with data derived from leaks concerning a domain deliberately designed for opacity will briefly be detailed.
 
-Kejriwal \& Dang (2020) note:
+\subsection{The Challenges of Obtaining and Interpreting Offshore Data}
+\label{sec:data_challenges}
+
+Researching the offshore financial system is inevitably difficult and fraught with challenges due to the pervasive secrecy that is its defining characteristic (Chang et al., 2023c; Christensen et al., 2022). The ICIJ database, while unparalleled in its scale and granularity, is not a comprehensive or randomly sampled representation of the entire offshore world. It is a compilation of data from specific leaks, each with its own origins and potential biases. For instance, a significant portion of the data originates from specific service providers like Mossack Fonseca (Panama Papers) or Appleby (Paradise Papers). Consequently, the observed patterns in clientele, jurisdictions, and service types may, to some extent, reflect the operational focus and market position of these particular firms rather than the offshore industry in its entirety (De Groen, 2017).
+
+Hoang (2022) in her ethnography, notes of one of the ultra-wealthy board directors she interviews (FLAG: Ensure correct description), that despite the entities he was behind were revealed in the Panama Papers, nothing traces back to him. Instead, a group of "fall guys", as she terms them, are the ones that fall victim to the public's search-light. What we're dealing with in the ICIJ data is the comparatively more visible part of the long stem of offshore that's otherwise buried deep where no sunlight can act as Brandeis' disinfectant. 
+
+An additional systematic bias arises from the inclusion of data from public corporate registries in certain jurisdictions as part of specific investigations (e.g., Paradise Papers incorporating registry data from Aruba, Bahamas, Barbados, Cook Islands, Lebanon, Malta, Nevis, and Samoa, as per the ICIJ `sourceID` variable). This data may include local businesses not engaged in typical offshore activities designed.
+
+Nevertheless, despite these inherent limitations, the ICIJ Offshore Leaks Database represents the most extensive publicly available structured dataset on offshore entities and their associated actors. As Kejriwal \& Dang (2020, p. 3(FLAG: which page)) note: 
 
 \begin{quote}
-"However, precisely because the collection maps out a global system, the Panama Papers also present us with a golden opportunity to study the flow of information2 between firms, individuals and intermediaries. From a scientific perspective, the Panama Papers repre- sent a complex system, with entities that range from individuals to companies, many of which serve a specific purpose based on where in the world they are based, to a variety of relationships. Studying the structural properties of this complex system using applied networks science has the potential to reveal interesting trends about how such systems operate across geographies and economies."
+"[...] [P]recisely because the collection maps out a global system, the Panama Papers also present us with a golden opportunity to study the flow of information2 between firms, individuals and intermediaries. From a scientific perspective, the Panama Papers repre- sent a complex system, with entities that range from individuals to companies, many of which serve a specific purpose based on where in the world they are based, to a variety of relationships. Studying the structural properties of this complex system using applied networks science has the potential to reveal interesting trends about how such systems operate across geographies and economies."
 \end{quote}
 
-
-The use of the ICIJ Offshore Leaks Database for this type of research is increasingly established. For example, Alstadsæter et al. (2019), Londoño-Vélez \& Ávila-Mahecha (2021), and Chang et al. (2023a; 2023b).
+This thesis, therefore, acknowledges that it is analyzing the \textit{visible and structured tip of the iceberg}. Consequently, absolute counts or prevalence estimates for the entire offshore world derived from this data will likely be underestimates and must be interpreted with extreme caution. However, findings pertaining to the \textit{types} of activities, the \textit{characteristics} of observed actors (particularly intermediaries, who are often directly named), and the \textit{structural properties} of the revealed networks are more likely to offer robust, albeit partial, insights into the mechanisms of the offshore financial system. The use of the ICIJ database for such analytical purposes is increasingly established in academic research, with studies employing it to gauge propensities for offshore use (Alstadsæter et al., 2019; Londoño-Vélez \& Ávila-Mahecha, 2021) or to explore relationships between offshore structures and political contexts (Chang et al., 2023a; 2023b). This thesis will proceed with similar caution, focusing on patterns and relationships rather than definitive global estimates.
 
 \subsection{Overview of the ICIJ Offshore Leaks Database}
 
@@ -27,130 +35,153 @@ Our primary dataset is the **International Consortium of Investigative Journalis
     \caption{Overview of Entity Incorporations Over Time from ICIJ Data}
     \label{fig:incorporations_time}
 \end{figure}
+Before getting into the explanation, it is important to note that the overview provided here is relatively cursory and focuses mostly on the attributes and feature engineering specific to this thesis. For those more familiar with network analysis, I'd strongly encourage Kejriwal \& Dang's (2020) to get a more in-depth understanding of the data in more graph-theoretical terms.
 
-Before getting into the explanation, it's important to note, that the overview provided here is relatively cursory and focuses mostly on the attributes and feature engineering specific to this thesis. For those more familiar with network analysis, I'd strongly encourage Kejriwal \& Dang's (2020) to get a more in-depth understanding of the data in more graph-theoretical terms.
+The fundamental data model leveraged by the ICIJ data is a graph database. This model is used for its ability to represent interconnected information, conceptualizing data as \textbf{nodes} (the core informational units) and \textbf{edges} (the links defining how these units are connected). For the purposes of our study, the most pertinent node types are:
+\begin{itemize}
+    \item \textbf{Entities}: These represent the diverse offshore legal structures documented in the leaks, such as Limited companies, S.A. (Société Anonyme), Inc. (Incorporated), trusts, and foundations.
+    \item \textbf{Officers}: This category includes individuals or, in some instances, other corporate bodies that fulfill specific roles (e.g., director, shareholder, beneficial owner, trustee, protector, nominee) within an Entity.
+    \item \textbf{Intermediaries}: These are the professional facilitators—typically law firms, accounting practices, banks, trust companies, or specialized middlemen—who assist clients in the establishment and ongoing management of offshore entities. They often act as the liaison with offshore service providers like Mossack Fonseca or Appleby.
+    \item \textbf{Addresses}: These nodes capture physical location data associated with the other node types, such as the registered office of an Entity or the business address of an Intermediary.
+\end{itemize}
 
-The fundamental data model leveraged by the ICIJ data is a graph database. This model is used for its ability to represent interconnected information, conceptualizing data as **nodes** (the core informational units) and **edges** (the links defining how these units are connected). For the purposes of our study, the most pertinent node types, as detailed in `icij_data_overview.md` and reflected in the input CSV files like `nodes-entities.csv`, `nodes-officers.csv`, etc., are:
-
-*   **Entities**: These represent the diverse offshore legal structures documented in the leaks, such as Limited companies, S.A. (Société Anonyme), Inc. (Incorporated), trusts, and foundations.
-*   **Officers**: This category includes individuals or, in some instances, other corporate bodies that fulfill specific roles (e.g., director, shareholder, beneficial owner, trustee, protector, nominee) within an Entity.
-*   **Intermediaries**: These are the professional facilitators—typically law firms, accounting practices, banks, trust companies, or specialized middlemen—who assist clients in the establishment and ongoing management of offshore entities. They often act as the liaison with offshore service providers like Mossack Fonseca or Appleby.
-*   **Addresses**: These nodes capture physical location data associated with the other node types, such as the registered office of an Entity or the business address of an Intermediary.
-
-Relationships within this graph structure explicitly define the nature of the connections, for example, an Officer is an `officer_of` an Entity, or an Intermediary acts as an `intermediary_of` an Entity. The two primary node types of interest here are entities and, of course, intermediaries. In the data model here, intermediaries role is, with very, very few exceptions represented entirely through entities. That is, at a high level, intermediaries are `intermediary_of` entities, which are `officer_of` officers. 
-
+Relationships (edges) within this graph structure explicitly define the nature of the connections, for example, an Officer is an \texttt{officer\_of} an Entity, or an Intermediary acts as an \texttt{intermediary\_of} an Entity. The two primary node types of interest for this thesis are \textbf{Entities} and, critically, \textbf{Intermediaries}. In the ICIJ data model, the role of intermediaries is, with very few exceptions, represented entirely through their connections to Entities. That is, at a high level, a common relational pathway is: Intermediaries are \texttt{intermediary\_of} Entities, which in turn have Officers (who are \texttt{officer\_of} these Entities).
 
 \subsection{Entities}
 
-Delving deeper into the **entities**, the information processed from source files such as `nodes-entities.csv` and `relationships.csv` provides a rich set of attributes for each. Key data points include the entity's registered `name`, its `jurisdiction` of incorporation (which I standardize to ISO3 country codes for consistent geographical analysis), and the `country_codes` associated with its operational activities or linked addresses (these are often distinct from its legal jurisdiction of incorporation). Further attributes encompass the `incorporation_date`, its operational `status` (e.g., Active, Struck Off, Dissolved), and its specific `entity_type` (e.g., Standard International Company, Trust, Business Company Limited by Shares). A particularly significant feature we derive for each entity, as processed in is the `bearer_count`. This metric quantifies the number of associated officers explicitly identified as "Bearer" or its linguistic equivalents (e.g., "THE BEARER," "EL PORTADOR"), which we standardize from variations found in `officers_df`. The presence of bearer instruments, as highlighted by Harrington (2016), is a critical indicator of mechanisms used to obscure true beneficial ownership, as ownership follows the physical possession of the share certificate rather than being registered.
+Delving deeper into the \textbf{entities}, the information processed from source files such as \texttt{nodes-entities.csv} and \texttt{relationships.csv} provides a rich set of attributes for each. Key data points include the entity's registered \texttt{name}, its \texttt{jurisdiction} of incorporation (which is standardized to ISO3 country codes for consistent geographical analysis), and the \texttt{country\_codes} associated with its operational activities or linked addresses. These \texttt{country\_codes} are often distinct from its legal \texttt{jurisdiction} of incorporation and provide insights into the geographical footprint of the entity's actual business or connections. Further attributes encompass the \texttt{incorporation\_date}, its operational \texttt{status} (e.g., Active, Struck Off, Dissolved), and its specific \texttt{entity\_type} (e.g., Standard International Company, Trust, Business Company Limited by Shares).
+
+A particularly significant feature derived for each entity is the \texttt{bearer\_count}. This metric quantifies the number of associated officers explicitly identified as "Bearer" or its linguistic equivalents (e.g., "THE BEARER," "EL PORTADOR"), which are standardized from variations found in the \texttt{officers\_df}. The presence of bearer instruments, as highlighted by Harrington (2016), is a critical indicator of mechanisms used to obscure true beneficial ownership. In such arrangements, legal ownership follows the physical possession of the share certificate rather than being recorded in a central register, thereby enhancing anonymity (Chang et al., 2023c).
 
 \subsection{Intermediaries and Feature Engineering}
 
-For **intermediaries**, whose foundational data is drawn from `nodes-intermediaries.csv`. Beyond basic identifying information such as their `name` and the `countries` associated with their operational addresses, we calculate their `degree`, which represents the total number of distinct entities they are connected to within the ICIJ network. More extensively, we construct several aggregated metrics that characterize each intermediary based on the collective properties of the entities they service. Because our primary interest is in intermediaries, we aggregate information up at the intermediary-level about the entities they're connected to. Graphs as a data model are incredibly good for being able to contain difficult, interrelated data, but also incredibly difficult to work with, so aggregating information up in key-value pairs. 
+For \textbf{intermediaries}, whose foundational data is drawn from \texttt{nodes-intermediaries.csv}, the analysis extends beyond basic identifying information. Beyond their \texttt{name} and the \texttt{countries} associated with their operational addresses, we calculate their \texttt{degree}. In this context, the degree represents the total number of distinct entities an intermediary is connected to within the ICIJ network, serving as a proxy for their client base size or activity level.
 
-For every intermediary, we generate:
-*   `country_counts`: A dictionary detailing the frequency of entities they are connected to, grouped by the `country_codes` associated with those entities (reflecting where the entities have operational links).
-*   `jurisdiction_counts`: A dictionary detailing the frequency of entities they are connected to, grouped by the `jurisdiction` in which those entities are incorporated.
-*   `regime_counts`: A dictionary detailing the frequency of entities they are connected to, grouped by the political regime type (e.g., Liberal Democracy, Closed Autocracy) of the entities' associated `country_codes`.
-*   `legal_tech_counts`: A dictionary detailing the frequency of entities they are connected to, grouped by the predominant types of "legal technologies" (e.g., Banking, Corporate, Dual-Purpose) prevalent in the entities' jurisdictions of incorporation at the time of their formation.
+More extensively, we construct several aggregated metrics that characterize each intermediary based on the collective properties of the entities they service. As our primary research interest lies in understanding the roles and specializations of intermediaries, we aggregate information at the intermediary-level about the entities they are connected to. While graph data models excel at representing complex, interrelated data, extracting features for broader statistical analysis often necessitates such aggregation into key-value attributes (Kejriwal \& Dang, 2020).
 
-Furthermore, we quantify for each intermediary the number of entities they are connected to that have `bearers_connected` (i.e., entities with a `bearer_count` > 0) and calculate the `bearer_share`, representing the proportion of their serviced entities that utilize bearer instruments. To measure the diversity of their client entity portfolio across these dimensions, we also compute normalized entropy scores (more on that later in this section): `country_entropy`, `jurisdiction_entropy`, `regime_entropy`, and `legal_tech_entropy`. These scores provide a standardized measure of how dispersed or concentrated an intermediary's entity connections are across different countries, jurisdictions, regime types, and legal technology environments.
+For every intermediary, we generate the following features:
 
-\section{External Data Sources}
-\label{sec:3_2}
-
-The following external data sources are used to connect with and enrich the ICIJ data:
 \begin{itemize}
-    \item \textbf{Laffitte Legal Technologies Data (HTHD)}: This dataset (Laffitte, 2024) is used for connecting historical legal framework changes to entities and their structuring.
-    \item \textbf{VDem (Varieties of Democracy) Data}: This provides country-level variables for the jurisdictions associated with entities and intermediaries.
-    \item \textbf{Intermediary Type Enrichment}: As detailed in Section \ref{sec:3_3}, an agentic AI approach is used to classify intermediaries based on scraped data.
+   \item \texttt{country\_counts}: A dictionary detailing the frequency of entities they are connected to, grouped by the \texttt{country\_codes} associated with those entities. This reflects the geographical spread of the operational links of the entities they service. The derivation of these \texttt{country\_codes} from address fields in the original leaks means their completeness and precision can vary, a factor considered in interpreting derived metrics.
+   \item \texttt{jurisdiction\_counts}: A dictionary detailing the frequency of entities they are connected to, grouped by the \texttt{jurisdiction} (ISO3 code) in which those entities are incorporated. This captures the intermediary's usage of different offshore legal environments.
+   \item \texttt{regime\_counts}: A dictionary detailing the frequency of entities they are connected to, grouped by the political regime type (e.g., Liberal Democracy, Closed Autocracy, as per VDem data detailed in Section \ref{sec:3_2}) of the entities' associated \texttt{country\_codes} at the time of entity incorporation. This provides insight into the political contexts linked to an intermediary's client base. Note, VDem do not classify a lot of those countries that are tax havens (e.g. Bahamas, British Virgin Islands etc.), because their methodology is not robust to these countries that are as small (FLAG: Find that appendix in VDem). For the sake of this thesis, when the VDem data cannot be matched, we assign the regime type as "Microstate".
+   \item \texttt{legal\_tech\_counts}: A dictionary detailing the frequency of entities they are connected to, grouped by the predominant types of "legal technologies" (e.g., Banking, Corporate, Dual-Purpose, as per Laffitte (2024), detailed in Section \ref{sec:3_2}) prevalent in the entities' jurisdictions of incorporation at the time of their formation. This reflects an intermediary's engagement with specific offshore legal architectures.
 \end{itemize}
 
-At the country(/jurisdiction)-level we use the Varieties of Democracy (VDem) data for information on the regime type, and Sebastien Laffitte's (2024) Historical Tax Havens Database dataset (HTHD) developed/collated for his thesis, with information on the legal technologies in the jurisdictions. 
+Furthermore, we quantify for each intermediary the number of entities they are connected to that have \texttt{bearers\_connected} (i.e., entities with a \texttt{bearer\_count} > 0) and calculate the \texttt{bearer\_share}, representing the proportion of their serviced entities that utilize these anonymity-enhancing instruments.
 
-1.  The **Varieties of Democracy (VDem) Project data** (specifically `vdem_core.csv`): We utilize the `v2x_regime` variable from VDem's comprehensive dataset to enrich our entity data. By matching an entity's associated `country_codes` and its `incorporation_year` with the VDem data, we assign a political regime classification to each entity. This entity-level regime information is then aggregated to construct the `regime_counts` at the intermediary level, providing insight into the political environments linked to an intermediary's clientele.
-2.  **Laffitte's (2024) "The Market for Tax Havens" dataset** (specifically `HTHD.csv`): This dataset offers a historical perspective on the "offshore legal architecture" of various jurisdictions, detailing their adoption of different "legal technologies" such as IBC laws, trust legislation, or banking secrecy provisions. We merge this dataset onto our entity data by matching the entity's `jurisdiction` of incorporation and its `incorporation_year`. This allows us to identify the specific legal technologies (e.g., "Banking," "Corporate," "Dual-Purpose," "Personal") active in an entity's jurisdiction at its time of incorporation. This entity-level characterization is subsequently aggregated to create the `legal_tech_counts` at the intermediary level, reflecting the types of legal environments their serviced entities operate within.
+To measure the diversity of their client entity portfolio across these dimensions, we also compute normalized entropy scores: \texttt{country\_entropy}, \texttt{jurisdiction\_entropy}, \texttt{regime\_entropy}, and \texttt{legal\_tech\_entropy}. More on that in Section \ref{subsec:entropy}. These scores provide a measure of the diversity of the intermediary's client base across the respective dimensions, with higher values indicating a more diverse portfolio.
 
-The aggregation process to derive `jurisdiction_counts` and `regime_counts` (and similarly `country_counts` and `legal_tech_counts`) at the intermediary level is a natural consequence of our data structure. Once each entity connected to an intermediary is characterized by its jurisdiction, associated country regime, or jurisdictional legal technology, we simply count the occurrences of these characteristics across all entities linked to a given intermediary.
+\section{Other Data Sources}
+\label{sec:3_2}
+To enrich the core ICIJ data, several external datasets are integrated, primarily to provide contextual information at the country or jurisdiction level, and to classify intermediaries by type.
 
-Directly at the Intermediaries-level, we also enrich a subset of intermediaries with information on the specific "type" derived from the typology in the EU(2017) paper. 
+\begin{itemize}
+    \item \textbf{Laffitte Legal Technologies Data (HTHD)}: This dataset (Laffitte, 2024) is used for connecting historical legal framework changes to entities and their structuring, specifically identifying the "legal technologies" active in a jurisdiction at the time of an entity's incorporation.
+    \item \textbf{VDem (Varieties of Democracy) Data}: This provides country-level variables, notably political regime types, for the jurisdictions and countries associated with entities and intermediaries.
+    \item \textbf{Intermediary Type Enrichment}: As detailed in Section \ref{sec:3_3_agentic_ai_classification} (updated label), an agentic AI approach is employed to classify a subset of intermediaries based on publicly available information scraped from the internet.
+\end{itemize}
+
+\section{Other Data Sources}
+\label{sec:3_2}
+To enrich the core ICIJ data, several external datasets are integrated, primarily to provide contextual information at the country or jurisdiction level, and to classify intermediaries by type.
+
+\begin{itemize}
+    \item \textbf{Laffitte Legal Technologies Data (HTHD)}: This dataset (Laffitte, 2024) is used for connecting historical legal framework changes to entities and their structuring, specifically identifying the "legal technologies" active in a jurisdiction at the time of an entity's incorporation.
+    \item \textbf{VDem (Varieties of Democracy) Data}: This provides country-level variables, notably political regime types, for the jurisdictions and countries associated with entities and intermediaries.
+    \item \textbf{Intermediary Type Enrichment}: As detailed in Section \ref{sec:3_3}, an agentic AI approach is employed to classify a subset of intermediaries based on publicly available information scraped from the internet.
+\end{itemize}
+
+At the country and jurisdiction level, we utilize data from the Varieties of Democracy (VDem) project for information on political regime types, and Sébastien Laffitte's (2024) Historical Tax Havens Database (HTHD), developed for his doctoral thesis, which provides detailed information on the evolution of legal technologies in various jurisdictions.
+
+\begin{enumerate}
+  \item The \textbf{Varieties of Democracy (VDem) Project data} (specifically \texttt{vdem\_core.csv}): We utilize the \texttt{v2x\_regime} variable from VDem's comprehensive dataset to enrich our entity data. This variable classifies countries into categories such as Closed Autocracy, Electoral Autocracy, Electoral Democracy, or Liberal Democracy. By matching an entity's associated \texttt{country\_codes} (representing operational links) and its \texttt{incorporation\_year} with the VDem data for the corresponding country and year, we assign a political regime classification to each entity. This entity-level regime information is then aggregated to construct the \texttt{regime\_counts} at the intermediary level, providing insight into the political environments linked to an intermediary's clientele.
+  
+  \item \textbf{Laffitte's (2024) "The Market for Tax Havens" dataset} (specifically \texttt{HTHD.csv}): This dataset offers a historical perspective on the "offshore legal architecture" of various jurisdictions, detailing their adoption of different "legal technologies" such as International Business Company (IBC) laws, trust legislation, or banking secrecy provisions. Laffitte categorizes these into broader types such as "Banking," "Corporate," "Dual-Purpose" (e.g., IBCs serving both personal and corporate needs), and "Personal" (e.g., trust laws). We merge this dataset onto our entity data by matching the entity's \texttt{jurisdiction} of incorporation and its \texttt{incorporation\_year} with the HTHD data. This allows us to identify the specific legal technologies active in an entity's jurisdiction at its time of incorporation. This entity-level characterization is subsequently aggregated to create the \texttt{legal\_tech\_counts} at the intermediary level, reflecting the types of legal environments their serviced entities operate within.
+\end{enumerate}
+
+\section{Agentic AI for Intermediary Classification}
+\label{sec:3_3}
+
+Directly at the Intermediaries-level, we also enrich a \textbf{subset of intermediaries} (specifically, a random sample of 500 and the top $\sim$1.5\% by degree, chosen to balance representativeness with computational feasibility for the AI agent) with information on their specific "type." This classification is based on a typology adapted from the EU (2017) report on the Panama Papers (De Groen, 2017), which identifies roles such as Tax Expert, Legal Expert, Administrator, and Investment Advisor.
 
 The core idea is to use an AI agent loop to automate the process of gathering information about and classifying the intermediaries listed in the ICIJ data. The basic workflow is illustrated in Figure \ref{fig:agent_loop_placeholder}.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{Methods_Agent_Graph.png} % Assuming you have agent_graph.png
+    \includegraphics[width=0.8\textwidth]{Methods_Agent_Graph.png}
     \caption{Agent Setup for Intermediary Classification}
     \label{fig:agent_loop_placeholder}
 \end{figure}
 
 In brief, the process involves an AI agent orchestrating online searches for each intermediary identified in the ICIJ data. It begins with generic searches, reads and interprets the initial results, and then formulates more specific search queries based on the information discovered or identified as lacking. This iterative process involves up to three search queries per intermediary, scouring the top 15 most relevant web results identified through query-result embedding similarity using the Tavily Search API (though the tool is relatively generic and its specific choice is not critical to the methodology). This effectively replaces the time-consuming need for manual searching of the intermediaries.
 
-Based on the information gathered, the AI agent then classifies the intermediary according to the EU (2017) typology (Tax Expert, Legal Expert, Administrator, Investment Advisor), adding a few additional relevant fields (e.g., specific job title). Crucially, the agent also provides a confidence score for its classification judgment, allowing for filtering or weighting in subsequent analyses.
+Based on the information gathered, the AI agent then classifies the intermediary according to the De Groer (2017) typology (Tax Expert, Legal Expert, Administrator, Investment Advisor), adding a few additional relevant fields (e.g., specific job title). To mitigate some of the obvious fallibility of such an enrichment method, the agent also provides a confidence score for its classification judgment, which is filtered on in the analysis.
 
 
-There are a few obvious limitations associated with this approach that warrant discussion:
-\begin{itemize}
-    \item The "Small Spiders" Problem. Kimberly Kay Hoang notes of one of the ultra-wealthy board directors she interviews, that despite the entities he was behind were revealed in the Panama Papers, nothing traces back to him. Instead, a group of "fall guys", as she terms them, are the ones that fall victim to the public's search-light. Those that have public profiles skew the bias towards the less illict people involved even stronger.
-    \item Temporal Misalignment: A primary concern is that all online searches are conducted based on information available today, whereas the ICIJ data pertains to activities that may have occurred years or even decades prior. This introduces two potential issues:
-    \begin{enumerate}
-        \item The process might be biased towards identifying intermediaries who are still active or have a significant online presence currently.
-        \item It implicitly assumes that the role an intermediary plays today (as reflected online) is equivalent to the role they played at the time relevant to the ICIJ data.
-    \end{enumerate}
-\end{itemize}
-
-Addressing the Limitations: While these issues are real, they are not prohibitive for their use in this thesis.
-\begin{enumerate}
-    \item Regarding the first point (bias towards current intermediaries), this primarily impacts the coverage or statistical power of the classification – we may only be able to confidently classify a subset (e.g., 50\%) of all intermediaries. This is acceptable, provided the unclassifiable intermediaries are not systematically different in ways that correlate with the research questions. The issue becomes problematic only if there is a systematic bias in identifiability across types (e.g., if it is inherently much harder to find information online about legal experts compared to tax experts due to differing needs for discretion or public visibility). The significant threat here is the bias in who provides public information - it will only be the intermediaries whose activities are not inherently illegal. A bias towards, in a sense, the least dangerous intermediaries as those being revealed.
-    \item Regarding the second point (role stability), the assumption that roles remain consistent is arguably less problematic. Given the highly specialized nature of functions like tax advisory, legal structuring, administration, and investment management within the offshore context, and the considerable barriers to entry (qualifications, reputation, networks) for each, frequent switching between these core roles by individuals or firms seems relatively unlikely.
-
-\section{Analytical Methodologies}
+\section{Analytical and Statistical Techniques Applied}
 \label{sec:3_3_analytical_methodologies}
 
-This section outlines the core analytical techniques applied to the processed data. This includes concepts from network theory for characterizing the structure of the ICIJ data, unsupervised learning methods for pattern discovery, and statistical tests for assessing the significance of findings.
+This section outlines the core analytical techniques applied to the processed data, with a primary emphasis on concepts from network theory for characterizing the structure of the ICIJ data. These network methods are central to the thesis, while other approaches, such as unsupervised learning for pattern discovery and statistical tests for assessing significance, serve as ancillary tools and will be discussed more briefly.
 
-\subsection{Network Analysis Concepts}
+\subsection{Concepts from Network Analysis}
 \label{subsec:network_theory_concepts}
 
-The analysis of the ICIJ data leverages several concepts from network theory to understand its structural properties. As highlighted by previous research (e.g., Kejriwal \& Dang, 2020; Chang et al., 2023a, 2023b), network science provides a powerful lens for this type of inquiry. Key concepts employed include:
+The application of network analysis is fundamental to this thesis, drawing on a tradition of using such methods to understand the nature of complex, often covert or illicit, systems (Morselli, 2009). Specifically, network analysis is employed here to uncover the roles intermediaries play based on their positions within the interconnected offshore financial system revealed by the ICIJ data. As described in Section \ref{sec:3_1}, the ICIJ data forms a multi-modal graph (comprising entities, officers, intermediaries, etc.). Directly applying many standard network analysis concepts to such a multipartite graph can be challenging. Therefore, our approach often involves analyzing specific projections or subsets of the global graph to make the analytical tools from network theory applicable. The foundational textbook by Newman (2010) serves as the primary reference for this section.
 
 \begin{itemize}
-    \item \textbf{Overall data model}: As described in Section \ref{subsec:icij_structure}, considering the multi-modal nature of the graph and projections thereof.
-    \item \textbf{Centrality scores and in-betweenness}: To identify key actors and relational importance within the network.
-    \item \textbf{Louvain community detection}: To uncover clusters or communities of closely related nodes.
-    \item \textbf{Power-law distribution}: To examine the distribution of node degrees and other network properties.
-    \item \textbf{Density of a graph}: To measure the general level of connectedness in the network or its components.
-    \item \textbf{(Entropy)}: As a measure of network information or randomness, where applicable.
+    \item \textbf{Centrality Scores}: To identify nodes of critical importance within specific network representations, we utilize two fundamental centrality measures. In the context of understanding the key countries for intermediary activity, these measures are applied to a network derived from intermediary incorporation patterns.
+    \begin{itemize}
+        \item \textbf{Eigenvector Centrality}: This measure assigns scores to nodes based on the principle that connections to high-scoring nodes contribute more to the score of the node in question than equal connections to low-scoring nodes. It is calculated as the principal eigenvector of the adjacency matrix $\mathbf{A}$ of the network, satisfying $x_i = \frac{1}{\lambda} \sum_{j} A_{ij} x_j$, where $x_i$ is the centrality score of node $i$, $A_{ij}$ is 1 if node $i$ is connected to node $j$ and 0 otherwise (or the weight of the edge), and $\lambda$ is the largest eigenvalue of $\mathbf{A}$ (cf. Perron-Frobenius theorem). Eigenvector centrality is chosen for its ability to identify nodes that are influential not just by having many connections, but by being connected to other influential nodes, providing a robust reading of which countries are most central in the network of intermediary incorporations.
+        \item \textbf{Betweenness Centrality}: This metric quantifies the extent to which a node lies on shortest paths between other pairs of nodes. For a node $v$, it is defined as $C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}$, where $\sigma_{st}$ is the total number of shortest paths between nodes $s$ and $t$, and $\sigma_{st}(v)$ is the number of those paths that pass through $v$. Betweenness centrality is used here to gauge which countries act as crucial "bridges" or conduits within the network, potentially connecting otherwise disparate segments, a role distinct from simply being a high-degree hub.
+    \end{itemize}
+
+    \item \textbf{Community Detection: Modularity Maximization}: To uncover clusters or communities of closely related nodes within the country network, we employ modularity maximization. This approach provides an atheoretical method for identifying densely connected groups of countries, which may reflect underlying similarities in how intermediaries utilize them. Such clustering could be influenced by factors like shared regime types (Chang et al., 2023c) or the trust dynamics inherent in relational capitalism. While traditional clustering algorithms could be applied, defining a meaningful distance or dissimilarity metric for nodes in these networks is non-trivial. Modularity maximization, conversely, assesses the quality of a partition by comparing the number of intra-community edges to what would be expected in a random network with similar properties (a null model). The quality of a partition $C$ is measured by the modularity $Q$:
+    \begin{equation}
+        Q = \frac{1}{2m} \sum_{i,j} \left[ A_{ij} - P_{ij} \right] \delta(c_i, c_j)
+    \end{equation}
+    where $m$ is the total number of edges, $A_{ij}$ is the actual weight of the edge between nodes $i$ and $j$, $P_{ij}$ is the expected weight of an edge between $i$ and $j$ under the Newman-Girvan null model (a configuration model preserving the degree sequence, where $P_{ij} = \frac{k_i k_j}{2m}$ for unweighted graphs, $k_i$ being the degree of node $i$), and $\delta(c_i, c_j)$ is 1 if nodes $i$ and $j$ are in the same community ($c_i=c_j$) and 0 otherwise. Since finding the optimal partition is an NP-hard (although, to be honest, at the size we reduce our graph sizes, search space isn't an issue...) problem, we utilize the Louvain method (Blondel et al., 2008), an efficient and widely adopted greedy algorithm, as implemented in the \texttt{networkx} library.
+
+    \item \textbf{Power-law Distribution}: The distribution of node degrees (number of connections) and other network properties are examined for characteristics of power-law distributions. A power law, $P(k) \sim k^{-\alpha}$, describes a "fat-tailed" distribution where a few nodes (hubs) have a disproportionately high number of connections, while most nodes have few. Such distributions are frequently observed in real-world networks (Clauset et al., 2009; Kejriwal \& Dang, 2020) and their presence can indicate significant heterogeneity in node importance.
+
+    \item \textbf{Density of a Graph}: Network density, the ratio of actual edges to the total number of possible edges in the network ($D = \frac{L}{N(N-1)/2}$ for an undirected graph with $L$ edges and $N$ nodes), is used to measure the general level of connectedness. Low density is typical for large, sparse networks and indicates that connections are selective rather than ubiquitous.
 \end{itemize}
 
-\subsection{Unsupervised Learning and Association Analysis}
+\subsection{Entropy}
+\label{subsec:entropy}
+Drawing on its application in prior studies of offshore finance (e.g., Chang et al., 2023c; Kejriwal \& Dang, 2020), Shannon entropy is employed as a measure of diversity or concentration. For a discrete random variable $X$ with $n$ possible outcomes $x_1, ..., x_n$ and probabilities $p(x_i)$, entropy is defined as:
+\begin{equation}
+    H(X) = -\sum_{i=1}^{n} p(x_i) \log_b p(x_i)
+\end{equation}
+where $b$ is the base of the logarithm (typically $b=2$, yielding units of bits). Compared to other concentration measures like the Herfindahl-Hirschman Index (HHI), entropy gives more weight to smaller amounts of diversity. This characteristic is particularly useful in this thesis, as intermediaries' activities (e.g., choice of jurisdictions or countries) are often highly concentrated in one or two locations, but variations in minor activities can still be informative. Normalized entropy, calculated by dividing $H(X)$ by the maximum possible entropy ($\log_b n$), is used to provide a standardized measure (0 to 1) for comparing diversity across intermediaries with different breadths of activity. Entropy is used, for example, as a summary statistic at the intermediary-level to quantify the diversity of their client entity portfolio across dimensions like country, jurisdiction, or regime type, enabling subsequent comparisons of these distributions across different intermediary classifications.
+
+\subsection{Association Analysis}
 \label{subsec:unsupervised_learning}
+In line with the highly exploratory nature of this thesis, unsupervised learning techniques are employed to discover notable patterns within the data. Association analysis (Hastie et al., 2009) is particularly opportune for identifying non-obvious relationships or co-occurrences in large datasets, such as the ICIJ networks. For example, it can help determine which connections (e.g., between a type of intermediary and the use of a specific jurisdiction or legal technology) are particularly remarkable. This approach relies on a \textbf{non-parametric notion} of pattern discovery, aiming to \textbf{discover patterns of high density} or co-occurrence.
 
-To discover patterns and relationships within the data without pre-defined target labels, unsupervised learning techniques are employed, with a particular focus on association analysis.
-
+Two main tools from association analysis, based on simple set-theoretical notions, are used:
 \begin{itemize}
-    \item This approach relies on a \textbf{non-parametric notion} of pattern discovery.
-    \item It aims at \textbf{discovering patterns of high density} or co-occurrence.
-    \item \textbf{Lift scores} will be used to quantify the strength of associations found, indicating how much more likely two items (e.g., use of a specific jurisdiction and a type of intermediary) are to appear together than expected by chance.
-\end{itemize}
-
-\subsection{Testing Significance of Results}
-\label{subsec:significance_testing}
-To ensure the robustness of the findings, appropriate statistical tests are utilized:
-\begin{itemize}
-    \item \textbf{Fisher's exact test}: Employed where applicable, particularly for categorical data and contingency tables. This is ideal for association analysis results and for dummy variables, such as whether entities are connected to bearer instruments.
-    \item \textbf{Mann-Whitney U test}: A non-parametric test used for comparing continuous variables between two independent groups when the data is not normally distributed.
-    \item \textbf{Two-sample Kolmogorov-Smirnov test}: Used for comparing the distributions of continuous variables from two samples, again a non-parametric choice.
+    \item \textbf{Support}: This measures the overall frequency of an itemset (e.g., a specific attribute or combination of attributes) in the dataset. For an itemset $X$, $Support(X) = P(X) = \frac{\text{count}(X)}{N}$, where $N$ is the total number of transactions (e.g., intermediaries). For an association rule $A \rightarrow B$, $Support(A \rightarrow B) = P(A \cup B)$.
+    \item \textbf{Lift}: This measures how much more likely item $B$ is to be present when item $A$ is present, compared to the baseline probability of $B$. It indicates the strength of an association beyond what would be expected by chance.
+    \begin{equation}
+        Lift(A \rightarrow B) = \frac{P(B|A)}{P(B)} = \frac{Support(A \cup B)}{Support(A) \times Support(B)}
+    \end{equation}
+    A lift value greater than 1 suggests a positive association, a value less than 1 suggests a negative association, and a value of 1 suggests independence. \textbf{Lift scores} will be used to quantify the strength of associations found, indicating, for example, how much more likely an intermediary of a certain type is to use a specific jurisdiction compared to the overall likelihood.
 \end{itemize}
 
 \subsection{Multiple Hypothesis Testing}
 \label{subsec:multiple_hypothesis_testing}
-Given that this research involves exploring multiple patterns and relationships, it is crucial to address the issue of multiple hypothesis testing.
+Given that this thesis is highly exploratory and investigates a multitude of potential associations, it is crucial to address the issue of multiple hypothesis testing. When numerous statistical tests are performed, the conventional Type I error rate of 5\% ($p < 0.05$) can become inflated, leading to a higher probability of false positives (incorrectly rejecting a true null hypothesis). To counteract this, a highly conservative approach is adopted, opting for the \textbf{Bonferroni correction} to control the Family-Wise Error Rate (FWER) at the conventional maximum of 5\%. This method adjusts the significance threshold for each individual test to $\alpha/m$, where $\alpha$ is the desired FWER (e.g., 0.05) and $m$ is the total number of hypotheses tested. Alternatively, individual p-values are multiplied by $m$, and then compared to $\alpha$. While known for its conservatism, this choice is made to be particularly cautious about any single false positive claim, given the exploratory nature of the analysis, rather than opting for procedures like the Benjamini-Hochberg method which control the False Discovery Rate (FDR).
+
+\subsection{Testing Significance of Results}
+\label{subsec:significance_testing}
+In line with the considerations above, and the nature of the data, specific non-parametric statistical tests are employed to assess the significance of observed differences or associations. These tests are chosen for their robustness to violations of normality assumptions. The following are applied where appropriate, with detailed applications described in the empirical analysis chapter:
 \begin{itemize}
-    \item The conventional Type I error rate of 5\% ($p < 0.05$) can become inflated when multiple tests are performed, leading to a higher chance of false positives.
-    \item The \textbf{Bonferroni correction} is considered, although it is known for being highly conservative.
-    \item The \textbf{Benjamini-Hochberg procedure} may be a more suitable alternative to control the False Discovery Rate (FDR), offering a better balance between power and error control. However, given the exploratory nature of this work, which can be likened to a data mining exercise, a conservative approach (like Bonferroni) might be preferred to minimize false positives over maximizing statistical power. The choice of method will be justified based on the specific context of the analyses.
+    \item \textbf{Mann-Whitney U test}: A non-parametric test used for comparing the distributions of continuous or ordinal variables between two independent groups. It is particularly useful when the data is not normally distributed, as is often the case with metrics like entropy scores or network-derived measures. It assesses whether one distribution is stochastically greater than the other.
+    \item \textbf{Fisher's exact test}: Employed for analyzing categorical data, particularly in contingency tables (e.g., 2x2 tables). This test is ideal for assessing associations between categorical variables, such as those resulting from association analysis or when examining the relationship between dummy variables (e.g., whether entities are connected to bearer instruments and intermediary type). It is an exact test, making it suitable for small sample sizes or when expected cell counts are low.
+    \item \textbf{Two-sample Kolmogorov-Smirnov test}: Used for comparing the underlying distributions of continuous variables from two independent samples. Unlike tests that compare central tendencies (like the t-test or Mann-Whitney U), the K-S test is sensitive to differences in location, scale, and shape of the distributions, offering a more comprehensive comparison.
 \end{itemize}
+
 
 \section{Use of LLMs in the Broader Paper}
 \label{sec:3_5_llms}
@@ -164,7 +195,7 @@ Used Google Gemini models mainly.
     \item gemini-2.5-flash-experimental-04-17
 \end{itemize}
 
-Quick edits frequently made using Claude's 3.7 Sonnet model.
+Quick edits frequently made using Claude's 3.7 Sonnet model (`claude-3.7-sonnet-latest`).
 
 
 

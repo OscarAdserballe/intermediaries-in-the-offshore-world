@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.26)  20 MAY 2025 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.26)  21 MAY 2025 09:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -746,9 +746,12 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 58
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./main.aux
 (./chapters/introduction.aux) (./chapters/theory.aux)
-(./chapters/data_methodology.aux) (./chapters/empirical_analysis.aux)
-(./chapters/discussion.aux) (./chapters/conclusion.aux)
-(./chapters/appendix.aux))
+(./chapters/data_methodology.aux
+
+LaTeX Warning: Label `sec:3_2' multiply defined.
+
+) (./chapters/empirical_analysis.aux) (./chapters/discussion.aux)
+(./chapters/conclusion.aux) (./chapters/appendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
@@ -923,16 +926,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `main.toc'.
 
  [2]
-(./main.lof)
+(./main.lof [3
+
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/loca
+l/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/
+2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [3
-
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/loca
-l/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024
-/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] (./main.lot
-Overfull \hbox (0.88945pt too wide) in paragraph at lines 14--14
+ [4] (./main.lot
+Overfull \hbox (0.88945pt too wide) in paragraph at lines 16--16
  [][] [][]\T1/lmr/m/n/12 Significant Ju-ris-dic-tion As-so-ci-a-tions in Co-Usa
 ge Net-work (Bon-fer-roni Cor- 
  []
@@ -941,7 +944,7 @@ ge Net-work (Bon-fer-roni Cor-
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [4
+ [5
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -1082,21 +1085,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  (./chapters/data_methodology.tex
 Chapter 3.
+
+LaTeX Warning: Reference `sec:3_4_analytical_methodologies' on page 15 undefine
+d on input line 4.
+
 [15
 
 
 
 
 ]
-Chapter 4.
-[16
-
-]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-1.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1105,14 +1103,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]
-<./images/Preliminary_Incorporations_over_Time.png, id=390, 1084.05pt x 578.16p
+[16]
+<./images/Preliminary_Incorporations_over_Time.png, id=475, 1084.05pt x 578.16p
 t>
 File: ./images/Preliminary_Incorporations_over_Time.png Graphic file (type png)
 
 <use ./images/Preliminary_Incorporations_over_Time.png>
 Package pdftex.def Info: ./images/Preliminary_Incorporations_over_Time.png  use
-d on input line 76.
+d on input line 34.
 (pdftex.def)             Requested size: 362.37569pt x 193.26355pt.
 
 
@@ -1123,7 +1121,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18 <./images/Preliminary_Incorporations_over_Time.png>]
+[17 <./images/Preliminary_Incorporations_over_Time.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+8.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (5.14816pt too wide) in paragraph at lines 58--59
+\T1/lmr/m/n/12 For \T1/lmr/bx/n/12 in-ter-me-di-aries\T1/lmr/m/n/12 , whose fou
+n-da-tional data is drawn from \T1/lmtt/m/n/12 nodes-intermediaries.csv\T1/lmr/
+m/n/12 ,
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1133,11 +1152,45 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
-<./images/Methods_Agent_Graph.png, id=403, 591.20876pt x 453.695pt>
+
+LaTeX Warning: Reference `sec:3_3_agentic_ai_classification' on page 20 undefin
+ed on input line 82.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20]
+Overfull \hbox (14.2968pt too wide) in paragraph at lines 98--99
+[]\T1/lmr/m/n/12 The \T1/lmr/bx/n/12 Va-ri-eties of Democ-racy (VDem) Project d
+ata \T1/lmr/m/n/12 (specif-i-cally \T1/lmtt/m/n/12 vdem_core.csv\T1/lmr/m/n/12 
+):
+ []
+
+
+Overfull \hbox (9.8689pt too wide) in paragraph at lines 100--101
+[]\T1/lmr/bx/n/12 Laffitte's (2024) "The Mar-ket for Tax Havens" dataset \T1/lm
+r/m/n/12 (specif-i-cally \T1/lmtt/m/n/12 HTHD.csv\T1/lmr/m/n/12 ):
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
+<./images/Methods_Agent_Graph.png, id=507, 591.20876pt x 453.695pt>
 File: ./images/Methods_Agent_Graph.png Graphic file (type png)
 <use ./images/Methods_Agent_Graph.png>
 Package pdftex.def Info: ./images/Methods_Agent_Graph.png  used on input line 1
-16.
+12.
 (pdftex.def)             Requested size: 362.37569pt x 278.09657pt.
 
 
@@ -1148,7 +1201,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20 <./images/Methods_Agent_Graph.png>]
+[22 <./images/Methods_Agent_Graph.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1157,25 +1210,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[22])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[23]
+[23{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1185,112 +1220,155 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]
+Overfull \hbox (4.87102pt too wide) in paragraph at lines 164--165
+\T1/lmr/m/n/12 tribute or com-bi-na-tion of at-tributes) in the dataset. For an
+ item-set $\OML/lmm/m/it/12 X$\T1/lmr/m/n/12 , $\OML/lmm/m/it/12 Support\OT1/lm
+r/m/n/12 (\OML/lmm/m/it/12 X\OT1/lmr/m/n/12 ) =
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27]
 \openout2 = `chapters/empirical_analysis.aux'.
 
  (./chapters/empirical_analysis.tex
-Chapter 5.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4.
-
-<./images/Preliminary_Geography_Overview.png, id=432, 1445.4pt x 1011.78pt>
+Chapter 4.
+<./images/Preliminary_Geography_Overview.png, id=542, 1445.4pt x 1011.78pt>
 File: ./images/Preliminary_Geography_Overview.png Graphic file (type png)
 <use ./images/Preliminary_Geography_Overview.png>
 Package pdftex.def Info: ./images/Preliminary_Geography_Overview.png  used on i
-nput line 11.
-(pdftex.def)             Requested size: 362.37569pt x 253.65454pt.
-[25
+nput line 16.
+(pdftex.def)             Requested size: 407.66833pt x 285.36522pt.
+[28
 
 
 
 
- <./images/Preliminary_Geography_Overview.png>]
-<./images/Preliminary_Powerlaw_Fit.png, id=439, 722.7pt x 433.62pt>
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29 <./images/Preliminary_Geography_Overview.png>]
+<./images/Preliminary_Powerlaw_Fit.png, id=554, 722.7pt x 433.62pt>
 File: ./images/Preliminary_Powerlaw_Fit.png Graphic file (type png)
 <use ./images/Preliminary_Powerlaw_Fit.png>
 Package pdftex.def Info: ./images/Preliminary_Powerlaw_Fit.png  used on input l
-ine 21.
+ine 31.
 (pdftex.def)             Requested size: 362.37569pt x 217.4248pt.
 
 
-Package caption Warning: \label without proper reference on input line 37.
-See the caption package documentation for explanation.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-LaTeX Warning: Reference `fig:geography_country_heatmaps_top5' on page 26 undef
-ined on input line 30.
-
-
-Package caption Warning: \label without proper reference on input line 49.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:geography_country_heatmaps_top11_15' on page 26 u
-ndefined on input line 30.
-
-<./images/Geography_Country_Heatmaps_Top5.png, id=443, 1149.8157pt x 232.7094pt
+[30]
+<./images/Geography_Country_Heatmaps_Top5.png, id=563, 1149.8157pt x 232.7094pt
 >
 File: ./images/Geography_Country_Heatmaps_Top5.png Graphic file (type png)
 <use ./images/Geography_Country_Heatmaps_Top5.png>
 Package pdftex.def Info: ./images/Geography_Country_Heatmaps_Top5.png  used on 
-input line 36.
-(pdftex.def)             Requested size: 362.37569pt x 73.33934pt.
-<./images/Geography_Country_Heatmaps_Top6_10.png, id=444, 1149.8157pt x 232.709
+input line 51.
+(pdftex.def)             Requested size: 407.66833pt x 82.5041pt.
+<./images/Geography_Country_Heatmaps_Top6_10.png, id=564, 1149.8157pt x 232.709
 4pt>
 File: ./images/Geography_Country_Heatmaps_Top6_10.png Graphic file (type png)
 <use ./images/Geography_Country_Heatmaps_Top6_10.png>
 Package pdftex.def Info: ./images/Geography_Country_Heatmaps_Top6_10.png  used 
-on input line 42.
-(pdftex.def)             Requested size: 362.37569pt x 73.33934pt.
-<./images/Geography_Country_Heatmaps_Top11_15.png, id=445, 1149.8157pt x 234.87
+on input line 57.
+(pdftex.def)             Requested size: 407.66833pt x 82.5041pt.
+<./images/Geography_Country_Heatmaps_Top11_15.png, id=567, 1149.8157pt x 234.87
 75pt>
 File: ./images/Geography_Country_Heatmaps_Top11_15.png Graphic file (type png)
 <use ./images/Geography_Country_Heatmaps_Top11_15.png>
 Package pdftex.def Info: ./images/Geography_Country_Heatmaps_Top11_15.png  used
- on input line 48.
-(pdftex.def)             Requested size: 362.37569pt x 74.02263pt.
-<./images/Geography_Country_Level_Entropy_Distribution.png, id=446, 722.7pt x 4
+ on input line 64.
+(pdftex.def)             Requested size: 407.66833pt x 83.27278pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31 <./images/Preliminary_Powerlaw_Fit.png> <./images/Geography_Country_Heatmap
+s_Top5.png>]
+<./images/Geography_Country_Level_Entropy_Distribution.png, id=576, 722.7pt x 4
 33.62pt>
 File: ./images/Geography_Country_Level_Entropy_Distribution.png Graphic file (t
 ype png)
 <use ./images/Geography_Country_Level_Entropy_Distribution.png>
 Package pdftex.def Info: ./images/Geography_Country_Level_Entropy_Distribution.
-png  used on input line 54.
+png  used on input line 73.
 (pdftex.def)             Requested size: 362.37569pt x 217.4248pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[26 <./images/Preliminary_Powerlaw_Fit.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[27 <./images/Geography_Country_Heatmaps_Top5.png> <./images/Geography_Country_
-Heatmaps_Top6_10.png> <./images/Geography_Country_Heatmaps_Top11_15.png> <./ima
-ges/Geography_Country_Level_Entropy_Distribution.png>]
-<./images/Geography_Country_Heatmaps_Cyprus.png, id=465, 252.945pt x 232.7094pt
+<./images/Geography_Country_Heatmaps_Cyprus.png, id=578, 252.945pt x 232.7094pt
 >
 File: ./images/Geography_Country_Heatmaps_Cyprus.png Graphic file (type png)
 <use ./images/Geography_Country_Heatmaps_Cyprus.png>
 Package pdftex.def Info: ./images/Geography_Country_Heatmaps_Cyprus.png  used o
-n input line 63.
+n input line 82.
 (pdftex.def)             Requested size: 362.37569pt x 333.3933pt.
-<./images/Geography_Distribution_of_Countries_by_Intermediary.png, id=467, 867.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32 <./images/Geography_Country_Heatmaps_Top6_10.png> <./images/Geography_Count
+ry_Heatmaps_Top11_15.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33 <./images/Geography_Country_Level_Entropy_Distribution.png> <./images/Geogr
+aphy_Country_Heatmaps_Cyprus.png>]
+<./images/Geography_Distribution_of_Countries_by_Intermediary.png, id=592, 867.
 24pt x 361.35pt>
 File: ./images/Geography_Distribution_of_Countries_by_Intermediary.png Graphic 
 file (type png)
 <use ./images/Geography_Distribution_of_Countries_by_Intermediary.png>
 Package pdftex.def Info: ./images/Geography_Distribution_of_Countries_by_Interm
-ediary.png  used on input line 73.
+ediary.png  used on input line 94.
 (pdftex.def)             Requested size: 362.37569pt x 150.98853pt.
 
 
@@ -1301,12 +1379,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28 <./images/Geography_Country_Heatmaps_Cyprus.png>]
-<./images/Geography_Cross_Country_Network.png, id=475, 1445.4pt x 722.7pt>
+[34 <./images/Geography_Distribution_of_Countries_by_Intermediary.png>]
+<./images/Geography_Cross_Country_Network.png, id=601, 1445.4pt x 722.7pt>
 File: ./images/Geography_Cross_Country_Network.png Graphic file (type png)
 <use ./images/Geography_Cross_Country_Network.png>
 Package pdftex.def Info: ./images/Geography_Cross_Country_Network.png  used on 
-input line 104.
+input line 124.
 (pdftex.def)             Requested size: 407.66833pt x 203.8323pt.
 
 
@@ -1317,19 +1395,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[29 <./images/Geography_Distribution_of_Countries_by_Intermediary.png>]
-
-LaTeX Warning: Reference `tab:appendix_country_betweenness' on page 30 undefine
-d on input line 123.
-
-
-LaTeX Warning: Reference `tab:appendix_country_eigenvector' on page 30 undefine
-d on input line 123.
-
-
-LaTeX Warning: Reference `tab:appendix_significant_country_associations' on pag
-e 30 undefined on input line 127.
-
+[35 <./images/Geography_Cross_Country_Network.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1338,22 +1404,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[30 <./images/Geography_Cross_Country_Network.png>]
-<./images/Geography_Distribution_of_Jurisdictions_by_Intermediary.png, id=490, 
+[36]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+<./images/Geography_Distribution_of_Jurisdictions_by_Intermediary.png, id=623, 
 867.24pt x 361.35pt>
 File: ./images/Geography_Distribution_of_Jurisdictions_by_Intermediary.png Grap
 hic file (type png)
 <use ./images/Geography_Distribution_of_Jurisdictions_by_Intermediary.png>
 Package pdftex.def Info: ./images/Geography_Distribution_of_Jurisdictions_by_In
-termediary.png  used on input line 159.
+termediary.png  used on input line 181.
 (pdftex.def)             Requested size: 362.37569pt x 150.98853pt.
-<./images/Geography_Cross_Jurisdiction_Network.png, id=492, 1445.4pt x 722.7pt>
+<./images/Geography_Cross_Jurisdiction_Network.png, id=626, 1445.4pt x 722.7pt>
 
 File: ./images/Geography_Cross_Jurisdiction_Network.png Graphic file (type png)
 
 <use ./images/Geography_Cross_Jurisdiction_Network.png>
 Package pdftex.def Info: ./images/Geography_Cross_Jurisdiction_Network.png  use
-d on input line 168.
+d on input line 190.
 (pdftex.def)             Requested size: 407.66833pt x 203.8323pt.
 
 
@@ -1364,39 +1439,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[31]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[32 <./images/Geography_Distribution_of_Jurisdictions_by_Intermediary.png> <./i
-mages/Geography_Cross_Jurisdiction_Network.png>]
-Overfull \hbox (30.44029pt too wide) in paragraph at lines 180--181
-[]\T1/lmr/bx/n/12 Community 0 (Dark Blue): \T1/lmr/m/n/12 HKG, CYM, COK, com-bi
-n-ing "Banking/Corporate/Dual-
+[38 <./images/Geography_Distribution_of_Jurisdictions_by_Intermediary.png>]
+Overfull \hbox (57.0896pt too wide) in paragraph at lines 203--204
+\T1/lmr/m/n/12 lands), and COK (Cook Is-lands), com-bin-ing ju-ris-dic-tions kn
+own for "Banking/Corporate/Dual-
  []
 
 
-LaTeX Warning: Reference `tab:appendix_jurisdiction_betweenness' on page 33 und
-efined on input line 185.
-
-
-LaTeX Warning: Reference `tab:appendix_jurisdiction_eigenvector' on page 33 und
-efined on input line 185.
-
-
-Overfull \hbox (3.44313pt too wide) in paragraph at lines 185--188
+Overfull \hbox (3.44313pt too wide) in paragraph at lines 208--211
 [] \T1/lmr/bx/n/12 Cen-tral-ity in the Ju-ris-dic-tion Net-work \T1/lmr/m/n/12 
 Cen-tral-ity met-rics for the full 41-jurisdiction
  []
 
 
-LaTeX Warning: Reference `tab:appendix_significant_jurisdiction_associations' o
-n page 33 undefined on input line 190.
+Overfull \hbox (2.65448pt too wide) in paragraph at lines 208--211
+\T1/lmr/m/n/12 co-usage net-work (de-tailed in Ap-pendix Ta-bles []A.4[] and []
+A.5[]) are re-veal-ing. \T1/lmr/bx/n/12 VGB (British
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1406,30 +1465,62 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33]
-<./images/Specialisation_Classification_Distribution_Comparison.png, id=510, 86
-7.24pt x 433.62pt>
-File: ./images/Specialisation_Classification_Distribution_Comparison.png Graphi
-c file (type png)
-<use ./images/Specialisation_Classification_Distribution_Comparison.png>
-Package pdftex.def Info: ./images/Specialisation_Classification_Distribution_Co
-mparison.png  used on input line 204.
-(pdftex.def)             Requested size: 362.37569pt x 181.18623pt.
-<./images/Appendix_Filtering_of_Enrichment.png, id=511, 867.24pt x 433.62pt>
+[39 <./images/Geography_Cross_Jurisdiction_Network.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40]
+
+LaTeX Warning: Reference `sec:appendix_enrichment_filtering_details' on page 41
+ undefined on input line 226.
+
+<./images/Appendix_Filtering_of_Enrichment.png, id=648, 867.24pt x 433.62pt>
 File: ./images/Appendix_Filtering_of_Enrichment.png Graphic file (type png)
 <use ./images/Appendix_Filtering_of_Enrichment.png>
 Package pdftex.def Info: ./images/Appendix_Filtering_of_Enrichment.png  used on
- input line 211.
+ input line 230.
 (pdftex.def)             Requested size: 362.37569pt x 181.18623pt.
 <./images/Specialisation_CDF_of_Degrees_by_Classification_Random_Sample.png, id
-=513, 867.24pt x 505.89pt>
+=650, 867.24pt x 505.89pt>
 File: ./images/Specialisation_CDF_of_Degrees_by_Classification_Random_Sample.pn
 g Graphic file (type png)
 <use ./images/Specialisation_CDF_of_Degrees_by_Classification_Random_Sample.png
 >
 Package pdftex.def Info: ./images/Specialisation_CDF_of_Degrees_by_Classificati
-on_Random_Sample.png  used on input line 221.
+on_Random_Sample.png  used on input line 244.
 (pdftex.def)             Requested size: 362.37569pt x 211.38393pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[41 <./images/Appendix_Filtering_of_Enrichment.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42 <./images/Specialisation_CDF_of_Degrees_by_Classification_Random_Sample.png
+>]
+<./images/Specialisation_Classification_Distribution_Comparison.png, id=662, 86
+7.24pt x 433.62pt>
+File: ./images/Specialisation_Classification_Distribution_Comparison.png Graphi
+c file (type png)
+<use ./images/Specialisation_Classification_Distribution_Comparison.png>
+Package pdftex.def Info: ./images/Specialisation_Classification_Distribution_Co
+mparison.png  used on input line 264.
+(pdftex.def)             Requested size: 362.37569pt x 181.18623pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1439,18 +1530,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34 <./images/Specialisation_Classification_Distribution_Comparison.png> <./ima
-ges/Appendix_Filtering_of_Enrichment.png>]
+[43 <./images/Specialisation_Classification_Distribution_Comparison.png>]
 <./images/Specialisation_Average_Entropy_and_Bearer_Usage_by_Classification.png
-, id=521, 867.24pt x 578.16pt>
+, id=673, 867.24pt x 578.16pt>
 File: ./images/Specialisation_Average_Entropy_and_Bearer_Usage_by_Classificatio
 n.png Graphic file (type png)
 <use ./images/Specialisation_Average_Entropy_and_Bearer_Usage_by_Classification
 .png>
 Package pdftex.def Info: ./images/Specialisation_Average_Entropy_and_Bearer_Usa
-ge_by_Classification.png  used on input line 241.
+ge_by_Classification.png  used on input line 285.
 (pdftex.def)             Requested size: 362.37569pt x 241.58163pt.
-)
+
+
+LaTeX Warning: Reference `sec:appendix_functional_specialisation_stats' on page
+ 44 undefined on input line 290.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1459,8 +1553,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[35 <./images/Specialisation_CDF_of_Degrees_by_Classification_Random_Sample.png
->]
+[44 <./images/Specialisation_Average_Entropy_and_Bearer_Usage_by_Classification
+.png>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1469,18 +1563,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36 <./images/Specialisation_Average_Entropy_and_Bearer_Usage_by_Classification
-.png>]
+[45]
 \openout2 = `chapters/discussion.aux'.
 
  (./chapters/discussion.tex
-Chapter 6.
-[37
+Chapter 5.
+[46
 
 
 
 
-])
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1489,12 +1582,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[38]
+[47])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[48]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
-Chapter 7.
-) [39
+Chapter 6.
+) [49
 
 
 
@@ -1504,7 +1606,7 @@ Chapter 7.
 
  (./chapters/appendix.tex
 Appendix A.
-[40
+[50
 
 
 
@@ -1572,10 +1674,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[41
+[51
 
 ]
-Overfull \hbox (8.39256pt too wide) in paragraph at lines 103--103
+Overfull \hbox (8.39256pt too wide) in paragraph at lines 104--104
 |[]\T1/lmr/bx/n/17.28 Jurisdiction Net-work Cen-tral-ity and As-so-ci-a-tions| 
 
  []
@@ -1588,30 +1690,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42
+[52
 
 ]
-Overfull \hbox (20.4511pt too wide) in paragraph at lines 168--168
+Overfull \hbox (20.4511pt too wide) in paragraph at lines 169--169
 []|\T1/lmr/m/n/6 u_jurisdiction_legal_technology| 
  []
 
 
-Overfull \hbox (20.25659pt too wide) in paragraph at lines 168--168
+Overfull \hbox (20.25659pt too wide) in paragraph at lines 169--169
 []|\T1/lmr/m/n/6 v_jurisdiction_legal_technology| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--178
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 []|\T1/lmr/m/n/6 Bnk/Corp/Dual/Oth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
-[]|\T1/lmr/m/n/6 Bnk/Corp/Dual/Oth
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--190
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
 []|\T1/lmr/m/n/6 Bnk/Corp/Dual/Oth
  []
 
@@ -1621,27 +1718,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--191
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
 []|\T1/lmr/m/n/6 Bnk/Corp/Dual/Oth
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 200--200
-[]|\T1/lmr/m/n/6 Bnk/Corp/Dual-
+[]|\T1/lmr/m/n/6 Bnk/Corp/Dual/Oth
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 201--201
+[]|\T1/lmr/m/n/6 Bnk/Corp/Dual-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--202
 []|\T1/lmr/m/n/6 Bnk/Corp/Dual/Oth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 10000) in paragraph at lines 205--205
 []|\T1/lmr/m/n/6 Bnk/Corp/Dual/Oth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 10000) in paragraph at lines 205--205
 []|\T1/lmr/m/n/6 Bnk/Corp/Dual-
  []
 
@@ -1653,34 +1755,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[43
+[53
 
 ]
-Overfull \hbox (58.29703pt too wide) in paragraph at lines 219--220
+Overfull \hbox (58.29703pt too wide) in paragraph at lines 220--221
 \T1/lmr/m/n/12 The core prompt pro-vided to the AI agent for clas-si-fi-ca-tion
  is as fol-lows (where \T1/lmtt/m/n/12 {intermediary_name}
  []
 
 
-Overfull \hbox (16.33234pt too wide) in paragraph at lines 260--260
+Overfull \hbox (16.33234pt too wide) in paragraph at lines 261--261
 []  \T1/lmtt/m/n/12 representation. Keywords: legal services, corporate law, en
 tity formation,[] 
  []
 
 
-Overfull \hbox (10.15733pt too wide) in paragraph at lines 260--260
+Overfull \hbox (10.15733pt too wide) in paragraph at lines 261--261
 []\T1/lmtt/m/n/12 - Investment Advisor: Focuses on managing financial assets an
 d investments.[] 
  []
 
 
-Overfull \hbox (65.73236pt too wide) in paragraph at lines 260--260
+Overfull \hbox (65.73236pt too wide) in paragraph at lines 261--261
 []\T1/lmtt/m/n/12 - classification (Enum: Tax Expert, Legal Expert, Administrat
 or, Investment Advisor)[] 
  []
 
 
-Overfull \hbox (41.03235pt too wide) in paragraph at lines 260--260
+Overfull \hbox (41.03235pt too wide) in paragraph at lines 261--261
 []\T1/lmtt/m/n/12 - is_individual (bool: based on the name and findings, is thi
 s likely a person?)[] 
  []
@@ -1693,28 +1795,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[44
+[54
 
 ]
-Overfull \hbox (34.85735pt too wide) in paragraph at lines 260--260
+Overfull \hbox (34.85735pt too wide) in paragraph at lines 261--261
 []\T1/lmtt/m/n/12 - job_title (str: inferred job title if possible, e.g., "Lawy
 er", "Accountant",[] 
  []
 
 
-Overfull \hbox (22.50734pt too wide) in paragraph at lines 260--260
+Overfull \hbox (22.50734pt too wide) in paragraph at lines 261--261
 []\T1/lmtt/m/n/12 - confidence (Enum: Low, High - Use Low if evidence is sparse
 , contradictory,[] 
  []
 
 
-Overfull \hbox (41.03235pt too wide) in paragraph at lines 260--260
+Overfull \hbox (41.03235pt too wide) in paragraph at lines 261--261
 []\T1/lmtt/m/n/12 - justification (str: detailed reasoning for the classificati
 on, referencing the[] 
  []
 
 
-Overfull \hbox (10.15733pt too wide) in paragraph at lines 260--260
+Overfull \hbox (10.15733pt too wide) in paragraph at lines 261--261
 []\T1/lmtt/m/n/12 Analyze the content of the search results carefully. Prioriti
 ze information[] 
  []
@@ -1727,8 +1829,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[45]
-Overfull \hbox (8.83583pt too wide) in paragraph at lines 292--293
+[55]
+Overfull \hbox (8.83583pt too wide) in paragraph at lines 293--294
 \T1/lmr/m/n/12 OPAL HOLD-INGS LIM-ITED. One re-sult men-tions 'OP-U-LENT OPAL C
 ON-STRUC-
  []
@@ -1741,7 +1843,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[46])
+[56])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1750,7 +1852,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47]
+[57]
 
 LaTeX Warning: Empty bibliography on input line 129.
 
@@ -1767,69 +1869,38 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 64AB2738E293B6A21A59E2276575627E;9912
-(rerunfilecheck)             After:  0EDCF5FDF596CE4A5A4D87BEF2BE1729;9744.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 0E53F9834736C76313E6897A341AC881;11941.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22305 strings out of 474116
- 398590 string characters out of 5743682
- 1960187 words of memory out of 5000000
- 44192 multiletter control sequences out of 15000+600000
- 610617 words of font info for 68 fonts, out of 8000000 for 9000
+ 22343 strings out of 474116
+ 399177 string characters out of 5743682
+ 1963187 words of memory out of 5000000
+ 44212 multiletter control sequences out of 15000+600000
+ 619445 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,12n,95p,1271b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{table.Alph0.8} has been referenced but does not exi
-st, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.caption.28} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.Alph0.5} has been referenced but does not exi
-st, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{appendix.B} has been referenced but does not exist,
- replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.Alph0.2} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.Alph0.1} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{appendix*.24} has been referenced but does not exis
-t, replaced by a fixed one
-
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive
-/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texm
-f-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/font
-s/type1/public/lm/lmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publ
-ic/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12
-.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (52 pages, 2054923 bytes).
+ 89i,12n,95p,1382b,5052s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
+cal/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/te
+xmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/f
+onts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/l
+mr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr6.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/tex
+live/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/
+texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist
+/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/lm/lmtt12.pfb>
+Output written on main.pdf (63 pages, 2127358 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 570 compressed objects within 6 object streams
- 138 named destinations out of 1000 (max. 500000)
- 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 850 PDF objects out of 1000 (max. 8388607)
+ 713 compressed objects within 8 object streams
+ 152 named destinations out of 1000 (max. 500000)
+ 494 words of extra memory for PDF output out of 10000 (max. 10000000)
 

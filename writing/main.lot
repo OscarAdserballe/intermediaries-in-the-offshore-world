@@ -3,15 +3,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Summary Statistics for the Full Country Co-Service Network}}{29}{table.caption.15}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Summary Statistics for the Full Jurisdiction Co-Usage Network}}{31}{table.caption.17}%
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Summary Statistics for the Full Country Co-Service Network}}{34}{table.caption.15}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Summary Statistics for the Full Jurisdiction Co-Usage Network}}{38}{table.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Top 10 Countries by Betweenness Centrality in the Full Co-Service Network (excluding XXX)}}{40}{table.caption.24}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Top 10 Countries by Eigenvector Centrality in the Full Co-Service Network (excluding XXX)}}{40}{table.caption.25}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces Significant Country Associations in Co-Service Network (Bonferroni Corrected $p < 6.89 \times 10^{-6}$)}}{41}{table.A.3}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces Top 10 Jurisdictions by Betweenness Centrality in the Full Co-Usage Network (excluding XXX)}}{42}{table.caption.26}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces Top 10 Jurisdictions by Eigenvector Centrality in the Full Co-Usage Network (excluding XXX)}}{42}{table.caption.27}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces Significant Jurisdiction Associations in Co-Usage Network (Bonferroni Corrected $p < 6.10 \times 10^{-5}$)}}{43}{table.A.6}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Top 10 Countries by Betweenness Centrality in the Full Co-Service Network (excluding XXX)}}{50}{table.caption.24}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Top 10 Countries by Eigenvector Centrality in the Full Co-Service Network (excluding XXX)}}{50}{table.caption.25}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Significant Country Associations in Co-Service Network (Bonferroni Corrected $p < 6.89 \times 10^{-6}$)}}{51}{table.A.3}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces Top 10 Jurisdictions by Betweenness Centrality in the Full Co-Usage Network (excluding XXX)}}{52}{table.caption.26}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces Top 10 Jurisdictions by Eigenvector Centrality in the Full Co-Usage Network (excluding XXX)}}{52}{table.caption.27}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces Significant Jurisdiction Associations in Co-Usage Network (Bonferroni Corrected $p < 6.10 \times 10^{-5}$)}}{53}{table.A.6}%
