@@ -1,4 +1,0 @@
-
-Filtered graph: 16 nodes, 35 edges
-
-Filtered graph: 16 nodes, 35 edges

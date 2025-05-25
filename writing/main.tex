@@ -21,40 +21,31 @@
 
 
 % --- Section Title Formatting ---
-\usepackage{titlesec} % Added package to control section spacing
-% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}[<right-sep>]
-\titlespacing*{\chapter}{0pt}{20pt}{40pt} % Adjust 20pt (before) and 40pt (after) as needed
+\usepackage{titlesec} 
+\titlespacing*{\chapter}{0pt}{20pt}{40pt} 
 
-% \titleformat{<command>}[<shape>]{<format>}{<label>}{<sep>}{<before-code>}[<after-code>]
-% Remove the "Chapter X" label completely
 \titleformat{\chapter}[display]
-  {\normalfont\Huge\bfseries} % Format of the title (Huge, Bold)
-  {}                         % Label (empty to remove "Chapter X")
-  {0pt}                      % Separation between label and title (0pt as label is empty)
-  {}                         % Code before the title body
+  {\normalfont\Huge\bfseries} 
+  {}                         
+  {0pt}                     
+  {}                       
 
 % --- Bibliography Package ---
-\usepackage[backend=biber, style=apa, sorting=nyt]{biblatex} % Modern bibliography management (use APA style)
-% Update the path to your bibliography file:
-\addbibresource{bib/references.bib} % Define your bibliography file
+\usepackage[backend=biber, style=apa, sorting=nyt]{biblatex} 
+\addbibresource{bib/references.bib} 
 
-% --- Optional: Nicer Headers/Footers ---
+% Nicer Headers/Footers 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\nouppercase{\leftmark}}
 \fancyfoot[C]{\thepage}
 
-% --- Selective Compilation (Optional but useful) ---
-% Uncomment the line below and list chapter filenames (without .tex) to compile only those chapters.
-% \includeonly{chapters/introduction,chapters/theory}
-
 
 \title{Network Topologies of Offshore Intermediaries}
-\author{Oscar Julius Adserballe} % Replace with your name
-\date{May 2025} % Or specify a date: \date{Month Year}
+\author{Oscar Julius Adserballe} 
+\date{May 2025}
 
-% --- Document Start ---
 \begin{document}
 
 \begin{titlepage}
@@ -65,8 +56,8 @@
 
     \vspace{1.5cm}
 
-    {\Large\bfseries Oscar Julius Adserballe\par} % Replace with your name
-    {\large Student ID: S160855\par} % Replace with your ID
+    {\Large\bfseries Oscar Julius Adserballe\par} 
+    {\large Student ID: S160855\par} 
 
     \vspace{1cm}
 
@@ -119,6 +110,7 @@
 \include{chapters/discussion}
 \include{chapters/conclusion}
 
+%TC:ignore
 % --- Appendix ---
 \appendix
 \include{chapters/appendix}
@@ -127,6 +119,10 @@
 % --- Bibliography ---
 % This command should be in your main file where you want the bibliography to appear.
 \printbibliography
+
+
+% Word count: texcount -inc main.tex -sum -char
+%TC:endignore
 
 \end{document}
 % --- Document End ---

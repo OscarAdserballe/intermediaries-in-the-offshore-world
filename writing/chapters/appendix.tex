@@ -1,6 +1,185 @@
 \chapter{Appendix}
 \label{chap:appendix}
 
+The hardest part - which I speak confidently on with my 21 years of experience on this earth - is always leaving material on the cutting-floor. I've, however, not had the willpower to completely relinquish this section of my thesis, and so with the brazen immaturity of a Bachelor's student, I've put it here, in vain hope that efforts won't feel wasted. 
+
+The appendix is structured as follows. First, detailing a third proposition on the centrality of Microstates in Co-service networks of intermediaries in both countries and jurisidictions. Secondly, the empirical analysis behind it, in which, I will briefly discuss methods, then followed by the results of looking at these "co-service networks" of intermediaries across countries. Thirdly, I'll go a bit deeper on the method by which I've classified intermediaries using a novel agentic method.
+
+\section{Proposition 3: Structural Centrality of Microstates in Intermediation Network}
+A core set of Offshore Financial Centers (OFCs), that in heavy part are those infamous microstates. Highly central in it.
+
+Interesting to note, that this may also be due to their offering of versatile ``legal technologies'' like ``Dual-Purpose'' vehicles as for example is proposed in Laffitte (2024). Empirical confirmation that they form the structural backbone of the global offshore network, and are countries that intermediaries from all countries whose residents they do business and jurisdiction they incorporate. Critical hubs and bridges in chains of intermediation, facilitating complex offshore strategies regardless of client or intermediary home country.
+
+Looking at the central actors in these networks of countries that intermediaries make use of. This is where network analysis shines, with its cohsive langauge of ``centrality'' and ``community detection''.
+
+\begin{itemize}
+\item High centrality (betweenness, eigenvector) of jurisdictions like VGB, BHS, PAN, CYM, HKG in your co-service and co-usage networks.
+\item Dominance of ``Dual-Purpose'' legal technologies in the central core of the jurisdiction co-usage network.
+\item High lift values between key OFCs in association analysis.
+\end{itemize}
+
+\section{Concepts from Network Analysis}
+\label{subsec:network_theory_concepts}
+
+Specifically, network analysis is employed here to uncover the roles intermediaries play based on their positions within the interconnected offshore financial system revealed by the ICIJ data. As described in Section \ref{sec:3_1}, the ICIJ data forms a multi-modal graph (comprising entities, officers, intermediaries, etc.). Directly applying many standard network analysis concepts to such a multipartite graph can be challenging. Therefore, our approach often involves analyzing specific projections or subsets of the global graph to make the analytical tools from network theory applicable. The foundational textbook by Newman (2010) serves as the primary reference for this section.
+
+\begin{itemize}
+    \item \textbf{Centrality Scores}: To identify nodes of critical importance within specific network representations, we utilize two fundamental centrality measures. In the context of understanding the key countries for intermediary activity, these measures are applied to a network derived from intermediary incorporation patterns.
+    \begin{itemize}
+        \item \textbf{Eigenvector Centrality}: This measure assigns scores to nodes based on the principle that connections to high-scoring nodes contribute more to the score of the node in question than equal connections to low-scoring nodes. It is calculated as the principal eigenvector of the adjacency matrix $\mathbf{A}$ of the network, satisfying $x_i = \frac{1}{\lambda} \sum_{j} A_{ij} x_j$, where $x_i$ is the centrality score of node $i$, $A_{ij}$ is 1 if node $i$ is connected to node $j$ and 0 otherwise (or the weight of the edge), and $\lambda$ is the largest eigenvalue of $\mathbf{A}$ (cf. Perron-Frobenius theorem). Eigenvector centrality is chosen for its ability to identify nodes that are influential not just by having many connections, but by being connected to other influential nodes, providing a robust reading of which countries are most central in the network of intermediary incorporations.
+        \item \textbf{Betweenness Centrality}: This metric quantifies the extent to which a node lies on shortest paths between other pairs of nodes. For a node $v$, it is defined as $C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}$, where $\sigma_{st}$ is the total number of shortest paths between nodes $s$ and $t$, and $\sigma_{st}(v)$ is the number of those paths that pass through $v$. Betweenness centrality is used here to gauge which countries act as crucial "bridges" or conduits within the network, potentially connecting otherwise disparate segments, a role distinct from simply being a high-degree hub.
+    \end{itemize}
+
+    \item \textbf{Community Detection: Modularity Maximization}: To uncover clusters or communities of closely related nodes within the country network, we employ modularity maximization. This approach provides an atheoretical method for identifying densely connected groups of countries, which may reflect underlying similarities in how intermediaries utilize them. Such clustering could be influenced by factors like shared regime types (Chang et al., 2023c) or the trust dynamics inherent in relational capitalism. While traditional clustering algorithms could be applied, defining a meaningful distance or dissimilarity metric for nodes in these networks is non-trivial. Modularity maximization, conversely, assesses the quality of a partition by comparing the number of intra-community edges to what would be expected in a random network with similar properties (a null model). The quality of a partition $C$ is measured by the modularity $Q$:
+    \begin{equation}
+        Q = \frac{1}{2m} \sum_{i,j} \left[ A_{ij} - P_{ij} \right] \delta(c_i, c_j)
+    \end{equation}
+    where $m$ is the total number of edges, $A_{ij}$ is the actual weight of the edge between nodes $i$ and $j$, $P_{ij}$ is the expected weight of an edge between $i$ and $j$ under the Newman-Girvan null model (a configuration model preserving the degree sequence, where $P_{ij} = \frac{k_i k_j}{2m}$ for unweighted graphs, $k_i$ being the degree of node $i$), and $\delta(c_i, c_j)$ is 1 if nodes $i$ and $j$ are in the same community ($c_i=c_j$) and 0 otherwise. Since finding the optimal partition is an NP-hard (although, to be honest, at the size we reduce our graph sizes, search space isn't an issue...) problem, we utilize the Louvain method (Blondel et al., 2008), an efficient and widely adopted greedy algorithm, as implemented in the \texttt{networkx} library.
+
+    \item \textbf{Power-law Distribution}: The distribution of node degrees (number of connections) and other network properties are examined for characteristics of power-law distributions. A power law, $P(k) \sim k^{-\alpha}$, describes a "fat-tailed" distribution where a few nodes (hubs) have a disproportionately high number of connections, while most nodes have few. Such distributions are frequently observed in real-world networks (Clauset et al., 2009; Kejriwal \& Dang, 2020) and their presence can indicate significant heterogeneity in node importance.
+
+    \item \textbf{Density of a Graph}: Network density, the ratio of actual edges to the total number of possible edges in the network ($D = \frac{L}{N(N-1)/2}$ for an undirected graph with $L$ edges and $N$ nodes), is used to measure the general level of connectedness. Low density is typical for large, sparse networks and indicates that connections are selective rather than ubiquitous.
+\end{itemize}
+
+\section{Association Analysis}
+\label{subsec:unsupervised_learning}
+In line with the highly exploratory nature of this thesis, unsupervised learning techniques are employed to discover notable patterns within the data. Association analysis (Hastie et al., 2009) is particularly opportune for identifying non-obvious relationships or co-occurrences in large datasets, such as the ICIJ networks. For example, it can help determine which connections (e.g., between a type of intermediary and the use of a specific jurisdiction or legal technology) are particularly remarkable. This approach relies on a \textbf{non-parametric notion} of pattern discovery, aiming to \textbf{discover patterns of high density} or co-occurrence.
+
+Two main tools from association analysis, based on simple set-theoretical notions, are used:
+\begin{itemize}
+    \item \textbf{Support}: This measures the overall frequency of an itemset (e.g., a specific attribute or combination of attributes) in the dataset. For an itemset $X$, $Support(X) = P(X) = \frac{\text{count}(X)}{N}$, where $N$ is the total number of transactions (e.g., intermediaries). For an association rule $A \rightarrow B$, $Support(A \rightarrow B) = P(A \cup B)$.
+    \item \textbf{Lift}: This measures how much more likely item $B$ is to be present when item $A$ is present, compared to the baseline probability of $B$. It indicates the strength of an association beyond what would be expected by chance.
+    \begin{equation}
+        Lift(A \rightarrow B) = \frac{P(B|A)}{P(B)} = \frac{Support(A \cup B)}{Support(A) \times Support(B)}
+    \end{equation}
+    A lift value greater than 1 suggests a positive association, a value less than 1 suggests a negative association, and a value of 1 suggests independence. \textbf{Lift scores} will be used to quantify the strength of associations found, indicating, for example, how much more likely an intermediary of a certain type is to use a specific jurisdiction compared to the overall likelihood.
+\end{itemize}
+
+
+
+
+\section{Patterns of Co-Specialisation}
+To explore these co-service relationships further, a network of countries was constructed. In this network, countries are nodes, and an edge exists between two countries if at least one intermediary serves clients (entities) linked to both. The weight of the edge reflects the number of distinct intermediaries serving clients in both countries. The resulting full country network consists of 121 nodes (countries) and 2,716 edges. Key summary statistics for this network are presented in Table \ref{tab:country_network_summary}. 
+
+\begin{table}[htbp]
+\centering
+\caption{Summary Statistics for the Full Country Co-Service Network}
+\label{tab:country_network_summary}
+\begin{tabular}{lc}
+\toprule
+\textbf{Metric}                        & \textbf{Value}    \\
+\midrule
+Number of Nodes               & 121      \\
+Number of Edges               & 2716     \\
+Network Density               & 0.3741   \\
+Average Degree                & 44.89    \\
+Average Clustering Coefficient & 0.7728   \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Visualising such dense graphs is incredibly challenging - and to be entirely honest, the rest of the thesis could be filled with differently filtered versions of this graph, illuminating some other aspect of it. Therefore, to identify the most important connections, the network was filtered using principles from association analysis. Edges are displayed only if they 1) meet a minimum support threshold (representing at least 0.008 of all intermediaries' country-pair connections, meaning the pair is co-serviced by at least that fraction of intermediaries who service multiple countries) and 2) a lift score of 1.5 or higher. Lift measures how much more frequently two countries are co-serviced than would be expected if their servicing by intermediaries were independent. This filtering ensures that the visualized connections are not only reasonably frequent but also represent associations significantly stronger than chance, that they are both common links as well as carrying statistical signal. The resulting filtered network, or "backbone," thus highlights the most robust and significant co-service relationships. While the exact number of nodes included is sensitive to the choice of the lift and support thresholds here, this "backbone" as I term it, is relatively stable across a range of thresholds.
+
+The nodes in the network visualization (Figure \ref{fig:geography_cross_country_network}) are coloured in two ways: first, by communities identified using the Louvain modularity maximization algorithm (Blondel et al., 2008), which groups densely interconnected countries; and second, by regime type using VDem data, as described in Section \ref{sec:3_2}. This dual coloring was intended to explore whether regime type influences intermediary operations and co-service patterns, a factor suggested by literature on offshore secrecy strategies (e.g. Chang et al., 2023b).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Geography_Cross_Country_Network.png}
+    \caption{Filtered Network of Co-Served Countries, Coloured by Louvain Community (left legend) and Regime Type (right legend). Edges shown have support $\ge 0.008$ and lift $\ge 1.5$. Node size can be proportional to degree or another centrality measure.}
+    \label{fig:geography_cross_country_network}
+\end{figure}
+
+\paragraph{Interpretation of the Filtered Country Network Structure}
+The filtered network (Figure \ref{fig:geography_cross_country_network}) reveals a sparse yet highly structured set of relationships, forming a distinct core-periphery structure. A central core of interconnected nodes is evident, particularly involving VGB (British Virgin Islands), CYM (Cayman Islands), and SGP (Singapore), along with their strong links to HKG (Hong Kong) and BMU (Bermuda).
+
+When coloured by regime type, no clear large-scale clustering emerges that aligns strictly with political systems. The central cluster itself is diverse, including Micro-states (VGB, CYM, BMU), jurisdictions classified as Closed Autocracies (HKG, reflecting its unique status), and Electoral Autocracies (SGP). Liberal Democracies such as the USA and TWN (Taiwan) are present but connect to nodes of various different regime types. This visual evidence supports the notion that regime type, while potentially a factor in individual elite choices (Chang et al., 2023c), is not a primary driver of these strong, systemic co-service relationships at the country-network level. Economic roles, historical ties, and financial infrastructure likely play more dominant roles in shaping this backbone.
+
+The Louvain community detection method, which is data-driven, reveals distinct groupings based on the density of co-service links:
+\begin{itemize}
+    \item \textbf{Community 0 (Dark Blue):} This is the largest community, featuring prominent offshore centers like VGB and CYM, major Asian economies/financial hubs like SGP, TWN (Taiwan), MYS (Malaysia), IDN (Indonesia), and Pacific jurisdictions like COK (Cook Islands) and likely WSM (Samoa, if present in the filtered graph). This highlights strong ties between several offshore financial centers and key Asian economies.
+    \item \textbf{Community 1 (Brown):} This community comprises major economies like the USA and CHN (China), alongside HKG (Hong Kong) and the offshore jurisdiction BMU (Bermuda), indicating a distinct Atlantic-Pacific nexus involving Bermuda.
+    \item \textbf{Community 2 (Light Blue):} A smaller, distinct community consisting of PAN (Panama), SYC (Seychelles), and BHS (Bahamas), all of which are significant offshore jurisdictions.
+\end{itemize}
+Most nodes in this backbone network are connected within two to three steps, indicating a relatively compact structure despite the filtering.
+
+Centrality metrics calculated on the full 121-node co-service network (detailed in Appendix Tables \ref{tab:appendix_country_betweenness_app} and \ref{tab:appendix_country_eigenvector_app}) identify key players.
+\textbf{VGB (British Virgin Islands)} is dominant, exhibiting the highest betweenness and eigenvector centrality, underscoring its pivotal role in connecting diverse client countries through shared intermediaries. The \textbf{USA} ranks second in both measures, reflecting its economic importance and the global reach of its client base serviced by international intermediaries. The USA is linked to BMU (Bermuda) in the filtered graph's Community 1. \textbf{HKG (Hong Kong) \& CHN (China)} also feature prominently in centrality scores and are central to Community 1. Numerous \textbf{Micro-states} (BMU, BHS, CYM) show high centrality, consistent with their specialized roles in offshore finance. \textbf{SGP (Singapore)} is another key, highly central node, bridging various parts of the network. In general, high centrality in the full network translates to a significant structural role in this filtered backbone, indicating that the most connected countries in the overall system also form the core of the strongest co-service relationships.
+
+\paragraph{Significant Country Associations}
+Lift scores from the association analysis (top associations detailed in Appendix Table \ref{tab:appendix_significant_country_associations_app}, filtered for co-occurrences $\ge 20$) reveal particularly strong and statistically significant pairings, many of which are visualized in Figure \ref{fig:geography_cross_country_network} (those with lift $\ge 1.5$).
+Key findings include:
+\begin{itemize}
+    \item Strong \textbf{Micro-state synergies} are evident. For instance, the WSM-CYM (Samoa-Cayman Islands) pairing shows a high lift of 6.78, and VGB-CYM (British Virgin Islands-Cayman Islands) has a lift of 1.91. These indicate that intermediaries servicing clients in one of these micro-states are substantially more likely to also service clients in the other, suggesting complementary service offerings or established pathways for specific client types. The CYM-BMU (Cayman Islands-Bermuda) link is exceptionally strong with a lift of 13.5.
+    \item A critical \textbf{China-Bermuda nexus} emerges with CHN-BMU showing a very high lift of 15.3. This suggests Bermuda acts as a particularly favored intermediary hub for clients linked to China. This is complemented by the USA-BMU link (lift 4.92), highlighting Bermuda's role in Community 1 of the filtered network, connecting major economic powers.
+    \item Robust \textbf{Asian connections} are underscored by pairs like SGP-MYS (Singapore-Malaysia, lift 5.27). Singapore (SGP) also shows strong co-service patterns with various Micro-states such as WSM (Samoa, lift 3.04) and CYM (Cayman Islands, lift 3.89), reinforcing its role as a key hub in Community 0.
+    \item A distinct \textbf{PAN-SYC-BHS nexus} (Community 2) is confirmed with pairings like PAN-SYC (Panama-Seychelles) having a lift of 3.89.
+    \item Crucially, high lift values are common \textbf{across different regime types}. For example, China (Closed Autocracy) has a very high lift with Bermuda (Micro-state), and the USA (Liberal Democracy) also has a significant lift with Bermuda. This reinforces the earlier observation that factors beyond regime similarity, such as specialized financial services, established legal and commercial pathways, or historical ties, are potent drivers of these strong co-service relationships.
+\end{itemize}
+
+\subsubsection{Network of Jurisdictions Used by Intermediaries}
+\label{subsubsec:network_jurisdictions_used}
+
+Shifting focus from client locations to incorporation locations, this section analyzes the network of jurisdictions that intermediaries use in combination. The full jurisdiction co-usage network, where an edge exists if an intermediary incorporates entities in both jurisdictions (weighted by the number of such intermediaries), comprises 41 nodes and 347 edges. Summary statistics are provided in Table \ref{tab:jurisdiction_network_summary}. The distribution of the number of distinct jurisdictions used per intermediary is shown in Figure \ref{fig:geography_distribution_jurisdictions_by_intermediary}, indicating that most intermediaries utilize a small portfolio of jurisdictions, though some use many.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary Statistics for the Full Jurisdiction Co-Usage Network}
+\label{tab:jurisdiction_network_summary}
+\begin{tabular}{lc}
+\toprule
+\textbf{Metric}                        & \textbf{Value}    \\
+\midrule
+Number of Nodes               & 41       \\
+Number of Edges               & 347      \\
+Network Density               & 0.4232   \\
+Average Degree                & 16.93    \\
+Average Clustering Coefficient & 0.8155   \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Geography_Distribution_of_Jurisdictions_by_Intermediary.png}
+    \caption{Distribution of the Number of Distinct Jurisdictions Used per Intermediary. Most intermediaries use only one or two jurisdictions for incorporation, but a tail of intermediaries uses a broader portfolio.}
+    \label{fig:geography_distribution_jurisdictions_by_intermediary}
+\end{figure}
+
+Figure \ref{fig:geography_cross_jurisdiction_network} presents a filtered "backbone" of these co-usage patterns, applying the same support ($\ge 0.008$) and lift ($\ge 1.5$) thresholds as for the country co-service network. Nodes are coloured by their predominant legal technology profile (derived from Laffitte, 2024, as detailed in Section \ref{sec:3_2}) and by Louvain communities. The image displays the most prominent nodes in this filtered network, including CRI (Costa Rica), SGP (Singapore), CYP (Cyprus), GBR (Great Britain), BLZ (Belize), AGO (Angola), HKG (Hong Kong), CYM (Cayman Islands), COK (Cook Islands), MYS (Malaysia), BHS (Bahamas), SYC (Seychelles), PAN (Panama), NIU (Niue), WSM (Samoa), and USA.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Geography_Cross_Jurisdiction_Network.png}
+    \caption{Filtered Network of Co-Used Jurisdictions, Coloured by Predominant Legal Technology (left legend) and Louvain Community (right legend). Edges shown have support $\ge 0.008$ and lift $\ge 1.5$.}
+    \label{fig:geography_cross_jurisdiction_network}
+\end{figure}
+
+\paragraph{Interpretation of the Filtered Jurisdiction Network Structure}
+The filtered jurisdiction network (Figure \ref{fig:geography_cross_jurisdiction_network}) reveals a central, densely connected core. Key jurisdictions in this core include BHS (Bahamas), SYC (Seychelles), AGO (Angola), WSM (Samoa), NIU (Niue), PAN (Panama), USA, and HKG (Hong Kong).
+
+When coloured by their predominant legal technology profile (Laffitte, 2024), the central cluster is overwhelmingly dominated by jurisdictions offering \textbf{"Dual-Purpose"} legal technologies (e.g., International Business Companies - IBCs). This strongly supports the observation that central jurisdictions in this co-usage network are those providing flexible, widely applicable corporate vehicles suitable for both corporate and personal wealth structuring. 
+
+Louvain community detection identifies the following groupings based on co-usage patterns:
+\begin{itemize}
+    \item \textbf{Community 1 (Brown):} This is the largest and most central community, encompassing jurisdictions like USA, PAN, NIU, BHS, SYC, AGO, and WSM. These are largely characterized by "Dual-Purpose" legal technologies.
+    \item \textbf{Community 0 (Dark Blue):} This community includes HKG, CYM (Cayman Islands), and COK (Cook Islands), combining jurisdictions known for "Banking/Corporate/Dual-Purpose" (like HKG) with those strong in "Dual-Purpose/Personal" (like CYM, COK).
+    \item \textbf{Community 2 (Light Blue):} This community is more peripheral in the filtered network and includes SGP (Singapore), CRI (Costa Rica), CYP (Cyprus), GBR (Great Britain), BLZ (Belize), and MYS (Malaysia), representing a mix of financial centers and specialized offshore jurisdictions.
+\end{itemize}
+
+\paragraph{Centrality in the Jurisdiction Network}
+Centrality metrics for the full 41-jurisdiction co-usage network (detailed in Appendix Tables \ref{tab:appendix_jurisdiction_betweenness_app} and \ref{tab:appendix_jurisdiction_eigenvector_app}) are revealing.
+\textbf{VGB (British Virgin Islands)} ranks first in both betweenness and eigenvector centrality in the full network, confirming its paramount importance as an incorporation jurisdiction. However, it is strikingly absent from the filtered graph in Figure \ref{fig:geography_cross_jurisdiction_network}. This implies that while VGB is co-used with many other jurisdictions by numerous intermediaries, these individual pairings might not meet the specific high support and lift thresholds chosen for this backbone view (requiring at least 20 co-occurrences and lift $\ge 1.5$). This suggests VGB's role might be more as a general-purpose, widely connected jurisdiction whose strong pairings are numerous but perhaps more diffuse, rather than concentrated in extremely high-lift niche combinations that also meet the co-occurrence threshold.
+\textbf{BHS (Bahamas)} and \textbf{PAN (Panama)} rank second and third, respectively, in overall centrality and are visibly central within the filtered graph, particularly in Community 1. \textbf{HKG (Hong Kong)} and \textbf{CYM (Cayman Islands)} are also highly central in the full network and form a core part of Community 0 in the filtered view. Most other top-ranked jurisdictions by centrality align with their prominence in the backbone, with VGB being the main exception due to the filtering criteria.
+
+\paragraph{Significant Jurisdiction Associations}
+Association analysis, focusing on lift scores from statistically significant pairs with at least 20 co-occurrences (detailed in Appendix Table \ref{tab:appendix_significant_jurisdiction_associations_app}), highlights robust co-usage patterns:
+\begin{itemize}
+    \item The dominant \textbf{Community 1 (largely "Dual-Purpose" hubs)} shows very high mutual lift values. For instance, BHS-NIU (Bahamas-Niue) has a lift of 4.6 (support 0.016), and NIU-WSM (Niue-Samoa) has a lift of 5.3 (support 0.012). NIU (Niue) appears as a critical connector within this cluster of Pacific and Caribbean jurisdictions, also showing strong lift with SYC (Seychelles, lift 4.1, support 0.010).
+    \item \textbf{Community 0 (financial centers and specialized OFCs)}: The HKG-CYM (Hong Kong-Cayman Islands) pairing shows a strong lift of 5.8 (support 0.0018), indicating a significant tendency for intermediaries using one to also use the other. WSM-CYM (Samoa-Cayman Islands) also shows a notable lift of 4.6 (support 0.0031).
+    \item Strong co-usage is observed between jurisdictions offering \textbf{similar legal technology profiles}. For example, many of the high-lift pairs within Community 1 involve jurisdictions predominantly offering "Dual-Purpose" or "Dual-Purpose/Personal" technologies.
+\end{itemize}
+
+
 \section{Country Network Centrality and Associations}
 \label{sec:appendix_country_network}
 
@@ -211,6 +390,7 @@ SGP  & 0.19    & 0.013    & 355         & Banking/Other Technologies            
 } % End tiny
 \clearpage
 
+
 \section{Classification of Intermediaries}
 \label{sec:appendix_intermediary_classification}
 
@@ -301,7 +481,7 @@ The following examples illustrate this process and the resulting structured outp
     \item \textbf{Findings:} Immediately yielded relevant results identifying the entity as "CHEO YEOH \& ASSOCIATES LLC," a Singapore-based company providing legal services, with details on its registration and directors.
     \item \textbf{Iteration 1 Query:} `Cheo Yeoh \& Associates services`
     \item \textbf{Findings:} Reinforced the legal nature, with results like "Cheo Yeoh \& Associates provides legal services" and official listings specifying "LEGAL ACTIVITIES."
-    \item \textbf{Iteration 2 Query:} `Cheo Yeoh \& Associates client testimonials` (or similar refinement if needed)
+    \item \textbf{Iteration 2 Query:} `Cheo Yeoh \& Associates client testimonials`
     \item \textbf{Findings:} Could uncover legal case mentions, lawyer profiles, or further business directory listings, solidifying its role. (The provided log indicates successful identification primarily from the first two iterations).
 \end{itemize}
 
@@ -317,6 +497,24 @@ The following examples illustrate this process and the resulting structured outp
     \item \textbf{justification:} "Cheo Yeoh \& Associates LLC provides legal services in Singapore. The company's principal activity is LEGAL ACTIVITIES (EXCLUDING ONLINE MARKETPLACES). Johnny Cheo is a Director at the firm. The firm has been operating for 23 years. The search results consistently point to legal services."
     \item \textbf{key\_evidence (Full Search Log):} (Content of the JSON-like string representing the search iterations and their results, as provided in the original example, would be detailed here. For brevity, it is summarized above and omitted in this representation.)
 \end{itemize}
+
+A decent chunk, especially of the random sample, needs to be filtered out as seen in the figure below.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Appendix_Filtering_of_Enrichment.png}
+    \caption{Filtering Process of the Enriched Random Sample for Functional Classification. This flowchart illustrates the steps taken to arrive at the final set of intermediaries with high-confidence functional classifications used in this section's analysis.}
+    \label{fig:appendix_filtering_enrichment}
+\end{figure}
+
+
+\section{Replication Code and Classification dataset}
+
+All code to replicate the results as well as all enrichment data classifying the samples of intermediaries can be found here on my GitHub. Link
+
+Note, it can be difficult to navigate the current codebase given the sheer amount of imperative code on there. I've tried keeping it as clean as possible for external eyes as well as documenting continuously, but deadlines caught up with me.
+
+
 
 
 
