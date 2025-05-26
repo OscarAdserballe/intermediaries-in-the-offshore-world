@@ -3,8 +3,6 @@
 
 The hardest part - which I speak confidently on with my 21 years of experience on this earth - is always leaving material on the cutting-floor. I've, however, not had the willpower to completely relinquish this section of my thesis, and so with the brazen immaturity of a Bachelor's student, I've put it here, in vain hope that efforts won't feel wasted. 
 
-The appendix is structured as follows. First, detailing a third proposition on the centrality of Microstates in Co-service networks of intermediaries in both countries and jurisidictions. Secondly, the empirical analysis behind it, in which, I will briefly discuss methods, then followed by the results of looking at these "co-service networks" of intermediaries across countries. Thirdly, I'll go a bit deeper on the method by which I've classified intermediaries using a novel agentic method.
-
 \section{Proposition 3: Structural Centrality of Microstates in Intermediation Network}
 A core set of Offshore Financial Centers (OFCs), that in heavy part are those infamous microstates. Highly central in it.
 
@@ -507,6 +505,68 @@ A decent chunk, especially of the random sample, needs to be filtered out as see
     \label{fig:appendix_filtering_enrichment}
 \end{figure}
 
+
+\section{(More) Geography and Jurisdiction Heatmaps for Intermediaries at Country-Level}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/Geography_Country_Heatmaps_Top6_10.png}
+    \caption{Client and Incorporation Jurisdiction Heatmap for Intermediaries in Top 6-10 Countries (TWN, CHN, PAN, IDN, GTM). Panels follow the same format as Figure \ref{fig:geography_country_heatmaps_top5}.}
+    \label{fig:geography_country_heatmaps_top6_10}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/Geography_Country_Heatmaps_Top11_15.png}
+    \caption{Client and Incorporation Jurisdiction Heatmap for Intermediaries in Top 11-15 Countries (LUX, BRA, BHS, JEY, THA). Each panel shows the distribution of client entity countries (by activity, top bar) and incorporation jurisdictions (bottom bar) for intermediaries based in the specified country. $H_c$ denotes country entropy and $H_j$ denotes jurisdiction entropy for that group of intermediaries.}
+    \label{fig:geography_country_heatmaps_top11_15}
+\end{figure}
+
+\textbf{Figures \ref{fig:geography_country_heatmaps_top6_10} and \ref{fig:geography_country_heatmaps_top11_15} – Intermediaries in Top 6-15 Countries:}
+These figures reveal patterns for other significant intermediary locations, including emerging economies and traditional OFCs.
+
+\begin{itemize}
+    \item \textbf{China (CHN)} (Figure \ref{fig:geography_country_heatmaps_top6_10}): Similar to Hong Kong, shows a strong domestic client focus (CHN, 75\%; $H_c=0.30$) and a preference for VGB (70\%) and Samoa (WSM, 13\%) for incorporations ($H_j=0.39$).
+
+    \item \textbf{Panama (PAN)} (Figure \ref{fig:geography_country_heatmaps_top6_10}): As a major OFC itself, Panamanian intermediaries overwhelmingly serve entities active in Panama (PAN, 89\%; $H_c=0.14$). They primarily use their own jurisdiction for incorporation (PAN, 36\%), but also VGB (32\%) and USA (10\%), leading to higher jurisdictional diversity ($H_j=0.62$). This suggests a role in both domestic incorporation and facilitating access to other OFCs for local clients.
+
+    \item \textbf{Luxembourg (LUX)} (Figure \ref{fig:geography_country_heatmaps_top11_15}): Another key European financial center, Luxembourg-based intermediaries primarily serve domestic clients (LUX, 70\%; $H_c=0.32$). Their incorporation choices are relatively diverse ($H_j=0.51$), favoring Panama (PAN, 42\%), VGB (33\%), and Seychelles (SYC, 13\%).
+
+    \item \textbf{Bahamas (BHS)} (Figure \ref{fig:geography_country_heatmaps_top11_15}): Shows an extreme domestic client focus (BHS, 100\%; $H_c=0.00$), with intermediaries almost exclusively using the Bahamas itself for incorporation (BHS, 93\%; $H_j=0.13$). This points to a highly localized service model within the OFC.
+
+    \item \textbf{Jersey (JEY)} (Figure \ref{fig:geography_country_heatmaps_top11_15}): Intermediaries in this Crown Dependency also exhibit a very strong domestic client focus (JEY, 93\%; $H_c=0.10$) and primarily use VGB (70\%) for incorporations ($H_j=0.34$).
+\end{itemize}
+
+An illustrative example of specific geographical specialization is provided by Cyprus-based intermediaries (Figure \ref{fig:geography_country_heatmaps_cyprus}). Cyprus is well-documented in academic and policy literature for its strong financial links to Russia (e.g., Alstadsæter et al., 2022, note similar patterns for Dubai facilitating Russian wealth). While Russia is generally underrepresented as a client country in the broader ICIJ dataset for intermediaries from most other nations, entities serviced by Cypriot intermediaries show a significant Russian presence. As seen in the top bar of Figure \ref{fig:geography_country_heatmaps_cyprus}, 12\% of entities serviced by Cypriot intermediaries are linked to activity in Russia (RUS). This proportion is notably higher than Russia's typical share in the client portfolios of intermediaries from the other top 15 countries (often negligible or grouped under "Other"), suggesting a strong, specific association—a high "lift" in association analysis terms—for the Cyprus-Russia connection. Beyond Russia, Cypriot intermediaries primarily serve entities active in Cyprus itself (CYP, 34\%), the United Arab Emirates (ARE, 27\%), and, interestingly, the British Virgin Islands (VGB, 26\%). The VGB share here might reflect entities whose ultimate beneficial owners or complex operational activities are channeled through or managed from VGB, rather than VGB being a primary country of economic activity in the traditional sense. For incorporations (bottom bar), Cypriot intermediaries heavily favor VGB (56\%), followed by Seychelles (SYC, 15\%), the Bahamas (BHS, 15\%), and Panama (PAN, 9\%). The entropy values for Cyprus-based intermediaries ($H_c = 0.55, H_j = 0.53$) are both above the median values observed in Figure \ref{fig:geography_country_level_entropy_distribution}, indicating a moderately diversified client base and a similarly moderate diversification in their choice of incorporation jurisdictions, despite the prominent Russian nexus. This specialized channelling of capital from specific regions through particular intermediary hubs like Cyprus highlights the nuanced roles different jurisdictions play within Global Wealth Chains (Seabrooke \& Wigan, 2017).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/Geography_Country_Heatmaps_Cyprus.png} % Adjusted width for single panel
+    \caption{Client and Incorporation Jurisdiction Heatmap for Cyprus-based Intermediaries ($H_c=0.55, H_j=0.53$). The top bar shows client entity countries (Cyprus 34\%, UAE 27\%, VGB 26\%, Russia 12\%). The bottom bar shows incorporation jurisdictions (VGB 56\%, SYC 15\%, BHS 15\%, PAN 9\%). The notable 12\% Russian client link suggests a specialized role.}
+    \label{fig:geography_country_heatmaps_cyprus}
+\end{figure}
+
+
+\section{Degree Distribution of Intermediaries}
+
+\label{subsubsec:degree_dist_intermediaries}
+A recurring theme in the study of complex networks, and one that underpins much of the analytical framework of this thesis, is the prevalence of power-law-like distributions in various network metrics. This characteristic is particularly evident in the degree distribution of intermediaries within the ICIJ dataset, as illustrated in Figure \ref{fig:preliminary_powerlaw_fit}. This is an established finding in the literature (e.g. Chang et al., 2023a), however, it is replicated here because of its importance for the thesis - and also serves as an indirect robustness check for the data. We essentially reproduce their finding, though the overlaw power-law estimates arrived at are different compared to Chang et al. (2023a) who find even fatter tails in the subset of countries (USA, Hong Kong, China, and Russia) they analyze. They land on an exponent of $\alpha \approx 1.2-1.4$ for the degree distribution of intermediaries in their sample, while we find $\alpha \approx 2.08$ for the full dataset. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/Preliminary_Powerlaw_Fit.png} % Assuming images are in an 'images' subdirectory
+    \caption{Degree Distribution of Intermediaries and Model Fits. The plot shows the probability density function (PDF) of intermediary degrees on a log-log scale. The empirical data (blue line) is compared against a fitted power-law distribution (red dashed line, $\alpha \approx 2.08$) and a fitted log-normal distribution (purple dash-dot line).}
+    \label{fig:preliminary_powerlaw_fit}
+\end{figure}
+Figure \ref{fig:preliminary_powerlaw_fit} plots the probability density function (PDF) of intermediary degrees on a log-log scale. This type of scaling is standard for visualizing heavy-tailed distributions, as a true power law will appear as a straight line. The empirical data (blue line) clearly shows a long tail, indicating that while the vast majority of intermediaries are connected to a relatively small number of entities, a few intermediaries possess an extraordinarily high number of connections. These are the "super-hubs" of the offshore world, intermediaries that facilitate the creation and administration of thousands, or even tens of thousands, of offshore entities. This visual observation aligns with findings from structural studies of similar large-scale datasets, such as Kejriwal and Dang's (2020) network analysis of the Panama Papers (a subset of the ICIJ data, we are working with), which also identified power-law degree distributions for actors within that leak. Such a distribution points to a highly heterogeneous system where certain intermediaries play a disproportionately significant role in structuring offshore financial networks.
+
+To formally assess the nature of this distribution, the fit of a power-law model was compared to that of a log-normal distribution, a common alternative for heavy-tailed data. Following the methodology proposed by Clauset et al. (2009), a log-likelihood ratio test yielded $R = 57.0287$ with a $p$-value $< 0.0001$. This result provides strong statistical evidence that a power-law model offers a significantly better fit to the empirical intermediary degree distribution than a log-normal model, or at the very least, confirms that the distribution is distinctly heavy-tailed. The fitted power-law distribution (red dashed line in Figure \ref{fig:preliminary_powerlaw_fit}) has an exponent $\alpha \approx 2.08$. In scale-free networks, $\alpha$ typically falls between 2 and 3; a value closer to 2, as observed here, signifies a particularly "fat" tail, indicating an even more pronounced dominance of the largest hubs compared to networks with higher $\alpha$ values. The log-normal fit (purple dash-dot line), by contrast, visibly underestimates the probability of observing these extremely high-degree intermediaries.
+
+The implications of this scale-free or heavy-tailed characteristic are profound for understanding the architecture and dynamics of the offshore financial system. It suggests a system that is not randomly organized but has an inherent structure where a few key intermediaries may act as critical "enablers" or "chokepoints" (Chang et al., 2023b; Christensen, 2024). The existence of these super-hubs implies that a significant portion of offshore activity is channeled through a limited number of actors. This concentration has several potential consequences:
+\begin{itemize}
+    \item \textbf{Efficiency and Scalability:} These hubs may provide economies of scale, making it easier and more efficient to create and manage large numbers of offshore entities.
+    \item \textbf{Vulnerability:} As demonstrated by Chang et al. (2023b) in their study of oligarch networks, systems with such scale-free properties are often robust to the random removal of nodes but critically vulnerable to the targeted disruption of their main hubs. This suggests that regulatory or law enforcement actions focused on these key intermediaries could have a disproportionately large impact on the overall network.
+    \item \textbf{Influence and Diffusion:} Highly connected intermediaries could be pivotal in disseminating specific tax planning strategies, financial products, or even compliance norms throughout the network.
+\end{itemize}
 
 \section{Replication Code and Classification dataset}
 
