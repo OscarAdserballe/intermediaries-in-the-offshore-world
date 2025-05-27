@@ -10,13 +10,14 @@
 \usepackage{pdflscape}
 \usepackage{caption}
 \usepackage{booktabs}
-\geometry{a4paper, margin=0.9in} 
+\geometry{a4paper, margin=0.85in} 
 \usepackage{amsmath, amssymb} % Math symbols
 \usepackage{graphicx} % For figures Tell LaTeX where to look for images:
 \graphicspath{{./images/}} % Add this line to specify the images folder
 \usepackage{enumitem} % For list formatting
 \usepackage{hyperref} % For potential URLs (clickable)
 \usepackage{setspace} % For line spacing
+\usepackage{tocbibind}
 \onehalfspacing % 1.5 line spacing
 
 
@@ -42,7 +43,7 @@
 \fancyfoot[C]{\thepage}
 
 
-\title{Network Topologies of Offshore Intermediaries}
+\title{Patterns of Specialisation of Intermediaries in Offshore Networks}
 \author{Oscar Julius Adserballe} 
 \date{May 2025}
 
@@ -61,13 +62,15 @@
 
     \vspace{1cm}
 
+    {\large Standard Pages: 40\par} 
+    {\large Citation Style: APA 7th Edition\par} 
+
+    \vspace{1cm}
+
     {\large Copenhagen Business School} \\ % Replace university
-
-    \vspace{2cm}
-
     {\large Supervisor: Rasmus Corlin Christensen\par} 
 
-    \vspace{1.5cm}
+    \vspace{1cm}
 
     {\large \today\par} 
 
@@ -93,13 +96,14 @@
 \chapter*{Abstract}
 \label{sec:abstract}
 \addcontentsline{toc}{chapter}{Abstract} % Manually add to ToC if needed
-Intermediaries are pivotal actors in the offshore financial system, facilitating global tax avoidance and contributing to economic inequality. This thesis investigates how intermediaries specialize within offshore networks, focusing on two primary dimensions: geographical concentration (clientele and jurisdiction use) and functional differentiation (service types and operational scale). The study employs network analysis on ICIJ leak data. This quantitative approach is enriched by a novel agentic AI method to classify a sample of intermediaries into functional types.
+Far from passive conduits, intermediaries like lawyers, accountants, and financial advisors actively design and manage the structures within the global offshore financial system that enables clients to avoid taxes and shield assets. This thesis investigates how intermediaries specialise within offshore networks, focusing on two primary dimensions: geographical concentration (clientele and jurisdiction use) and functional differentiation (service types and operational scale). This thesis leverages International Consortium of Investigative Journalist (ICIJ) leak data following the general direction of Chang et al. (2023a; 2023b) to investigate these patterns. This is supplemented by a novel agentic AI method to classify a sample of intermediaries into functional types.
 
-Two key propositions are asserted: 1) Intermediaries often display strong geographical or cultural specificity, predominantly serving distinct clienteles or regions while strategically selecting from a global range of offshore jurisdictions. 2) Different intermediary types occupy distinct roles in the network, varying in systemic importance, operational scope (e.g., client volume), and diversity of services offered (e.g., jurisdiction and legal technology usage). These patterns of specialization contributes to understanding the operational logic of tax haven networks and offers pathways for more targeted and effective regulatory interventions against these networks.
+Two key propositions are presented: 1) intermediaries display strong geographical specificity, predominantly serving distinct clienteles and regions, while selecting from a global and broader range of offshore jurisdictions; and 2) different intermediary types occupy distinct roles in the network, varying in systemic importance, operational scope (e.g., client volume), and diversity of services offered (e.g., jurisdiction and legal technology usage). These patterns of specialisation contributes to understanding the operational logic of tax haven networks better and offers pathways for more targeted and effective regulatory interventions against these networks.
 
 % --- Include Chapters ---
 \pagenumbering{arabic} % Switch to Arabic numerals for main content
 \pagestyle{fancy} % Switch back to fancy style for main content
+\addtocounter{page}{-1} %
 
 % Use \include for main chapters. LaTeX will automatically start a new page for each.
 \include{chapters/introduction}
@@ -113,12 +117,7 @@ Two key propositions are asserted: 1) Intermediaries often display strong geogra
 % --- Appendix ---
 \appendix
 \include{chapters/appendix}
-
-
-% --- Bibliography ---
-% This command should be in your main file where you want the bibliography to appear.
-\printbibliography
-
+\include{chapters/bibliography}
 
 % Word count: texcount -inc main.tex -sum -char
 %TC:endignore
