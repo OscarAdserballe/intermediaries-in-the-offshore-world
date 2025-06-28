@@ -8,8 +8,8 @@ The project investigates the global landscape of **intermediary** firms that fac
 
 | Path | Purpose |
 |------|---------|
-| `main.ipynb` | End-to-end workflow that loads prepared datasets, recreates every figure/table shown in the thesis and exports them to the `writing/images/` folder. |
-| `scrape_intermediaries.ipynb` | Agentic Workflow using LangGraph. Helper notebook / script that enriches the raw Offshore Leaks Intermediaries list with firmographic data from public APIs (e.g. OpenCorporates, World Bank). |
+| `main.ipynb` | End-to-end workflow that loads prepared datasets, recreates every figure/table shown in the thesis. |
+| `scrape_intermediaries.ipynb` | Agentic Workflow using LangGraph as a framework and using Tavily to find information on intermediaries. |
 | `enrichment_data/` | Light-weight CSV snapshots used by the notebooks (`*_sample_*.csv`). Raw datasets (hundreds of MB) live in `datasets/` and are ignored by Git. |
 | `other/dot-graph/` | Network visualisations (DOT + PNG) referenced in the Methods chapter. |
 | `writing/` | LaTeX source of the written thesis. Compile with `latexmk -pdf writing/main.tex`. A ready-made PDF (`writing/main.pdf`) is included for convenience. |
