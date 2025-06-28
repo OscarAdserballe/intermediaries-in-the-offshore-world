@@ -17,10 +17,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Filtering Process of the Samples for Function-Classification}}{45}{figure.caption.16}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Filtering Process of the Samples for Function-Classification}}{46}{figure.caption.16}%
 \contentsline {figure}{\numberline {A.2}{\ignorespaces Client and Incorporation Jurisdiction Heatmap for Intermediaries in Top 6-10 Countries (TWN, CHN, PAN, IDN, GTM)}}{46}{figure.caption.17}%
 \contentsline {figure}{\numberline {A.3}{\ignorespaces Client and Incorporation Jurisdiction Heatmap for Intermediaries in Top 11-15 Countries (LUX, BRA, BHS, JEY, THA)}}{46}{figure.caption.18}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Client and Incorporation Jurisdiction Heatmap for Cyprus-based Intermediaries}}{47}{figure.caption.19}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Degree Distribution of Intermediaries and Model Fits}}{48}{figure.caption.20}%
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Filtered Network of Co-Served Countries, Coloured by Louvain Community (left) and Regime Type (right). Edges shown have support $\ge 0.008$ and lift $\ge 1.5$}}{54}{figure.caption.22}%
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Filtered Network of Co-Used Jurisdictions, Coloured by Legal Technology (left) and Louvain Community (right). Edges shown have support $\ge 0.008$ and lift $\ge 1.5$.}}{57}{figure.caption.24}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Client and Incorporation Jurisdiction Heatmap for Cyprus-based Intermediaries}}{48}{figure.caption.19}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Degree Distribution of Intermediaries and Model Fits}}{49}{figure.caption.20}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Filtered Network of Co-Served Countries, Coloured by Louvain Community (left) and Regime Type (right). Edges shown have support $\ge 0.008$ and lift $\ge 1.5$}}{55}{figure.caption.22}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Filtered Network of Co-Used Jurisdictions, Coloured by Legal Technology (left) and Louvain Community (right). Edges shown have support $\ge 0.008$ and lift $\ge 1.5$.}}{58}{figure.caption.24}%

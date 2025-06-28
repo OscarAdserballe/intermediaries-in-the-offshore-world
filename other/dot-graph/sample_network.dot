@@ -1,0 +1,27 @@
+
+digraph G {
+    rankdir=LR; // Optional: Layout from Left to Right
+
+    node [shape=box, style="rounded"];
+
+    Officer1 [label="Officer 1"];
+    Officer2 [label="Officer 2"];
+    Officer3 [label="Officer 3"];
+    EntityA [label="Entity A"];
+    EntityB [label="Entity B"];
+    Intermediary [label="Intermediary"];
+    ServiceProvider [label="Service Provider"];
+
+    Officer1 -> EntityA [label="Officer of", fontcolor="gray"];
+    Officer1 -> EntityB [label="Officer of", fontcolor="gray"];
+    Officer2 -> EntityA [label="Officer of", fontcolor="gray"];
+    Officer3 -> EntityA [label="Officer of", fontcolor="gray"];
+    Officer3 -> EntityB [label="Officer of", fontcolor="gray"];
+
+    EntityA -> Intermediary [label="Intermediary of", fontcolor="gray"];
+    EntityB -> Intermediary [label="Intermediary of", fontcolor="gray"];
+
+    Intermediary -> ServiceProvider; // This edge didn't have a label, so no fontcolor needed
+
+}
+

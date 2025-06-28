@@ -47,19 +47,19 @@
 \contentsline {chapter}{\numberline {A}Appendix}{40}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Replication Code and Classification dataset}{40}{section.A.1}%
 \contentsline {section}{\numberline {A.2}Use of LLMs in the Broader Paper}{41}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Classification of Intermediaries}{41}{section.A.3}%
+\contentsline {section}{\numberline {A.3}Classification of Intermediaries}{42}{section.A.3}%
 \contentsline {section}{\numberline {A.4}(More) Geography and Jurisdiction Heatmaps for Intermediaries at Country-Level}{46}{section.A.4}%
 \contentsline {section}{\numberline {A.5}Degree Distribution of Intermediaries}{48}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Proposition 3: Structural Centrality of Microstates in Intermediation Network}{50}{section.A.6}%
-\contentsline {subsection}{\numberline {A.6.1}Concepts from Network Analysis}{50}{subsection.A.6.1}%
-\contentsline {subsection}{\numberline {A.6.2}Association Analysis}{52}{subsection.A.6.2}%
-\contentsline {subsection}{\numberline {A.6.3}Patterns of Co-Specialisation}{53}{subsection.A.6.3}%
-\contentsline {subsection}{\numberline {A.6.4}Interpretation of the Filtered Country Network Structure}{54}{subsection.A.6.4}%
-\contentsline {subsection}{\numberline {A.6.5}Significant Country Associations}{55}{subsection.A.6.5}%
-\contentsline {subsubsection}{Network of Jurisdictions Used by Intermediaries}{56}{subsection.A.6.5}%
-\contentsline {subsection}{\numberline {A.6.6}Interpretation of the Filtered Jurisdiction Network Structure}{57}{subsection.A.6.6}%
-\contentsline {subsection}{\numberline {A.6.7}Centrality in the Jurisdiction Network}{58}{subsection.A.6.7}%
-\contentsline {subsection}{\numberline {A.6.8}Significant Jurisdiction Associations}{58}{subsection.A.6.8}%
-\contentsline {subsection}{\numberline {A.6.9}Country Network Centrality and Associations}{59}{subsection.A.6.9}%
-\contentsline {subsection}{\numberline {A.6.10}Jurisdiction Network Centrality and Associations}{61}{subsection.A.6.10}%
-\contentsline {chapter}{Bibliography}{63}{appendix*.29}%
+\contentsline {section}{\numberline {A.6}Proposition 3: Structural Centrality of Microstates in Intermediation Network}{51}{section.A.6}%
+\contentsline {subsection}{\numberline {A.6.1}Concepts from Network Analysis}{51}{subsection.A.6.1}%
+\contentsline {subsection}{\numberline {A.6.2}Association Analysis}{53}{subsection.A.6.2}%
+\contentsline {subsection}{\numberline {A.6.3}Patterns of Co-Specialisation}{54}{subsection.A.6.3}%
+\contentsline {subsection}{\numberline {A.6.4}Interpretation of the Filtered Country Network Structure}{55}{subsection.A.6.4}%
+\contentsline {subsection}{\numberline {A.6.5}Significant Country Associations}{56}{subsection.A.6.5}%
+\contentsline {subsubsection}{Network of Jurisdictions Used by Intermediaries}{57}{subsection.A.6.5}%
+\contentsline {subsection}{\numberline {A.6.6}Interpretation of the Filtered Jurisdiction Network Structure}{58}{subsection.A.6.6}%
+\contentsline {subsection}{\numberline {A.6.7}Centrality in the Jurisdiction Network}{59}{subsection.A.6.7}%
+\contentsline {subsection}{\numberline {A.6.8}Significant Jurisdiction Associations}{59}{subsection.A.6.8}%
+\contentsline {subsection}{\numberline {A.6.9}Country Network Centrality and Associations}{60}{subsection.A.6.9}%
+\contentsline {subsection}{\numberline {A.6.10}Jurisdiction Network Centrality and Associations}{62}{subsection.A.6.10}%
+\contentsline {chapter}{Bibliography}{64}{appendix*.29}%
