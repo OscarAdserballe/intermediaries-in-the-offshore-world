@@ -2,7 +2,7 @@
 
 This repository contains all material needed to reproduce the empirical results presented in my Bachelor thesis. It is nothing serious, but only meant as an attempt at trying to make my work reproducible and trying (keyword: trying!) something that's more professional than it actually is. The code certainly isn't elegant, but I've tried structuring it using Jupyter notebooks. 
 
-The project investigates the global landscape of **intermediary** firms that facilitate offshore incorporations and explores their geographic specialisation using network-science and statistical techniques, and an agentic workflow enriching their individual profiles using LangGraph.
+The project investigates the global landscape of **intermediary** firms that facilitate offshore incorporations and explores their geographic specialisation using network-science and statistical techniques, and an agentic workflow enriching their individual profiles using LangGraph. This analysis only touches the surface, and man is there still a lot out there.
 
 ## Repository layout
 
@@ -22,7 +22,7 @@ The project investigates the global landscape of **intermediary** firms that fac
 
 1. **Introduction** – sets the scene and research questions.
 2. **Theory** – situates the work in the tax‐avoidance and network‐science literature.
-3. **Data & Methodology** – documents data sources (ICIJ leaks, OpenCorporates), cleaning, enrichment, and the Generative‐AI classification approach.
+3. **Data & Methodology** – documents data sources (ICIJ leaks, V-Dem, Historical Tax Haven Database), cleaning, enrichment, and the Generative‐AI classification approach.
 4. **Empirical Analysis** – presents descriptive statistics, network measures, and hypothesis tests on specialisation.
 5. **Discussion** – interprets findings and contrasts them with existing scholarship and policy debates.
 6. **Conclusion** – summarises contributions and limitations.
