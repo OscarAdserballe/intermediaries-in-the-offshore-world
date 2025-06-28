@@ -10,9 +10,9 @@ The project investigates the global landscape of **intermediary** firms that fac
 |------|---------|
 | `main.ipynb` | End-to-end workflow that loads prepared datasets, recreates every figure/table shown in the thesis. |
 | `scrape_intermediaries.ipynb` | Agentic Workflow using LangGraph as a framework and using Tavily to find information on intermediaries. |
-| `enrichment_data/` | Light-weight CSV snapshots used by the notebooks (`*_sample_*.csv`). Raw datasets (hundreds of MB) live in `datasets/` and are ignored by Git. |
-| `other/dot-graph/` | Network visualisations (DOT + PNG) referenced in the Methods chapter. |
-| `writing/` | LaTeX source of the written thesis. Compile with `latexmk -pdf writing/main.tex`. A ready-made PDF (`writing/main.pdf`) is included for convenience. |
+| `enrichment_data/` | Full CSV-files of enriched intermediaries generated using `scrape_intermediaries.ipynb` |
+| `other/dot-graph/` | ICIJ Data model and Agentic workflow visualisations (DOT + PNG) referenced in the Methods chapter. |
+| `writing/` | LaTeX source of the written thesis. Compile with `pdflatex writing/main.tex`. A ready-made PDF (`writing/main.pdf`) is included for convenience. |
 | `datasets/` | Large raw datasets (ignored by default); see _Data access_ below. |
 
 ## Thesis & analysis overview
@@ -31,7 +31,7 @@ The project investigates the global landscape of **intermediary** firms that fac
 Compile with:
 ```bash
 cd writing
-latexmk -pdf main.tex
+pdflatex main.tex
 ```
 
 ### Main analysis notebook
@@ -50,7 +50,7 @@ A smaller helper notebook, `scrape_intermediaries.ipynb`, shows how the enrichme
 1. **Clone & install dependencies** (Python ≥ 3.10):
 
    ```bash
-   gh repo clone OscarAdserballe/topologies-of-intermediaries-in-the-offshore-world
+   gh repo clone OscarAdserballe/intermediaries-in-the-offshore-world
    cd <repo>
    poetry install  # or: pip install -r requirements.txt
    ```
@@ -66,7 +66,7 @@ A smaller helper notebook, `scrape_intermediaries.ipynb`, shows how the enrichme
 
    ```bash
    cd writing
-   latexmk -pdf main.tex
+   pdflatex main.tex
    ```
 
 ## Data access
