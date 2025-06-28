@@ -11,14 +11,14 @@
 \usepackage{caption}
 \usepackage{booktabs}
 \geometry{a4paper, margin=0.85in} 
-\usepackage{amsmath, amssymb} % Math symbols
-\usepackage{graphicx} % For figures Tell LaTeX where to look for images:
-\graphicspath{{./images/}} % Add this line to specify the images folder
-\usepackage{enumitem} % For list formatting
-\usepackage{hyperref} % For potential URLs (clickable)
-\usepackage{setspace} % For line spacing
+\usepackage{amsmath, amssymb} 
+\usepackage{graphicx} 
+\graphicspath{{./images/}} 
+\usepackage{enumitem} 
+\usepackage{hyperref} 
+\usepackage{setspace} 
 \usepackage{tocbibind}
-\onehalfspacing % 1.5 line spacing
+\onehalfspacing 
 
 
 % --- Section Title Formatting ---
@@ -67,7 +67,7 @@
 
     \vspace{1cm}
 
-    {\large Copenhagen Business School} \\ % Replace university
+    {\large Copenhagen Business School} 
     {\large Supervisor: Rasmus Corlin Christensen\par} 
 
     \vspace{1cm}
@@ -78,34 +78,32 @@
 \end{titlepage}
 
 % --- Front Matter (ToC, Lists) ---
-\pagenumbering{roman} % Use Roman numerals for front matter
-\pagestyle{plain} % Use plain style for ToC pages
+\pagenumbering{roman}
+\pagestyle{plain}
 
 \newpage
-\tableofcontents % Generate Table of Contents
+\tableofcontents 
 
 \newpage
-\listoffigures % Generate List of Figures (if any)
+\listoffigures 
 
 \newpage
-\listoftables  % Generate List of Tables (if any)
+\listoftables  
 
 \newpage
 
-% Keep the Abstract in the main file as it's part of the front matter
 \chapter*{Abstract}
 \label{sec:abstract}
-\addcontentsline{toc}{chapter}{Abstract} % Manually add to ToC if needed
+\addcontentsline{toc}{chapter}{Abstract} 
 Far from passive conduits, intermediaries like lawyers, accountants, and financial advisors actively design and manage the structures within the global offshore financial system that enables clients to avoid taxes and shield assets. This thesis investigates how intermediaries specialise within offshore networks, focusing on two primary dimensions: geographical concentration (clientele and jurisdiction use) and functional differentiation (service types and operational scale). This thesis leverages International Consortium of Investigative Journalist (ICIJ) leak data following the general direction of Chang et al. (2023a; 2023b) to investigate these patterns. This is supplemented by a novel agentic AI method to classify a sample of intermediaries into functional types.
 
 Two key propositions are presented: 1) intermediaries display strong geographical specificity, predominantly serving distinct clienteles and regions, while selecting from a global and broader range of offshore jurisdictions; and 2) different intermediary types occupy distinct roles in the network, varying in systemic importance, operational scope (e.g., client volume), and diversity of services offered (e.g., jurisdiction and legal technology usage). These patterns of specialisation contributes to understanding the operational logic of tax haven networks better and offers pathways for more targeted and effective regulatory interventions against these networks.
 
 % --- Include Chapters ---
-\pagenumbering{arabic} % Switch to Arabic numerals for main content
-\pagestyle{fancy} % Switch back to fancy style for main content
-\addtocounter{page}{-1} %
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\addtocounter{page}{-1}
 
-% Use \include for main chapters. LaTeX will automatically start a new page for each.
 \include{chapters/introduction}
 \include{chapters/theory}
 \include{chapters/data_methodology}
